@@ -1,0 +1,64 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/sections/Hero.astro';
+import OneColumn from '../../components/sections/OneColumn.astro';
+import ImageText from '../../components/sections/ImageText.astro';
+import CtaBox from '../../components/sections/CtaBox.astro';
+---
+<Base title="About us">
+  <Hero title="About CCAIS" image="/wp-content/uploads/2023/11/AG-Seb-Stein-Team-Working-01-resize-e1698927527819.jpg" />
+
+  <OneColumn>
+    <h3><span style="color: #450dc0">This 5-year UKRI Turing AI Acceleration Fellowship led by Professor Sebastian Stein is developing the fundamental science needed to build AI systems that can be trusted by citizen users.</span></h3>
+  </OneColumn>
+
+  <OneColumn>
+    <h4><span style="color: #450dc0">Research Challenges</span></h4>
+    <p>To achieve our vision of citizen-centric AI systems, we are working on several novel advances in the area of artificial intelligence.</p>
+    <p>First, to safeguard the privacy of individuals, new approaches to understanding the constraints and preferences of citizens are needed. These approaches will be distributed in nature – that is, they will not depend on collecting detailed data from individuals, but will allow citizens to manage and retain their own data. To achieve this, we are developing intelligent software agents that act on behalf of each citizen, that store personal data locally and only communicate limited information to others when necessary.</p>
+  </OneColumn>
+
+  <ImageText image="/wp-content/uploads/2023/11/child-with-robot-1.jpg" side="left" alt="Child interacting with a robot">
+    <p>Second, to incentivise positive behaviour modifications and discourage exploitation, we are drawing on the field of mechanism design to model how self-interested decision-makers behave in strategic settings and how beneficial actions can be incentivised. Particular challenges here include dealing with limited information, uncertainty about preferences and a constantly changing environment that necessitates incentives to be dynamically adapted via appropriate learning mechanisms.</p>
+  </ImageText>
+
+  <OneColumn>
+    <p>Finally, to enable an inclusive feedback loop involving citizens and other stakeholders, new interaction mechanisms are needed that can provide explanations for actions as well as information about whether the system is making fair decisions. While there is a wealth of emerging work on explainability and fairness in AI, this typically deals with simple one-shot problems. In contrast, we are considering more realistic and complex sequential settings, where actions have long-term consequences (including fairness) that may not be immediately apparent.</p>
+  </OneColumn>
+
+  <div class="page-accolades-section secondary">
+    <div class="container">
+      <div class="small-container">
+        <div class="top-block"><h2>Our achievements</h2></div>
+        <div class="accolades-main-block">
+          <div class="accolade">
+            <div class="text">
+              <p><a href="/outputs/publications/"><img src="/wp-content/uploads/2023/12/Paper-Icon.svg" alt="" loading="lazy" /></a></p>
+              <h4>80+ Papers</h4>
+            </div>
+          </div>
+          <div class="accolade">
+            <div class="text">
+              <p><a href="https://www.youtube.com/@CCAIS_Soton"><img src="/wp-content/uploads/2023/12/Lectern.svg" alt="" loading="lazy" /></a></p>
+              <h4>5+ Keynotes</h4>
+            </div>
+          </div>
+          <div class="accolade">
+            <div class="text">
+              <p><a href="https://sites.google.com/view/ccais-seminar/home"><img src="/wp-content/uploads/2023/12/Talks.svg" alt="" loading="lazy" /></a></p>
+              <h4>30+ Invited Talks</h4>
+            </div>
+          </div>
+          <div class="accolade">
+            <div class="text">
+              <p><a href="/events/"><img src="/wp-content/uploads/2023/12/Workshop.svg" alt="" loading="lazy" /></a></p>
+              <h4>20+ Workshops</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <CtaBox image="/wp-content/uploads/2023/11/woman-in-server-room-crop-1.jpg" title="Our vision" text="Find out more about our vision of citizen-centric AI systems." href="/about-us/vision/" label="Vision" />
+</Base>

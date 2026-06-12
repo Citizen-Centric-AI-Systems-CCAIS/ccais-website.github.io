@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { excerptOf } from '../../lib/excerpt';
+const items = (await getCollection('open-source')).sort((a, b) => b.data.date - a.data.date);
+const trim = (s, n = 110) => (s && s.length > n ? s.slice(0, n) + '…' : s);
+const fmt = (d) => d.toDateString();
+---
+<Base title="Open Source" bodyClass="archive post-type-archive post-type-archive-open-sources">
+  <div class="container">
+    <h1>Open Source</h1>
+    <h4>Open source software from CCAIS</h4>
+    <div class="open-sources">
+      {items.map((i) => (
+        <div class="single-open-sources">
+          <div class="bg-image" style={`background-image:url('${i.data.image}')`}></div>
+          <a href={`/open-sources/${i.id}/`}>
+            <div class="text-overlay">
+              <h3>{i.data.title}</h3>
+              <p>{trim(excerptOf(i))}</p>
+            </div>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</Base>

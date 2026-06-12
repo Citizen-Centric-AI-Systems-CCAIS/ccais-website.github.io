@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/sections/Hero.astro';
+import OneColumn from '../../components/sections/OneColumn.astro';
+import ImageText from '../../components/sections/ImageText.astro';
+import CtaBox from '../../components/sections/CtaBox.astro';
+---
+<Base title="Vision">
+  <Hero title="Vision" breadcrumb="About us/" image="/wp-content/uploads/2023/11/woman-in-server-room-crop-1.jpg" />
+
+  <OneColumn>
+    <h4><span style="color: #450dc0">AI holds great promise in addressing grand societal challenges, including the development of a smarter, cleaner electricity grid, the seamless provision of convenient on-demand mobility services, and the ability to protect citizens through advice and informed deployment of medical, emergency and police resources to fight epidemics, deal with crises and prevent crime. However, these promises can only be realised if citizens are able to trust AI systems.</span></h4>
+  </OneColumn>
+
+  <ImageText image="/wp-content/uploads/2023/11/young-female-engineer-using-a-digital-tablet-while-working-in-a-server-room-1.jpg" side="left" alt="Engineer working in a server room">
+    <p>In this project, we are developing the fundamental science needed to build trusted (and trustworthy) citizen-centric AI systems. These AI systems put citizens at their heart, rather than view them as passive providers of data. They make decisions that maximise the benefit for citizens, given their individual constraints and preferences. They use incentives where appropriate to encourage positive behaviour change, but they are also robust to strategic manipulation, in order to prevent individuals from exploiting the system at the expense of others. Importantly, citizen-centric AI systems involve citizens and other stakeholders in a feedback loop that enables them to audit decisions and modify the system’s behaviour to ensure that effective, but also ethical decisions are taken.</p>
+  </ImageText>
+
+  <CtaBox image="/wp-content/uploads/2023/11/child-with-robot-expand-1-scaled.jpg" title="Applications" text="Find out more about our range of application areas." href="/about-us/applications/" label="Applications" />
+</Base>

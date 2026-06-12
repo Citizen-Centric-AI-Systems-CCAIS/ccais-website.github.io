@@ -1,0 +1,15 @@
+---
+const { image, side = 'left', alt = '' } = Astro.props;
+---
+<div class="image-text-columns-section">
+  <div class="container">
+    <div class={`small-container ${side}`}>
+      <div class="img">
+        <img src={image} alt={alt} loading="lazy" />
+      </div>
+      <div class="text">
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+---
+// Single source of truth for site navigation.
+// NOTE: the old WordPress site had a footer menu that disagreed with the
+// header (Open Source -> /outputs/open-source/, Impact -> /outputs/impact/,
+// "Research Outputs" label, missing "About CCAIS"). Both menus now share
+// this structure, matching the header of the original site.
+export const menu = [
+  {
+    label: 'About us',
+    href: '#',
+    children: [
+      { label: 'About CCAIS', href: '/about-us/' },
+      { label: 'Our team', href: '/about-us/our-team/' },
+      { label: 'Our partners', href: '/about-us/our-partners/' },
+      { label: 'Vision', href: '/about-us/vision/' },
+      { label: 'Applications', href: '/about-us/applications/' }
+    ]
+  },
+  { label: 'Projects', href: '/projects/' },
+  {
+    label: 'News',
+    href: '#',
+    children: [
+      { label: 'Blog posts', href: '/blog/' },
+      { label: 'News updates', href: '/latest-news/' }
+    ]
+  },
+  {
+    label: 'Outputs',
+    href: '#',
+    children: [
+      { label: 'Publications', href: '/outputs/publications/' },
+      { label: 'Open Source', href: '/open-sources/' },
+      { label: 'Impact', href: '/impacts/' }
+    ]
+  },
+  {
+    label: 'Engage with us',
+    href: '#',
+    children: [
+      { label: 'Events', href: '/events/' },
+      { label: 'Seminar Series', href: '/seminar-series/' },
+      { label: 'Join us', href: '/join-us/' },
+      { label: 'Partner with us', href: '/partner-with-us/' }
+    ]
+  },
+  { label: 'Contact', href: '/contact-ccais/' }
+];
+
+const { id = 'primary-menu' } = Astro.props;
+---
+<ul id={id} class="menu">
+  {menu.map((item) => (
+    <li class={item.children ? 'menu-item menu-item-has-children' : 'menu-item'}>
+      <a href={item.href}>{item.label}</a>
+      {item.children && (
+        <>
+          <button class="submenu-toggle-button" aria-label={`Open ${item.label} submenu`}></button>
+          <ul class="sub-menu">
+            {item.children.map((c) => (
+              <li class="menu-item"><a href={c.href}>{c.label}</a></li>
+            ))}
+          </ul>
+        </>
+      )}
+    </li>
+  ))}
+</ul>

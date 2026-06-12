@@ -1,0 +1,58 @@
+---
+/**
+ * Official LinkedIn post embeds, driven by src/data/linkedin.json.
+ * Posts are click-to-load: LinkedIn iframes set cookies, so nothing is
+ * requested from LinkedIn until the visitor opts in (remembered locally).
+ */
+import data from '../data/linkedin.json';
+
+const { limit = 4 } = Astro.props;
+
+// Accept either an embed src or a normal post URL (derive the activity urn).
+const toEmbedSrc = (url: string): string | null => {
+  if (url.includes('/embed/feed/update/')) return url;
+  const m = url.match(/activity[-:](\d+)/);
+  return m ? `https://www.linkedin.com/embed/feed/update/urn:li:activity:${m[1]}` : null;
+};
+
+const posts = (data.posts ?? []).map(toEmbedSrc).filter(Boolean).slice(0, limit);
+---
+{posts.length > 0 && (
+  <div class="linkedin-feed" data-count={posts.length}>
+    <div class="linkedin-consent">
+      <p>
+        Our latest LinkedIn posts are shown here. Loading them connects your
+        browser to LinkedIn (which may set cookies).
+      </p>
+      <button class="customButton button-primary" id="linkedin-load">Show LinkedIn posts</button>
+    </div>
+    <div class="linkedin-grid" hidden>
+      {posts.map((src) => (
+        <iframe
+          data-src={src}
+          height="480"
+          frameborder="0"
+          allowfullscreen
+          title="Embedded LinkedIn post"
+          loading="lazy"
+        ></iframe>
+      ))}
+    </div>
+  </div>
+)}
+
+<script>
+  const feed = document.querySelector('.linkedin-feed');
+  if (feed) {
+    const consent = feed.querySelector('.linkedin-consent');
+    const grid = feed.querySelector('.linkedin-grid');
+    const load = () => {
+      grid.querySelectorAll('iframe[data-src]').forEach((f) => { f.src = f.dataset.src; });
+      grid.hidden = false;
+      consent.remove(); // [hidden] alone loses to the flex display rule
+      localStorage.setItem('ccais-linkedin-embeds', 'ok');
+    };
+    feed.querySelector('#linkedin-load')?.addEventListener('click', load);
+    if (localStorage.getItem('ccais-linkedin-embeds') === 'ok') load();
+  }
+</script>

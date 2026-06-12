@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/sections/Hero.astro';
+import CtaBox from '../components/sections/CtaBox.astro';
+---
+<Base title="Contact CCAIS">
+  <Hero title="Contact CCAIS" image="/wp-content/uploads/2023/11/ccais-team-lauging-around-table.jpg" />
+
+  <div class="contact-section">
+    <div class="container">
+      <div class="small-container">
+        <div class="info">
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:ss2@ecs.soton.ac.uk">ss2@ecs.soton.ac.uk</a>
+          </div>
+          <div>
+            <h4>Tel</h4>
+            <a href="tel:+442380597645">+44 (0)23 8059 7645</a>
+          </div>
+          <div>
+            <h4>Address</h4>
+            <p>Building 32, Room 4011, University Road, University of Southampton, Southampton, SO17 1BJ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <div class="container">
+      <div class="small-container">
+        <!-- Static replacement for the Gravity Form. Works as-is on Netlify
+             (data-netlify); point the action at Formspree etc. on other hosts. -->
+        <form name="contact" method="POST" data-netlify="true" action="/contact-ccais/?submitted=true">
+          <div class="form-row">
+            <label class="screen-reader-text" for="cf-name">Name</label>
+            <input id="cf-name" type="text" name="name" placeholder="Name" required />
+            <label class="screen-reader-text" for="cf-email">Email</label>
+            <input id="cf-email" type="email" name="email" placeholder="Email" required />
+          </div>
+          <label class="screen-reader-text" for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="10" placeholder="Message" required></textarea>
+          <button type="submit" class="customButton button-primary">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <CtaBox image="/wp-content/uploads/2023/11/woman-in-server-room-crop-1.jpg" title="Our vision" text="Find out more about our vision of citizen-centric AI systems." href="/about-us/vision/" label="Vision" />
+</Base>

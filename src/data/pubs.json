@@ -1,0 +1,1050 @@
+[
+ {
+  "Authors": [
+   "Dankloff, Mirthe",
+   "Yuan, Yining",
+   "Ajmeri, Nirav",
+   "Yazdanpanah, Vahid"
+  ],
+  "Title": "Long-term effects of fairness metrics on population dynamics",
+  "Year": 2026,
+  "Venue": "Fourth International Workshop on Citizen-Centric Multiagent Systems 2026 (C-MAS 2026)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=198f3ccf-976d-4ce9-bee2-ba3a2106831e",
+  "Abstract": "Algorithmic fairness is often treated as a static property, overlooking that individuals may disengage from systems they perceive as unfair. We introduce a dynamic notion of perceived fairness in a lending scenario that captures how repeated unjust denials and observation of peer outcomes can drive applicants to opt out. Through a multi-agent simulation framework on synthetic data, we measure how different fairness metrics affect long-term population retention and feature dynamics. Our results show that without fairness constraints, apparent fairness improvements arise from the selective opt-out of disadvantaged applicants (survivorship bias). Demographic parity and equal opportunity reduce immediate retention disparities but do not guarantee long-term fairness; demographic parity, in particular, overcorrects participation dynamics, accumulating long-term unfairness. We compare this against a causal fairness model that achieves a balanced retention rate and lower long-term unfairness. Our findings highlight the need to assess long-term fairness in settings with endogenous participation, where individual decisions are shaped by perceived fairness and peer effects, beyond static fairness constraints.<br/><br/><br/><br/>"
+ },
+ {
+  "Authors": [
+   "Deshmukh, Jayati",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian",
+   "Ramchurn, Gopal"
+  ],
+  "Title": "The triad of identity, trust and responsibility in multi-agent systems",
+  "Year": 2026,
+  "Venue": "25th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2026)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=b22e6fab-5dc1-4782-889f-a06d7ea6cfca",
+  "Abstract": "The design of autonomous AI agents that behave responsibly and foster trust in open multi-agent systems remains a fundamental challenge. Traditional game-theoretical approaches largely assume self-interested behaviour, yet real-world collaborations among humans often rely on prosocial considerations that extend beyond individual utility. To address this, for the first time in this paper, we investigate the triad of identity, responsibility, and trust as core elements shaping responsible multi-agent behaviour. We propose a novel agent model, building on the notion of Computational Transcendence, which equips agents with an elastic sense of identity, enabling them to incorporate the welfare of others into their decision-making. Our framework integrates subjective (identity-based) and objective (experience-based and reputation-based) components of trust. Using Iterated Prisoner’s Dilemma (IPD) simulations on different network structures, we analyse how varying levels of identity and trust affect responsible behaviour. Results demonstrate that the interplay of these three concepts can promote emergent responsibility, mitigate exploitation, and sustain long-term cooperation in dynamic multi-agent environments. We argue that this triadic perspective provides a principled foundation for designing trustworthy, responsible, and identity/value aware agents with implications for future human–AI collaboration."
+ },
+ {
+  "Authors": [
+   "Gebrekidan, Tesfay Zemuy",
+   "Stein, Sebastian",
+   "Norman, Tim"
+  ],
+  "Title": "Client-master multiagent deep reinforcement learning for task offloading in mobile edge computing",
+  "Year": 2026,
+  "Venue": "ACM Transactions on Autonomous and Adaptive Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=55271700-216a-402e-ab77-9335223a6787",
+  "DOI": "10.1145/3768579",
+  "DOI_URL": "https://doi.org/10.1145/3768579",
+  "Abstract": "As mobile applications grow in complexity, there is an increasing need to perform computationally intensive tasks. However, user devices (UDs), such as tablets and smartphones, have limited capacity to carry out the required computations. Task offloading in mobile edge computing (MEC) is a strategy that meets this demand by distributing tasks between UDs and servers. Deep reinforcement learning (DRL) is a promising solution for this strategy because it can adapt to dynamic changes and minimize online computational complexity. However, various types of continuous and discrete resource constraints on UDs and MEC servers pose challenges to the design of an efficient DRL algorithm. Existing DRL-based task-offloading algorithms focus on the constraints of the UDs, assuming the availability of enough resources on the server. Moreover, existing Multiagent DRL (MADRL)-based task-offloading algorithms are homogeneous agents and consider homogeneous constraints as a penalty in their reward function. We propose a novel Client-Master MADRL (CMMADRL) algorithm for task offloading in MEC that uses client agents at the UDs to decide on their resource requirements and a master agent at the server to make a combinatorial action selection based on the decision of the UDs. CMMADRL is shown to achieve up to 59% improvement in performance over existing benchmark and heuristic algorithms."
+ },
+ {
+  "Authors": [
+   "Georgiou, Prokopis",
+   "Deshmukh, Jayati",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian",
+   "Gerding, Enrico"
+  ],
+  "Title": "EVMapSim: a network-level electric vehicle charging simulator",
+  "Year": 2026,
+  "Venue": "25th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2026)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=8610d926-b6b6-4a8b-a7f1-4bc7347456d5",
+  "Abstract": "Long-distance electric vehicle (EV) travel depends critically on charging infrastructure reliability. When stations fail or queues form unexpectedly, drivers face increased range anxiety and risk of getting stranded. In this demonstration paper, we present EVMapSim, a discrete-event simulator for modelling EV navigation and charging behaviour at a national scale. We demonstrate 10,000+ vehicles traversing the UK road network, each making real-time charging decisions while encountering infrastructure failures. EVMapSim supports three failure scenarios, enabling analysis of how infrastructure resilience affects driver outcomes, including wait times, route deviations, and stranding rates."
+ },
+ {
+  "Authors": [
+   "Yazdanpanah, Vahid",
+   "Ajmeri, Nirav",
+   "Du, Yali",
+   "Kokciyan, Nadin",
+   "Santos, Fernando P.",
+   "Stein, Sebastian"
+  ],
+  "Title": "Proceedings of the Fourth International Workshop on Citizen-Centric Multiagent Systems 2026 (C-MAS 2026)",
+  "Year": 2026,
+  "Venue": "Proceedings of the Fourth International Workshop on Citizen-Centric Multiagent Systems 2026 (C-MAS 2026)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=7c86e1de-4084-4c78-8231-9aedc03e4e51",
+  "Abstract": "Welcome to the fourth edition of C-MAS, the International Workshop on Citizen-Centric Multiagent Systems. C-MAS continues to explore how multiagent systems, autonomous agents, and AI-based sociotechnical systems can be designed around citizens as active participants rather than passive users, data sources, or service recipients. As AI systems increasingly mediate access to public services, information, mobility, finance, healthcare, and collective decision-making, it becomes essential to understand how citizens' preferences, values, rights, vulnerabilities, and strategic behaviours can be represented and respected.<br/><br/>C-MAS 2026 builds on the foundations established in previous editions by broadening the discussion around citizen agency, accountability, fairness, and participation. This year's accepted papers address a diverse set of topics, including accountability and explainability in citizen-centric MAS, emotionally intelligent human-AI interaction, biased social norms in large language models, long-term fairness dynamics, strategic behaviour in school choice and lending, multiagent reinforcement learning for cooperation and logistics, human-centric mobility services, algorithmic influence in information diffusion, and the realism of generative agents in social simulations.<br/><br/>The workshop also features a keynote by Dr. Roxana R\\u{a}dulescu on human-aligned agents and multi-objective reinforcement learning. The keynote highlights a central challenge for citizen-centric AI, namely that many socially relevant problems involve multiple stakeholders, conflicting objectives, and trade-offs that cannot be reduced to a single reward signal. This perspective strongly resonates with the themes of C-MAS 2026, where the design of AI and multiagent systems requires not only technical performance or the optimisation of a single aspect, but also attention to transparency, trust, fairness, and human values.<br/><br/><br/>We hope these proceedings provide a useful snapshot of current research on citizen-centric multiagent systems and help foster further collaboration across AI, multiagent systems, social simulation, responsible AI, public policy, and human-centred design. We thank all authors, reviewers, organisers, session chairs, and participants for contributing to the continuing development of the C-MAS community.<br/><br/>Further details about C-MAS 2026 are available on the workshop webpage: https://sites.google.com/view/cmas2026 <br/>"
+ },
+ {
+  "Authors": [
+   "Deshmukh, Jayati",
+   "Liang, Zijie ",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian",
+   "Ramchurn, Savapali D."
+  ],
+  "Title": "Serious games for ethical preference elicitation",
+  "Year": 2025,
+  "Venue": "AAMAS - 2025 : The 24th International Conference on Autonomous Agents and Multiagent Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=169f7000-7c15-4521-9dd7-567ad8256e26",
+  "DOI": "10.5555/3709347.3744078",
+  "DOI_URL": "https://doi.org/10.5555/3709347.3744078",
+  "Abstract": "Autonomous agents acting on behalf of humans must act according to their ethical preferences. However, ethical preferences are latent and abstract and thus it is challenging to elicit them. To address this, we present a serious game that helps elicit ethical preferences in a more dynamic and engaging way than traditional methods such as questionnaires or simple dilemmas."
+ },
+ {
+  "Authors": [
+   "Dilkes, Jim",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian"
+  ],
+  "Title": "Post-trained language models as agents in sequential games",
+  "Year": 2025,
+  "Venue": "The Third UK AI Conference 2025",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=e70edd74-63ac-4a49-b873-5d7b5a458260",
+  "Abstract": "Recent studies have found that Reinforcement Learning (RL) can endow a pre-trained Large Language Models (LLM) with improved capabilities on tasks with verifiable outcomes, removing the need for training data or explicit human feedback. This opens the door to new applications for LLMs that would previously have required a prohibitively large amount of human-generated data. In this study, we extend the Group Relative Policy Optimization (GRPO) RL algorithm for post-training LLMs on environments requiring sequential decision making. This approach allows us to integrate the innate knowledge and reasoning capabilities of LLMs in to the decision making process, thereby improving the generalization capabilities of the agent while simultaneously enhancing explainability through the model's natural language reasoning about its actions.<br/><br/>We show that by post-training an LLM of only 3 billion parameters, we can develop environment-specific decision-making capabilities comparable to those of more powerful pre-trained models. Specifically, we find that the LLM learns an appropriate strategy for reasoning about its next-best action in a multi-agent Snake game, and to generate its responses in a prescribed format. Further, we show that this learned strategy enables the LLM to improve its performance on previously unseen variations of the Snake game. Finally, we propose a method for sampling training episodes from a larger batch of generated episodes and demonstrate that it improves both performance on the game and convergence speed."
+ },
+ {
+  "Authors": [
+   "Dilkes, Jim",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian"
+  ],
+  "Title": "Reinforced language models for sequential decision making",
+  "Year": 2025,
+  "Venue": "Reinforced language models for sequential decision making",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=0f9ea418-8408-4cf8-8f31-78f31629eece",
+  "DOI": "10.48550/arXiv.2508.10839",
+  "DOI_URL": "https://doi.org/10.48550/arXiv.2508.10839",
+  "Abstract": "Large Language Models (LLMs) show potential as sequential decision-making agents, but their application is often limited due to a reliance on large, computationally expensive models. This creates a need to improve smaller models, yet existing post-training methods are designed for single-turn interactions and cannot handle credit assignment in multi-step agentic tasks. To address this, we introduce Multi-Step Group-Relative Policy Optimization (MS-GRPO), a new algorithm for post-training LLM agents, grounded in formal Text-Mediated Stochastic Game (TSMG) and Language-Agent Policy (LAP) frameworks. For credit assignment, MS-GRPO attributes the entire cumulative episode reward to each individual episode step. We supplement this algorithm with a novel absolute-advantage-weighted episode sampling strategy that we show improves training performance. We evaluate our approach by post-training a 3-billion parameter model on Snake and Frozen Lake. Our experiments demonstrate that the method is effective in improving decision-making performance: our post-trained 3B parameter model outperforms a 72B parameter baseline by 50% on the Frozen Lake task. This work demonstrates that targeted post-training is a practical and efficient alternative to relying on model scale for creating sequential decision-making agents using LLMs."
+ },
+ {
+  "Authors": [
+   "Du, Yali",
+   "Kokciyan, Nadin",
+   "Koohy, Behrad",
+   "Santos, Fernando P.",
+   "Stein, Sebastian",
+   "Yazdanpanah, Vahid"
+  ],
+  "Title": "Proceedings of the third international workshop on citizen-centric multiagent systems 2025 (C-MAS 2025)",
+  "Year": 2025,
+  "Venue": "Proceedings of the third international workshop on citizen-centric multiagent systems 2025 (C-MAS 2025)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=511ae1ff-006d-4efe-8362-3b7de1a739cb",
+  "DOI": "10.6084/m9.figshare.29086628.v1",
+  "DOI_URL": "https://doi.org/10.6084/m9.figshare.29086628.v1",
+  "Abstract": "Welcome to the third edition of C-MAS, the International Workshop on Citizen-Centric Multiagent Systems. Over the past two years, C-MAS has focused on reshaping how we think about AI and multiagent systems in relation to society and role of end users. We continue to challenge the conventional view of users as passive data sources or service consumers. Instead, we emphasise the role of citizens as active agents with their own goals, preferences, and responsibilities within sociotechnical systems. As AI technologies increasingly shape our public spaces, communities, and infrastructures, a citizen-centric perspective become crucial for ensuring these systems are inclusive, trustworthy, and socially beneficial. C-MAS 2025 builds on the foundations laid in 2023 and 2024, pushing further into questions of participation, agency, and impact.<br/><br/>This year, we are expanding our focus to highlight not only the design of citizen-centric MAS but also their deployment and evaluation in real-world contexts. Our sessions cover key themes such as \"Empowering Citizens in Critical Services\", \"Modelling Human Needs in Shared Environments\", \"Multiagent Learning for Public Decision-Making\", and \"Ethics, Fairness, and Normative Reasoning\". Through these discussions, we aim to bridge the gap between research prototypes and impactful, citizen-focused AI solutions. We are excited to welcome an interdisciplinary community of researchers all contributing to a shared vision: AI systems that serve and empower the citizens."
+ },
+ {
+  "Authors": [
+   "Gu, Wen",
+   "Li, Zhaoxing",
+   "Buermann, Jan",
+   "Dilkes, Jim",
+   "Michailidis, Dimitris",
+   "Hasegawa, Shinobu",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian"
+  ],
+  "Title": "Facilitating automated online consensus building through parallel thinking",
+  "Year": 2025,
+  "Venue": "Facilitating automated online consensus building through parallel thinking",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=4b139325-4edf-491d-9452-ed44eb4ee504",
+  "DOI": "10.48550/arXiv.2503.12499",
+  "DOI_URL": "https://doi.org/10.48550/arXiv.2503.12499",
+  "Abstract": "Consensus building is inherently challenging due to the diverse opinions held by stakeholders. Effective facilitation is crucial to support the consensus building process and enable efficient group decision making. However, the effectiveness of facilitation is often constrained by human factors such as limited experience and scalability. In this research, we propose a Parallel Thinking-based Facilitation Agent (PTFA) that facilitates online, text-based consensus building processes. The PTFA automatically collects textual posts and leverages large language models (LLMs) to perform all of the six distinct roles of the well-established Six Thinking Hats technique in parallel thinking. To illustrate the potential of PTFA, a pilot study was carried out and PTFA's ability in idea generation, emotional probing, and deeper analysis of ideas was demonstrated. Furthermore, a comprehensive dataset that contains not only the conversational content among the participants but also between the participants and the agent is constructed for future study."
+ },
+ {
+  "Authors": [
+   "Gu, Wen ",
+   "Li, Zhaoxing",
+   "Buermann, Jan",
+   "Dilkes, Jim",
+   "Michailidis, Dimitris",
+   "Hasegawa, Shinobu",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian"
+  ],
+  "Title": "PTFA: an LLM-based agent that facilitates online consensus building through parallel thinking",
+  "Year": 2025,
+  "Venue": "The Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=2d22e2dc-a813-492d-86cd-29002dc64652",
+  "Abstract": "Consensus building is inherently challenging due to the diverse opinions held by stakeholders.  Effective facilitation is crucial to support the consensus building process and enable efficient group decision making.  However, the effectiveness of facilitation is often constrained by human factors such as limited experience and scalability. <br/><br/>In this research, we propose a Parallel Thinking-based Facilitation Agent (PTFA) that facilitates online, text-based consensus building processes.  The PTFA automatically collects real-time textual input and leverages large language models (LLMs) to perform all six distinct roles of the well-established Six Thinking Hats technique in parallel thinking. To illustrate the potential of the agent, a pilot study was conducted, demonstrating its capabilities in idea generation, emotional probing, and deeper analysis of idea quality.  Additionally, future open research challenges such as optimizing scheduling and managing behaviors in divergent phase are identified.<br/><br/>Furthermore, a comprehensive dataset that contains not only the conversational content among the participants but also between the participants and the agent is constructed for future study."
+ },
+ {
+  "Authors": [
+   "Koohy, Behrad",
+   "Stein, Sebastian",
+   "Gerding, Enrico"
+  ],
+  "Title": "Adaptive microtolling in competitive online congestion games via multiagent reinforcement learning",
+  "Year": 2025,
+  "Venue": "Proceedings of the 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=198a32fc-01ef-4873-893f-8aab196e3aef",
+  "Abstract": "Efficient urban traffic management remains a critical challenge, yet traditional congestion games fail to capture the dynamic and competitive nature of real-world transportation systems. We introduce the Multi-Market Routing Problem (MMRP), an online and oligopolistic extension that models competition amongst route providers utilising adaptive microtolling strategies to influence driver behaviour and mitigate congestion. We formally define the MMRP, highlighting the computational complexity of solving the MMRP, and use an adapted version of Proximal Policy Optimisation (PPO) to improve update stability in multiagent environments to address this problem in online settings. Our empirical analysis demonstrates that our PPO-based approach not only matches the performance of existing benchmarks but also significantly enhances equity, reduces travel times for users, and increases profitability for providers."
+ },
+ {
+  "Authors": [
+   "Koohy, Behrad",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian",
+   "Gerding, Enrico"
+  ],
+  "Title": "Adaptive pricing and learning in the multi-market routing problem",
+  "Year": 2025,
+  "Venue": "The European Conference on Artificial Intelligence",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=216b4678-38d4-4e6e-acb2-94ae73881f77",
+  "Abstract": "In modern urban transportation networks, multiple self-interested travel providers (public transit, micromobility providers, ride-sharing platforms and toll roads) compete for heterogenous transportation users that wish to balance time and cost. Traditional congestion models assume fixed, exogenous costs, while dynamic‑pricing frameworks typically focus on a single operator, overlooking the rich strategic interplay among decentralised transportation providers. This paper introduces the Multi‑Market Routing Problem (MMRP), a game‑theoretic model in which each provider utilises adaptive pricing to maximise profit and heterogeneous transportation users which aim to minimise their travel time and cost.<br/><br/>We present the MMRP as an extension of traditional congestion games, and extend it to consider online instances for adaptive pricing under dynamic and stochastic congestion. We demonstrate the computational complexity for game-theoretic and exact solutions to the MMRP, reflecting the computational complexity of coordinating routing in dynamic and uncertain settings. To address this, we propose the use of independent Proximal Policy Optimisation as a decentralised and effective solution to the online MMRP, demonstrating reduced travel times and more equitable and fair outcomes for transportation users, and increased profitability for transportation providers. The MMRP framework and learning algorithms offer a principled foundation for competitive, multimodal routing in modern urban transportation networks."
+ },
+ {
+  "Authors": [
+   "Li, Zhaoxing",
+   "Yazdanpanah, Vahid",
+   "Wang, Jindi",
+   "Gu, Wen",
+   "Shi, Lei",
+   "Cristea, Alexandra I.",
+   "Kiden, Sarah",
+   "Stein, Sebastian"
+  ],
+  "Title": "TutorLLM: customizing learning recommendations with knowledge tracing and retrieval-augmented generation",
+  "Year": 2025,
+  "Venue": "Human-Computer Interaction – INTERACT 2025",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=9630f2ee-ad49-404b-8cad-7a3239df6c92",
+  "DOI": "10.48550/arXiv.2502.15709",
+  "DOI_URL": "https://doi.org/10.48550/arXiv.2502.15709",
+  "Abstract": "The integration of AI in education offers significant potential to enhance learning efficiency. Large Language Models (LLMs), such as ChatGPT, Gemini, and Llama, allow students to query a wide range of topics, providing unprecedented flexibility. However, LLMs face challenges, such as handling varying content relevance and lack of personalization. To address these challenges, we propose TutorLLM, a personalized learning recommender LLM system based on Knowledge Tracing (KT) and Retrieval-Augmented Generation (RAG). The novelty of TutorLLM lies in its unique combination of KT and RAG techniques with LLMs, which enables dynamic retrieval of context-specific knowledge and provides personalized learning recommendations based on the student's personal learning state. Specifically, this integration allows TutorLLM to tailor responses based on individual learning states predicted by the Multi-Features with Latent Relations BERT-based KT (MLFBK) model and to enhance response accuracy with a Scraper model. The evaluation includes user assessment questionnaires and performance metrics, demonstrating a 10\\% improvement in user satisfaction and a 5\\% increase in quiz scores compared to using general LLMs alone."
+ },
+ {
+  "Authors": [
+   "Stein, Sebastian",
+   "Kiden, Sarah",
+   "Yazdanpanah, Vahid",
+   "Li, Zhaoxing",
+   "Low, Adrian",
+   "Poile, Andrew Efe John",
+   "Koohy, Behrad",
+   "Zhang, Beining",
+   "Arcanjo, Bruno",
+   "Watson, Connor",
+   "Schneiders, Eike",
+   "Lim, Eu Jin",
+   "Periyathambi, Ezhilarasi",
+   "Dehghan, Fariba",
+   "Buermann, Jan",
+   "Deshmukh, Jayati",
+   "Dilkes, Jim",
+   "Nicholas, Luke Oliver",
+   "Georgiou, Prokopis",
+   "Gomer, Richard",
+   "Gu, Wen "
+  ],
+  "Title": "Multiagent systems based on large language models: a citizen-centric perspective",
+  "Year": 2025,
+  "Venue": "Rethinking Multi-Agent Systems<br/>in the Era of LLMs",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=e460e1e0-21f4-447b-81ac-5285fd93e032"
+ },
+ {
+  "Authors": [
+   "Akintunde, Michael",
+   "Yazdanpanah, Vahid",
+   "Fathabadi, Asieh",
+   "Cirstea, Corina",
+   "Dastani, Mehdi",
+   "Moreau, Luc"
+  ],
+  "Title": "Formal specification of actual trust in multiagent systems",
+  "Year": 2024,
+  "Venue": "The third International Conference on Hybrid Human-Artificial Intelligence",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=098747e6-38ce-47fa-82fa-12796d401517",
+  "DOI": "10.3233/FAIA240179",
+  "DOI_URL": "https://doi.org/10.3233/FAIA240179",
+  "Abstract": "This research focuses on establishing trust in multiagent systems where human and AI agents collaborate. We propose a computational notion of actual trust, emphasising the modelling of an agent’s capacity to deliver tasks. Unlike reputation-based trust or performing a statistical analysis on past behaviour, our approach considers the specific setting in which agents interact. We integrate non-deterministic semantics for capturing inherent uncertainties within the behaviour of a multiagent system, but stress the importance of verifying an agent’s actual capabilities. We provide a conceptual analysis of actual trust’s characteristics and highlight relevant trust verification tools. By advancing the understanding and verification of trust in collaborative systems, this research contributes to responsible and trustworthy human-AI interactions, enhancing reliability in various domains."
+ },
+ {
+  "Authors": [
+   "Akintunde, Michael",
+   "Yazdanpanah, Vahid",
+   "Salehi Fathabadi, Asieh",
+   "Cirstea, Corina",
+   "Dastani, Mehdi",
+   "Moreau, Luc"
+  ],
+  "Title": "Actual Trust in Multiagent Systems",
+  "Year": 2024,
+  "Venue": "Proceedings of the 23rd International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2024)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=d3815f6a-e071-46b5-9d5a-72142955346d",
+  "Abstract": "We study how  trust can be established in multiagent systems where human and AI agents collaborate. We propose a computational notion of actual trust, emphasising the modelling of trust based on agents' capacity to deliver tasks in prospect. Unlike reputation-based trust, we consider the specific setting in which agents interact and model a forward-looking notion of trust. We provide a conceptual analysis of actual trust's characteristics and highlight relevant trust verification tools. By advancing the understanding and verification of trust in collaborative systems, we contribute to responsible and trustworthy human-AI interactions, enhancing reliability in various domains."
+ },
+ {
+  "Authors": [
+   "Augustin, Alexandry",
+   "Shafipour, Elnaz",
+   "Stein, Sebastian"
+  ],
+  "Title": "EVtonomy: a personalised route planner for electric vehicles",
+  "Year": 2024,
+  "Venue": "The 23rd International Conference on Autonomous Agents and Multi-Agent Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=58dc0582-e748-4e18-8e2a-0b6119c31140",
+  "Abstract": "With the continuing growth of the electric vehicle (EV) market, planning long road trips should be a seamless and hassle-free experience for EV owners. Dedicated EV route planning apps have emerged recently as indispensable assistants providing essential mapping and data services. However, EV owners still face a number of challenges when planning their routes to prevent unnecessary delays or expenses. These challenges are not yet fully addressed with current EV planning apps. This paper introduces EVtonomy, an app that assigns an intelligent agent to each driver capable of planning personalised journeys. Specifically, the agent provides routes and charging stop recommendations aligned with the EV owner's individual preferences in terms of trip duration, including both driving time and the time spent charging the car, along with the total charging costs."
+ },
+ {
+  "Authors": [
+   "Coulson, Rory",
+   "Shafipour, Elnaz",
+   "Stein, Sebastian",
+   "Buermann, Jan",
+   "Sharkh, Suleiman",
+   "Cruden, Andrew"
+  ],
+  "Title": "Balancing EV demand at charging stations using multi-agent reinforcement learning",
+  "Year": 2024,
+  "Venue": "The 37th International Electric Vehicle Symposium &amp; Exhibition",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=e25e455d-164b-423e-8605-f03411caae66",
+  "Abstract": "This paper proposes a method for optimising the routing of electric vehicles (EVs) to charging stations via a multi-agent reinforcement learning (MARL) demand balancing system in order to reduce queuing time. This is achieved through simulations via the SUMO simulator to train and test agents to reduce demand by applying reinforcement learning algorithms. Q-learning, PPO and DQN experiments have been conducted to determine a suitable algorithm. The approaches were run on multiple test road networks and a real-world Berlin network with ten charging stations to validate the findings. Varied learning strategies are also explored to determine the appropriate behaviour patterns between the agents, including competitive and cooperative learning as well as a mix of the two. The results of the most promising DQN cooperative implementation applied to the Berlin network achieved an 88.09% reduction in the mean wait times when compared with a greedy approach. The findings of this paper demonstrate the potential for practical benefits of applying MARL systems to real-world environments."
+ },
+ {
+  "Authors": [
+   "Gebrekidan, Tesfay Zemuy",
+   "Stein, Sebastian",
+   "Norman, Timothy J."
+  ],
+  "Title": "Deep reinforcement learning with coalition action selection for online combinatorial resource allocation with arbitrary action space",
+  "Year": 2024,
+  "Venue": "The 23rd International Conference on Autonomous Agents and Multi-Agent Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=2148b115-c48c-42c7-9adc-88fbd2078239",
+  "Abstract": "Current DRL algorithms typically assume a fixed number of possible<br/>actions and sequentially select one action at a time, making them<br/>inefficient for resource allocation problems with arbitrarily large action<br/>spaces. Sequential action selection requires updating the state<br/>for every action selected, which increases the depth of the decision,<br/>the state space, the uncertainty, and the number of executions. This<br/>affects the convergence of the algorithm and slows the execution<br/>speed. Additionally, current DRL algorithms are not efficient for<br/>online resource allocation problems with an arbitrary number of<br/>task arrivals per time step because they assume a fixed number<br/>of actions. To address these challenges, we propose a novel coalition<br/>action selection approach that enables the DRL algorithm to<br/>simultaneously select a coalition of an arbitrary number of actions<br/>from a set with an arbitrary number of possible actions. By making<br/>simultaneous decisions at each time step, coalition action selection<br/>avoids the computational cost and large state space caused by the<br/>sequential decision that updates the state multiple times. We evaluate<br/>the performance and complexity of coalition action selection<br/>and sequential action selection approaches using an online combinatorial<br/>resource allocation problem. The results demonstrate that<br/>the coalition action selection approach retains close performance<br/>to the offline optimal for various online traffic demand arrival rates<br/>of the online combinatorial resource allocation problem, while the<br/>performance of the sequential action selection approach decreases<br/>as the size of the problem increases. The experiments also demonstrate<br/>that coalition action selection has much lower computational<br/>complexity than sequential action selection."
+ },
+ {
+  "Authors": [
+   "Gebrekidan, Tesfay Zemuy",
+   "Stein, Sebastian",
+   "Norman, Tim"
+  ],
+  "Title": "Combinatorial client-master multiagent deep reinforcement learning for task offloading in mobile edge computing: extended abstract",
+  "Year": 2024,
+  "Venue": "Proceedings of the 23rd International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2024)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=e4093ea0-7a4e-4672-9fb5-53bbe6d59462",
+  "Abstract": "Deep reinforcement learning (DRL) is gaining attention in task-offloading problems because it can adapt to dynamic changes and minimize online computational complexity. However, the various types of continuous and discrete resource constraints on the user devices (UDs) and mobile edge computing (MEC) servers pose challenges to the design of an efficient DRL-based task-offloading strategy. Existing DRL-based task-offloading algorithms focus on the constraints of the UDs, assuming the availability of enough storage resources on the server. Moreover, existing multiagent DRL (MADRL)-based task-offloading algorithms are homogeneous agents and consider homogeneous constraints as a penalty in their reward function. We proposed a novel combinatorial client-master MADRL (CCM_MADRL) algorithm for task offloading in mobile edge computing (CCM_MADRL_MEC) that enables: UDs to decide their resource requirements, and the server to make a combinatorial decision based on the requirements of the UDs. CCM_MADRL_MEC is the first MADRL in task offloading to consider server storage capacity in addition to the constraints in the UDs. By taking advantage of the combinatorial action selection, CCM_MADRL_MEC has shown superior convergence over existing benchmark and heuristic algorithms. "
+ },
+ {
+  "Authors": [
+   "Kiden, Sarah",
+   "Stahl, Bernd",
+   "Townsend, Beverley",
+   "Maple, Carsten",
+   "Vincent, Charles",
+   "Sampson, Fraser",
+   "Gilbert, Geoff",
+   "Smith, Helen",
+   "Deshmukh, Jayati",
+   "Ross, Jen",
+   "Williams, Jennifer",
+   "del Rincon, Jesus Martinez",
+   "Lisinska, Justyna",
+   "O’Shea, Karen",
+   "Da Costa Abreu, Márjory",
+   "Bencomo, Nelly",
+   "Deb, Oishi",
+   "Winter, Peter",
+   "Li, Phoebe ",
+   "Torr, Philip",
+   "Lau, Pin Lean",
+   "Iniesta, Raquel",
+   "Ramchurn, Gopal",
+   "Stein, Sebastian",
+   "Yazdanpanah, Vahid"
+  ],
+  "Title": "Responsible AI governance",
+  "Year": 2024,
+  "Venue": "A response to UN interim report on governing AI for humanity",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=4ae19ef6-bb46-4e69-8268-4a09596a0d34",
+  "DOI": "10.5258/SOTON/PP0057",
+  "DOI_URL": "https://doi.org/10.5258/SOTON/PP0057"
+ },
+ {
+  "Authors": [
+   "Kiden, Sarah",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian"
+  ],
+  "Title": "Responsible use of citizen-centric AI",
+  "Year": 2024,
+  "Venue": "UK Parliament",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=1f27f1b6-bdcd-4ef3-9b4a-28236433aef1",
+  "Abstract": "In the digital age, the integration of AI into government processes holds immense potential to enhance efficiency, improve service delivery, support decision-making, and foster innovation. However, with this potential come significant ethical, societal, technical and legal considerations. As AI systems become more pervasive in government, it is imperative to ensure that they are designed, deployed, and governed responsibly, with a primary focus on benefiting citizens and society as a whole.<br/><br/>In order for AI systems to truly serve the interests of UK society, they need to be designed, developed, and deployed with a citizen-centric approach in mind. This entails prioritising the needs, preferences, and rights of individual citizens while upholding principles of fairness, transparency, explainability, and accountability. To address these challenges and opportunities, we propose the adoption of the Responsible use of Citizen-Centric AI (RECA) framework within the UK government and other institutions. This framework is informed by our established line of research on responsible and trustworthy AI systems [9], on citizen-centric AI systems [12], and our response to the United Nations (UN) report on governing AI for humanity [11], as well as various discussions with key stakeholders in the UK and international representatives [13]. The RECA framework is grounded in four key principles: (1) citizen awareness, (2) citizen beneficence, (3) citizen sensitivity, and (4) citizen auditability. By adhering to these principles, the government and other public institutions can ensure that AI systems contribute to societal wellbeing while mitigating potential risks and harms.<br/><br/>RECA can be used to evaluate AI systems that the UK government employs (that is, in using externally developed AI tools and applications) or to be considered during the design and development of those AI systems that government departments co-develop internally."
+ },
+ {
+  "Authors": [
+   "Kiden, Sarah",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian"
+  ],
+  "Title": "Use of artificial intelligence in government",
+  "Year": 2024,
+  "Venue": "Use of artificial intelligence in government",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=61c6c1ac-dd66-4244-9a04-d4a65e9c60b0",
+  "DOI": "10.5258/SOTON/PP0073",
+  "DOI_URL": "https://doi.org/10.5258/SOTON/PP0073",
+  "Abstract": "The Citizen-Centric AI Systems (CCAIS) team1 is a multidisciplinary group of academics and researchers at the School of Electronics and Computer Science (ECS) within the University of Southampton. The team is developing the fundamental science needed to build artificial intelligence (AI) systems that can be trusted by citizen end users. It is funded through a 5-year UK Research and Innovation (UKRI) Turing AI Acceleration Fellowship led by Professor Sebastian Stein. The team collaborates closely with Responsible AI UK (RAI UK), a network that brings researchers in the UK together to understand how we should shape the development of AI to benefit people, communities and society. On behalf of their research group, Dr. Sarah Kiden, Dr. Vahid Yazdanpanah and Professor Sebastian Stein are keen on offering the Responsible Use of Citizen- Centric AI (RECA) framework to the Public Accounts Committee of the UK Parliament in response to the inquiry on the 'Use of artificial intelligence in government' https://committees.parliament.uk/work/8367/use-of-artificial-intelligencein- government/. Drawing from extensive research and stakeholder workshops, the RECA framework provides evidence-based guidelines to promote the responsible, ethical and transparent development, deployment and use of AI for the benefit of all citizens. "
+ },
+ {
+  "Authors": [
+   "Koohy, Behrad",
+   "Buermann, Jan",
+   "Briggs, Pamela ",
+   "Pschierer-Barnfather, Paul",
+   "Yazdanpanah, Vahid",
+   "Gerding, Enrico",
+   "Stein, Sebastian"
+  ],
+  "Title": "Adaptive incentive engineering in citizen-centric AI",
+  "Year": 2024,
+  "Venue": "The 23rd International Conference on Autonomous Agents and Multi-Agent Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=a5e2e1b3-0160-471d-932e-3c654669c8f7",
+  "DOI": "10.5555/3635637.3663258",
+  "DOI_URL": "https://doi.org/10.5555/3635637.3663258",
+  "Abstract": "Adaptive incentives are a valuable tool shown to improve the efficiency of complex multiagent systems and could produce win-win situations for all stakeholders. However, their application usage is very limited, partly due to a significant gap between the literature and practice. We argue that overcoming this gap requires addressing four open research challenges. First, the dynamic, volatile and uncertain nature of environments needs to be fully considered. Second, social factors including user acceptance, fairness, ethical considerations and trust have to match end users' expectations and needs. Third, the evaluation of mechanisms and systems has to be robust and focused on real-world outcomes and stakeholder requirements. Finally, all this has to be built on a reliable theoretical foundation. In order to overcome these open challenges in adaptive incentive engineering, tools from the fields of mechanism design and game theory can be used. This will help to achieve the opportunities adaptive incentives can provide to real-world practical environments, producing better AI systems for the benefit of all."
+ },
+ {
+  "Authors": [
+   "Li, Zhaoxing",
+   "Yang, Jujie",
+   "Wang, Jindi",
+   "Shi, ﻿Lei",
+   "Feng, Jiayi ",
+   "Stein, Sebastian"
+  ],
+  "Title": "LBKT: a LSTM BERT-based knowledge tracing model for long-sequence data",
+  "Year": 2024,
+  "Venue": "20th International Conference on Intelligent Tutoring Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=de75f932-3dcc-40f9-a0d6-2655f7e85e53",
+  "Abstract": "The field of Knowledge Tracing (KT) aims to understand how students learn and master knowledge over time by analyzing their historical behaviour data. To achieve this goal, many researchers have proposed KT models that use data from Intelligent Tutoring Systems (ITS) to predict students' subsequent actions. However, with the development of ITS, large-scale datasets containing long-sequence data began to emerge. Recent deep learning based KT models face obstacles such as low efficiency, low accuracy, and low interpretability when dealing with large-scale datasets containing long-sequence data. To address these issues and promote the sustainable development of ITS, we propose a LSTM BERT-based Knowledge Tracing model for long sequence data processing, namely LBKT, which uses a BERT-based architecture with a Rasch model-based embeddings block to deal with different difficulty levels information and an LSTM block to process the sequential characteristic in students' actions. LBKT achieves the best performance on most benchmark datasets on the metrics of ACC and AUC."
+ },
+ {
+  "Authors": [
+   "Li, Zhaoxing",
+   "Stein, Sebastian",
+   "Yazdanpanah, Vahid"
+  ],
+  "Title": "Towards citizen-centric multiagent systems based on large language models",
+  "Year": 2024,
+  "Venue": "GoodIT 2024: Information Technology for Social Good",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=720e9e40-c73d-4fd8-bc99-44450a427412",
+  "Abstract": "The rapid evolution of Large Language Models (LLMs), exemplified by GPT-4, has ushered in a transformative era in artificial intelligence (AI). This paper introduces the concept of Citizen-Centric Multiagent Systems based on Large Language Models (C-LLMAS) and advocates for LLMs as pivotal technology for this vision. We present a comprehensive framework that places citizens at the core of multiagent systems, ensuring user-friendly interactions, bidirectional feedback, and dynamic user participation. Key contributions of this paper include proposing a framework for C-LLMAS that integrates LLMs to enhance citizen engagement, feedback loops, and dynamic involvement; identifying and discussing critical research challenges such as personalized citizen modeling, safeguarding citizen interests, enhancing security, and improving explainability; and highlighting collaborative research opportunities that demonstrate the potential of LLMs in various domains, including transportation, healthcare, and education. By addressing these challenges and exploring these opportunities, this paper aims to integrate LLMs into C-LLMAS responsibly, ultimately enhancing citizens’ social good and trust in AI systems."
+ },
+ {
+  "Authors": [
+   "Mehryar, Sara",
+   "Yazdanpanah, Vahid",
+   "Tong, Jeffrey"
+  ],
+  "Title": "AI and climate resilience governance",
+  "Year": 2024,
+  "Venue": "iScience",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=ee876590-2ab4-4773-9613-b1eb81385bf5",
+  "DOI": "10.1016/j.isci.2024.109812",
+  "DOI_URL": "https://doi.org/10.1016/j.isci.2024.109812",
+  "Abstract": "<p>While artificial intelligence (AI) offers promising solutions to address climate change impacts, it also raises many application limitations and challenges. A risk governance perspective is used to analyze the role of AI in supporting decision-making for climate adaptation, spanning risk assessment, policy analysis, and implementation. This comprehensive review combines expert insights and systematic literature review. The study's findings indicate a large emphasis on applying AI to climate “risk assessments,” particularly regarding hazard and exposure assessment, but a lack of innovative approaches and tools to evaluate resilience and vulnerability as well as prioritization and implementation process, all of which involve subjective, qualitative, and context-specific elements. Additionally, the study points out challenges such as difficulty of simulating complex long-term changes, and evolving policies and human behavior, reliance on data quality and computational resources, and the need for improved interpretability of results as areas requiring further development.</p>"
+ },
+ {
+  "Authors": [
+   "Ong, Yi Cheng",
+   "Protopapas, Nicos",
+   "Yazdanpanah, Vahid",
+   "Gerding, Enrico H.",
+   "Stein, Sebastian"
+  ],
+  "Title": "Fair and efficient ride-scheduling: a preference-driven approach",
+  "Year": 2024,
+  "Venue": "Journal of Simulation",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=46e48a65-d81e-492a-b37c-3e97c93fd819",
+  "DOI": "10.1080/17477778.2024.2334826",
+  "DOI_URL": "https://doi.org/10.1080/17477778.2024.2334826",
+  "Abstract": "Smart mobility and, in particular, automated ridesharing platforms promise efficient, safe, and sustainable modes of transportation in urban settings. To make such platforms acceptable to the end-users, it is key to capture their preferences not in a static manner (by determining a fixed route and schedule for the vehicle) but in a dynamic manner by giving the riders the chance to get involved in the routing process of an upcoming journey. To that end, this work provides a toolbox of multiagent methods that enable different forms of active preference-awareness in ridesharing services. We capture riders' preferences (as end-users of a ridesharing service), preserve their privacy by avoiding expecting them to share preferences with other riders, and show the efficacy of the presented ridesharing algorithms using agent-based simulation and illustrating their utilitarian and fairness properties."
+ },
+ {
+  "Authors": [
+   "Protopapas, Nicos",
+   "Yazdanpanah, Vahid",
+   "Gerding, Enrico",
+   "Stein, Sebastian"
+  ],
+  "Title": "Online decentralised mechanisms for dynamic ridesharing",
+  "Year": 2024,
+  "Venue": "Proceedings of the 23rd International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2024)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=97cae7f5-b72c-40e1-b707-341176242f37",
+  "Abstract": "Ridesharing services promise an exciting new future for urban mobility. A carefully designed ridesharing system will decrease congestion levels and increase air quality. However, an effective system needs to capture online demand, where users do not schedule their trips in advance, but instead appear and ask for a ride right away. Such online demands require rerouting to be efficient. We call this setting with online demands and available rerouting \"dynamic ridesharing\" and propose a market-based mechanism where the prospective riders are provided with a menu of choices between several available cars. Our algorithm incentivises users to share their rides and guarantees riders' utility by properly compensating riders whose routes change during their journey. We provide numerical results, comparing our algorithm against natural benchmarks representing real-world ridesharing services for several cases and with respect to efficiency, fairness, and environmental impact."
+ },
+ {
+  "Authors": [
+   "Reyes-Cruz, Gisela",
+   "Craigon, Peter ",
+   "Piskopani, Anna-Maria",
+   "Dowthwaite, Liz",
+   "Lu, Yang",
+   "Lisinska, Justyna",
+   "Shafipour, Elnaz",
+   "Stein, Sebastian",
+   "Fischer, Joel"
+  ],
+  "Title": "\"Like rearranging deck chairs on the Titanic\"? Feasibility, fairness, and ethical concerns of a citizen carbon budget for reducing CO2 emissions",
+  "Year": 2024,
+  "Venue": "ACM Conference on Fairness, Accountability, and Transparency 2024",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=1a6c2cfd-6874-44b6-abf9-7ec42b42369f"
+ },
+ {
+  "Authors": [
+   "Sewell, Gregory ",
+   "Gauthier, Stephanie",
+   "James, Patrick",
+   "Stein, Sebastian"
+  ],
+  "Title": "Predicting UK domestic electricity and gas consumption between differing demographic household compositions",
+  "Year": 2024,
+  "Venue": "Energies",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=fb9b57f8-81f3-4de4-88d2-82874ee76588",
+  "DOI": "10.3390/en17184753",
+  "DOI_URL": "https://doi.org/10.3390/en17184753",
+  "Abstract": "This paper examines the influence of building characteristics, occupant demographics and behaviour on gas and electricity consumption, differentiating between family groups; homes with children; homes with elderly; and homes without either. Both regression and Lasso regression analyses are used to analyse data from a 2019 UK-based survey of 4358homes (n = 1576 with children, n = 436 with elderly, n = 2330 without either). Three models (building, occupants, behaviour) were tested against electricity and gas consumption for each group. Results indicated that homes without children or elderly consumed the least energy. Property Type emerged as the strongest predictor in the Building Model (except for homes with elderly), while Current Energy Efficiency was less significant, particularly for homes with elderly occupants. Homeownership and number of occupants were the most influential factors in the Occupants Model, though this pattern did not hold for homes with elderly. Many occupant and behaviour variables are often considered ‘unregulated energy’ in calculations such as SAP and are thus typically disregarded. However, this study found these variables to be significant, especially as national standards improve. The findings suggest that incorporating occupant behaviour into energy modelling could help reduce the energy performance gap."
+ },
+ {
+  "Authors": [
+   "Shafipour, Elnaz",
+   "Stein, Sebastian",
+   "Ahipasaoglu, Selin"
+  ],
+  "Title": "Personalised electric vehicle charging stop planning through online estimators",
+  "Year": 2024,
+  "Venue": "Autonomous Agents and Multi-Agent Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=ec1d030a-f59b-49ab-93b0-11980976c022",
+  "DOI": "10.1007/s10458-024-09671-8",
+  "DOI_URL": "https://doi.org/10.1007/s10458-024-09671-8",
+  "Abstract": "In this paper, we address the problem of finding charging stops while travelling in electric vehicles (EVs) using artificial intelligence (AI). Choosing a charging station is challenging, because drivers have very heterogeneous preferences in terms of how they trade off the features of various alternatives (for example, regarding the time spent driving, charging costs, waiting times at charging stations, and the facilities provided at the charging stations). The key problem here is eliciting the diverse preferences of drivers, assuming that these preferences are typically not fully known a priori, and then planning stops based on each driver’s preferences. Our approach to solving this problem is to develop an intelligent personal agent that learns preferences gradually over multiple interactions. This study proposes a new technique that utilises a small-scale discrete choice experiment as a method of interacting with the driver in order to minimise the cognitive burden on the driver. Using this method, drivers are presented with a variety of routes with possible combinations of charging stops depending on the agent’s latest belief about their preferences. In subsequent iterations, the personal agent will continue to learn and refine its belief about the driver’s preferences, suggesting more personalised routes that are closer to the driver’s preferences. Based on real preference data from EV drivers, we evaluate our novel algorithm and show that, after only a few queries, our method quickly converges to the optimal routes for EV drivers."
+ },
+ {
+  "Authors": [
+   "Shafipour, Elnaz",
+   "Stein, Sebastian",
+   "Ahipasaoglu, Selin"
+  ],
+  "Title": "Personalised electric vehicle routing using online estimators",
+  "Year": 2024,
+  "Venue": "ECAI 2023 Workshop on Artificial Intelligence for Sustainability",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=db93de56-8d21-4d94-b2a7-2c83219c5fde",
+  "DOI": "10.1007/978-3-031-50485-3_25",
+  "DOI_URL": "https://doi.org/10.1007/978-3-031-50485-3_25",
+  "Abstract": "In this paper, we develop a novel approach to help drivers of electric vehicles (EVs) plan charging stops on long journeys. A key challenge here is eliciting the highly heterogeneous preferences of drivers. Here we develop an intelligent personal agent that learns preferences through multiple interactions. To minimise the cognitive burden on the driver, we propose a novel technique which applies a small-scale discrete choice experiment to interact with the driver. Specifically, the agent provides drivers with several routes with possible combinations of charging stops based on their latest beliefs about the driver's preferences. Then, through subsequent iterations, the personal agent learns and refines its beliefs about the driver's preferences. It suggests better routes closer to the driver's preferences. We evaluated our novel algorithm with real preference data from EV drivers, showing that our approach converges quickly to the optimal routes after only a small number of queries. "
+ },
+ {
+  "Authors": [
+   "Stein, Sebastian",
+   "Chapman, Archie",
+   "Du, Yali",
+   "Koohy, Behrad",
+   "Yazdanpanah, Vahid",
+   "Yolum, Pinar"
+  ],
+  "Title": "Proceedings of the second international workshop on citizen-centric multiagent systems 2024 (C-MAS 2024)",
+  "Year": 2024,
+  "Venue": "Proceedings of the second international workshop on citizen-centric multiagent systems 2024 (C-MAS 2024)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=1a9621c5-ec15-4d22-98f0-99735500608a",
+  "DOI": "10.6084/m9.figshare.25743057.v1",
+  "DOI_URL": "https://doi.org/10.6084/m9.figshare.25743057.v1"
+ },
+ {
+  "Authors": [
+   "Chakraborty, Sukankana",
+   "Stein, Sebastian",
+   "Swami, Ananthram",
+   "Jones, Matthew",
+   "Hill, Lewis"
+  ],
+  "Title": "The influence maximisation game",
+  "Year": 2023,
+  "Venue": "22nd International Conference on Autonomous Agents and Multiagent Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=7438eb1b-a3bf-4171-98d1-5faba5ce2300",
+  "Abstract": "The problem of influence maximisation investigates efficient ways in which external influence (typically limited by resources) can be applied to a social network to maximise control over the global behaviours of a population. It is an effective tool that finds its application in many real-world scenarios, for instance it can be used to gather intelligence in crowdsourcing activities and to incentivise people to adopt desirable public policies. While the problem has been studied extensively in theoretical settings, many of these approaches can be expensive and inefficient to apply in the real world, particularly when considering an unknown or irrational competitor. The influence maximisation game was designed to bridge this gap between theory and the practical application of this knowledge. In this experiment, human subjects are presented with networks where they can employ their own tactics to maintain maximum influence against a competitor (which in this case is an AI agent). We aim to determine how people strategise to spread influence in the real world. In particular, we determine if people always act rationally in these settings or if their strategies are inherently biased \\textemdash in which case we aim to identify inexpensive, yet effective strategies that can outperform these biased strategies. Observing how people strategise in the real world can help us modify our theoretical results for more efficient practical applications."
+ },
+ {
+  "Authors": [
+   "Cicognani, Simona",
+   "Stein, Sebastian",
+   "Tonin, Mirco ",
+   "Vlassopoulos, Michael"
+  ],
+  "Title": "Symbolic incentives and the recruitment of volunteers for citizen science projects",
+  "Year": 2023,
+  "Venue": "Oxford Economic Papers",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=452fb4f7-e978-43fe-b904-aa993d22e76b",
+  "DOI": "10.1093/oep/gpad031",
+  "DOI_URL": "https://doi.org/10.1093/oep/gpad031",
+  "Abstract": "The provision of activities with external benefits that rely on voluntary contributions may often fall below societal needs. In this article, we focus on such contributions to a citizen science project (the World Community Grid) in which members of the general public are asked to offer unused computer power to advance cutting-edge scientific research. We investigate the role played by symbolic awards in stimulating existing contributors to recruit new contributors for this project. The recruitment campaign we study introduces badges for referrals (visible on each user’s public profile page) varying, across randomized treatment groups, the threshold of successful referrals needed to receive these badges. We find that these symbolic incentives are effective in boosting referrals, and more so when the minimum threshold for achieving symbolic awards is higher. However, the overall effect of the incentives is quite modest, highlighting the challenges of running referral campaigns for the recruitment of volunteers."
+ },
+ {
+  "Authors": [
+   "Dymond, Jack",
+   "Stein, Sebastian",
+   "Gunn, Stephen"
+  ],
+  "Title": "Exploiting epistemic uncertainty at inference time for early-exit power saving",
+  "Year": 2023,
+  "Venue": "26th European Conference on Artificial Intelligence",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=9dcc2841-f4ad-44dd-8393-1f0bcfda96c6",
+  "DOI": "10.3233/FAIA230323",
+  "DOI_URL": "https://doi.org/10.3233/FAIA230323",
+  "Abstract": "Distinguishing epistemic from aleatoric uncertainty is a central idea to out-of-distribution (OOD) detection. By interpreting adversarial and OOD inputs from this perspective, we can collect them into a single unclassifiable group. Rejecting such inputs mid-inference will reduce resource usage. To achieve this, we apply k-nearest neighbour (KNN) classifiers to the embedding space of branched neural networks. This introduces a novel means of additional power savings, through an early-exit reject.Our technique works out-of-the-box on any branched neural net-work and can be competitive on OOD benchmarks, achieving an area under receiver operator characteristic (AUROC) of over 0.9 in most datasets, and scores of 0.95+ when identifying perturbed inputs. A mixed input test set is introduced, we show how OOD inputs can be identified up to 50% of the time, and adversarial inputs up to 85% of the time. In a balanced test environment, this equates to power savings of up to 18% in the OOD scenario and 40% in the adversarial scenario. This allows a more stringent in-distribution (ID) classification policy, leading to accuracy improvements of 15% and 20%on the OOD and adversarial tests, respectively, when compared to conventional exit policies operating under the same conditions."
+ },
+ {
+  "Authors": [
+   "Koohy, Behrad"
+  ],
+  "Title": "Reinforcement learning and mechanism design for routing of connected and autonomous vehicles",
+  "Year": 2023,
+  "Venue": "The 22nd International Conference on Autonomous Agents and Multiagent Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=e7e5b032-0153-42b3-b3ea-6159f7c9463d",
+  "Abstract": "The data provided by Connected and Autonomous Vehicles (CAVs) is a powerful tool, providing insight into user incentives and preferences, and combined with existing road data sources, provides a number of new research avenues for intelligent traffic systems. In this paper, we propose the use of Reinforcement Learning (RL) for adaptive pricing of travel systems such as trains, buses and toll-road, in simulations which consider multiple transport providers and traffic management systems, known as the multi-market pricing problem. We also propose two research directions for this problem, the use of incentives when user preferences are included and development of detection and prevention of unintentional collusion between RL pricing agents."
+ },
+ {
+  "Authors": [
+   "Liu, Mengya",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian",
+   "Gerding, Enrico"
+  ],
+  "Title": "Sustainability-oriented route generation for ridesharing services",
+  "Year": 2023,
+  "Venue": "Computer Science and Information Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=f2c8f42a-a78f-481b-897d-21c243f11f3f",
+  "DOI": "10.2298/CSIS221209053L",
+  "DOI_URL": "https://doi.org/10.2298/CSIS221209053L",
+  "Abstract": "Sustainability is the ability to maintain and preserve natural and man-made systems for the benefit of current and future generations. The three pillars of sustainability are social, economic, and environmental. These pillars are interdependent and interconnected, meaning that progress in one area can have positive or negative impacts on the others. This calls for smart methods to balance such benefits and find solutions that are optimal with respect to all the three pillars of sustainability. By using AI methods, in particular, genetic algorithms for multiobjective optimisation, we can better understand and manage complex systems in order to achieve sustainability. In the context of sustainability-oriented ridesharing, genetic algorithms can be used to optimise route finding in order to lower the cost of transportation and reduce emissions. This work contributes to this domain by using AI, specifically genetic algorithms for multiobjective optimisation, to improve the efficiency and sustainability of transportation systems. By using this approach, we can make progress towards achieving the goals of the three pillars of sustainability."
+ },
+ {
+  "Authors": [
+   "Onitiu, Daria",
+   "Yazdanpanah, Vahid",
+   "Chapman, Adriane",
+   "Gerding, Enrico",
+   "Middleton, Stuart E.",
+   "Williams, Jennifer"
+  ],
+  "Title": "On the legal aspects of responsible AI: adaptive change, human oversight, and societal outcomes",
+  "Year": 2023,
+  "Venue": "International Conference on AI for People",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=8d34e9a6-b86e-423e-9e36-323b5128f298",
+  "Abstract": "This paper discusses the ways in which complexity and degrees of autonomy in AI-based medical devices (AIaMD) may challenge the safety and performance of software for EU regulatory alignment and responsible AI regard-ing AI-induced harms. It examines the EU Commission proposals for an AI Liability Directive and a revised Product Liability Directive to identify two research challenges that must be addressed for tracing and assigning legal responsibility of AI-induced harms during the products lifecyle. These challenges relate to identifications of “defects” arising from algorithmic change and degrees of human oversight. Some suggestions will be made in how they can be addressed through causal modelling, counterfactuals, and responsibility reasoning."
+ },
+ {
+  "Authors": [
+   "Salehi Fathabadi, Asieh",
+   "Yazdanpanah, Vahid"
+  ],
+  "Title": "Trust modelling and verification using Event-B",
+  "Year": 2023,
+  "Venue": "<br/>Fifth Workshop on Formal Methods for Autonomous Systems<br/>",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=85bbde51-87fe-420f-9c0b-ec0cea5bde4c",
+  "DOI": "10.4204/EPTCS.395.2",
+  "DOI_URL": "https://doi.org/10.4204/EPTCS.395.2",
+  "Abstract": "Trust is a crucial component in collaborative multiagent systems (MAS) involving humans and autonomous AI agents. Rather than assuming trust based on past system behaviours, it is important to formally verify trust by modelling the current state and capabilities of agents. We argue for verifying actual trust relations based on agents' abilities to deliver intended outcomes in specific contexts. To enable reasoning about different notions of trust, we propose using the refinement-based formal method Event-B. Refinement allows progressively introducing new aspects of trust - from abstract to concrete models incorporating knowledge and runtime states. We demonstrate modelling three trust concepts and verifying associated trust  properties in MAS. The formal, correctness-by-construction approach allows to deduce guarantees about trustworthy autonomy in human-AI partnerships. Overall, our contribution facilitates rigorous verification of trust in multiagent systems."
+ },
+ {
+  "Authors": [
+   "Stein, Sebastian",
+   "Criado, Natalia",
+   "Koohy, Behrad",
+   "Larson, Kate",
+   "Slavkovik, Marija",
+   "Yazdanpanah, Vahid"
+  ],
+  "Title": "Proceedings of the International Workshop on Citizen-Centric Multiagent Systems 2023",
+  "Year": 2023,
+  "Venue": "Proceedings of the International Workshop on Citizen-Centric Multiagent Systems 2023",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=1841f33f-354d-4974-9bc1-915dfa6a81e8",
+  "DOI": "10.6084/m9.figshare.23177732.v1",
+  "DOI_URL": "https://doi.org/10.6084/m9.figshare.23177732.v1",
+  "Abstract": "Large-scale AI systems promise to address important societal challenges, such as decarbonising our energy system, transitioning to on-demand mobility or responding effectively to disasters. However, citizen end users are often seen as peripheral to these systems, assumed to be passively providing data and consuming services. The goal of this workshop on citizen-centric multiagent systems (C-MAS) is to explore alternative approaches that treat citizen end users as first-class agents with diverse needs and preferences, thus enabling more trustworthy, fairer and potentially more widely accepted sociotechnical solutions to pressing societal challenges. C-MAS 2023 will draw on the substantial body of work within multiagent systems on how to model, design and reason about complex systems of interacting self-interested agents, which may include citizen end users, service providers, governmental bodies and other stakeholders. It will also build on emerging techniques from human-centred AI to promote fairness and to enable explainability. This workshop will be relevant for researchers,  both in industry and academia,  whose research affects and involves citizens end non-expert users."
+ },
+ {
+  "Authors": [
+   "Stein, Sebastian",
+   "Yazdanpanah, Vahid"
+  ],
+  "Title": "Citizen-centric multiagent systems",
+  "Year": 2023,
+  "Venue": "AAMAS '23: Proceedings of the 2023 International Conference on Autonomous Agents and Multiagent Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=72b5022b-d8a5-4504-90ce-95f90e808296",
+  "Abstract": "Advances in multiagent systems (MAS) have the potential to solve critical societal challenges. For example, MAS techniques for efficient resource allocation can help us implement cleaner and more efficient forms of on-demand mobility; social choice methods can support us in deciding how to trade off energy use and comfort in smart buildings; and task coordination methods can be used to respond to disasters in an effective and resilient manner. However, the benefits of these approaches can only be realised if citizen end users are able to trust these emerging multiagent systems. To achieve this, a citizen-centric approach needs to be taken. This places citizens at the heart of the design, development and deployment of trustworthy multiagent systems. We present open research challenges in this area, put forward key application domains for citizen-centric MAS (C-MAS) and discuss collaborative research opportunities."
+ },
+ {
+  "Authors": [
+   "Williams, Jennifer",
+   "Shafipour Yourdshahi, Elnaz",
+   "Shi, Gongwei",
+   "Stein, Sebastian"
+  ],
+  "Title": "Rethinking comfort profiles in adaptive building energy management systems",
+  "Year": 2023,
+  "Venue": "22nd International Conference on Autonomous Agents and Multiagent Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=919be6c2-777a-42fb-acfb-818848219b23",
+  "DOI": "10.6084/m9.figshare.22811324.v1",
+  "DOI_URL": "https://doi.org/10.6084/m9.figshare.22811324.v1",
+  "Abstract": "As standard building occupancy schedules continue to change from static closed-door offices to dynamic open office layouts, we face new challenges for developing smart building energy management systems (BEMS) that can simultaneously adapt to save energy costs, while also incorporating the comfort preferences of the occupants. This is especially true for certain building types which by design are open layout, or partially-open layout such as schools, hospitals, and libraries. In this paper, we identify and explain three of the most critical challenges that specifically relate to incorporating feedback from building occupants into an interactive reinforcement learning algorithm. For each challenge, we propose how the challenge could be dealt with practically, within the context of our ongoing work and experimentation in this area. Overcoming these challenges opens new opportunities for artificial intelligence solutions that will place citizens in the centre and also help smart building<br/>designers move toward net-zero goals."
+ },
+ {
+  "Authors": [
+   "Williams, Jennifer",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian"
+  ],
+  "Title": "Privacy-Preserving Occupancy Estimation",
+  "Year": 2023,
+  "Venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=15adc7e0-9561-4194-89ea-07a9ec6824f0",
+  "DOI": "10.1109/ICASSP49357.2023.10095340",
+  "DOI_URL": "https://doi.org/10.1109/ICASSP49357.2023.10095340",
+  "Abstract": "In this paper, we introduce an audio-based framework for occupancy estimation, including a new public dataset, and evaluate occupancy in a ‘cocktail party’ scenario where the party is simulated by mixing audio to produce speech with overlapping talkers (1-10 people). To estimate the number of speakers in an audio clip, we explored five different types of speech signal features and trained several versions of our model using convolutional neural networks (CNNs). Further, we adapted the framework to be privacy-preserving by making random perturbations of audio frames in order to conceal speech content and speaker identity. We show that some of our privacy-preserving features perform better at occupancy estimation than original waveforms. We analyse privacy further using two adversarial tasks: speaker recognition and speech recognition. Our privacy-preserving models can estimate the number of speakers in the simulated cocktail party clips within 1-2 persons based on a mean-square error (MSE) of 0.9-1.6 and we achieve up to 34.9% classification accuracy while preserving speech content privacy. However, it is still possible for an attacker to identify individual speakers, which motivates further work in this area."
+ },
+ {
+  "Authors": [
+   "Yazdanpanah, Vahid",
+   "Williams, Jennifer",
+   "Stein, Sebastian"
+  ],
+  "Title": "Computational Responsibility for Trustworthy Citizen-Centric AI",
+  "Year": 2023,
+  "Venue": "The First UK AI Conference 2023 - Turing AI Fellowship Event",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=915752e7-17ee-43a3-a1fa-31951d2b4f95"
+ },
+ {
+  "Authors": [
+   "Cipolina-Kun, Lucia",
+   "Yazdanpanah, Vahid",
+   "Gerding, Enrico",
+   "Stein, Sebastian"
+  ],
+  "Title": "Coalition formation in ridesharing with walking options",
+  "Year": 2022,
+  "Venue": "ICLR 2022 Workshop on Gamification and Multiagent Solutions",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=a5e191b6-72fa-493d-b709-35b9bfe4b78e",
+  "Abstract": "In this work, we introduce a novel coalition formation mechanism for ridesharing services. Specifically, we extend the current literature to integrate walking options within the trip. This allows us to effectively account for a user’s value of time when walking, which is not negligible. Additionally, we propose a cost allocation method that ensures proportionality for sharing the costs, i.e. those who walk more should pay less. We present a preliminary formal evaluation of the efficacy of our cost allocation method and discuss its desirable properties. Our study is a step towards developing smart mobility systems that recommend optimal ridesharing coalitions to users and suggest cost allocations that accounts for the marginal cost and contributions of each rider."
+ },
+ {
+  "Authors": [
+   "Cipolina-Kun, Lucia",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian",
+   "Gerding, Enrico"
+  ],
+  "Title": "A proportional pricing mechanism for ridesharing services with meeting points",
+  "Year": 2022,
+  "Venue": "PRIMA 2022: Principles and Practice of Multi-Agent Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=0587e3ad-74c7-4b42-9857-0a6b54b24a93",
+  "DOI": "10.1007/978-3-031-21203-1_31",
+  "DOI_URL": "https://doi.org/10.1007/978-3-031-21203-1_31",
+  "Abstract": "Ridesharing is a promising approach for reducing congestion and pollution, and many variants have been studied in the literature over the past decades.  In this paper, we consider a novel setting where individuals walk to a common pick-up point and ride together to a single drop-off point from where they walk to their final destination. This setting requires finding the  optimal composition of riders and pick-up and drop-off meeting points, as well as  an equitable distribution of the costs whereby riders are incentivised to participate. Based on game-theoretic principles, we propose a methodology to determine the optimal pick-up and drop-off points, together with a cost allocation method that is equitable in the sense that it ensures proportionality for sharing the costs, i.e., those who walk more should pay less. We present a formal evaluation of our cost allocation method and empirical evaluation against the Shapley value using real-world and simulated data. Our results show that our approach is computationally more tractable than the Shapley value, as it is linear in time while guaranteeing individual rationality under certain conditions. "
+ },
+ {
+  "Authors": [
+   "Divband Soorati, Mohammad",
+   "Gerding, Enrico",
+   "Marchioni, Enrico",
+   "Naumov, Pavel",
+   "Norman, Timothy",
+   "Ramchurn, Sarvapali",
+   "Rastegari, Baharak",
+   "Sobey, Adam",
+   "Stein, Sebastian",
+   "Tarapore, Danesh",
+   "Yazdanpanah, Vahid",
+   "Zhang, Jie"
+  ],
+  "Title": "From Intelligent Agents to Trustworthy Human-Centred Multiagent Systems",
+  "Year": 2022,
+  "Venue": "AI Communications",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=a76f89a8-ef64-4951-bdce-3937c50ed808",
+  "DOI": "10.3233/AIC-220127",
+  "DOI_URL": "https://doi.org/10.3233/AIC-220127",
+  "Abstract": "The Agents, Interaction and Complexity research group at the University of Southampton has a long track record of research in multiagent systems (MAS). We have made substantial scientific contributions across learning in MAS, game-theoretic techniques for coordinating agent systems, and formal methods for representation and reasoning. We highlight key results achieved by the group and elaborate on recent work and open research challenges in developing trustworthy autonomous systems and deploying human-centred AI systems that aim to support societal good. "
+ },
+ {
+  "Authors": [
+   "Dymond, Jack",
+   "Stein, Sebastian",
+   "Gunn, Stephen"
+  ],
+  "Title": "Adapting branched networks to realise progressive intelligence",
+  "Year": 2022,
+  "Venue": "British Machine Vision Conference",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=e47f7314-d0be-4c74-aae0-24732d78ccd0",
+  "Abstract": "Progressive intelligence is a formulation of machine learning which trades-off performance requirements with resource availability. It does this by approaching the inference process incrementally. Current work in this area focuses on overall model performance rather than optimising its complete operating range. In this paper, we build upon existing explainability and branched neural network research to show how neural networks can be adapted to exhibit progressive intelligence. We assess the utility of joint branch optimisation for progressive intelligence using a number of explainability metrics. When optimising the area under curve of layerwise linear probe accuracy we find equally weighted early-exit branch optimisation produces models with the highest linear probe accuracy throughout the backbone. By varying confidence thresholds we represent the entire range over which the model can operate, we then explore its interaction with the scaling of the branched neural network backbone. Finally, we propose a novel ensemble inference strategy which utilises repeat predictions and requires no additional optimisation. Experiments with CIFAR10/100 show that this inference strategy can save up to 44% of the multiply accumulate operations used in inference whilst maintaining model performance, when compared against conventional early-exit methods."
+ },
+ {
+  "Authors": [
+   "Iwase, Tatsuya",
+   "Stein, Sebastian",
+   "Gerding, Enrico",
+   "Chapman, Archie"
+  ],
+  "Title": "A Polynomial-time decentralised algorithm for coordinated management of multiple intersections",
+  "Year": 2022,
+  "Venue": "The 31st International Joint Conference on Artificial Intelligence",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=dfd34d9c-f353-41b0-ae5e-bc8d4a13cde4",
+  "DOI": "10.24963/ijcai.2022/534",
+  "DOI_URL": "https://doi.org/10.24963/ijcai.2022/534",
+  "Abstract": "Autonomous intersection management has the potential to reduce road traffic congestion and energy consumption. To realize this potential, efficient algorithms are needed. However, most existing studies locally optimize one intersection at a time, and this can cause negative externalities on the traffic network as a whole. Here, we focus on coordinating multiple intersections, and formulate the problem as a distributed constraint optimisation problem (DCOP). We consider three utility design approaches that trade off efficiency and fairness. Our polynomial-time algorithm for coordinating multiple intersections reduces the traffic delay by about 41% compared to independent single intersection management approaches."
+ },
+ {
+  "Authors": [
+   "Koohy, Behrad",
+   "Stein, Sebastian",
+   "Gerding, Enrico",
+   "Manla, Ghaithaa"
+  ],
+  "Title": "Reward function design in multi-agent reinforcement learning for traffic signal control",
+  "Year": 2022,
+  "Venue": "ATT'22: Workshop Agents in Traffic and Transportation, July 25, 2022, Vienna, Austria",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=0cf15d1a-8da7-4901-bab1-bad77dc86970",
+  "Abstract": "In recent years, there has been increased interest in Reinforcement Learning (RL) for Traffic Signal Control (TSC), with implementations of RL touted as a potential successor to the current commercial solutions in place. Commercial systems, such as Microprocessor Optimised Vehicle Actuation (MOVA) and Split, Cycle, and Offset Optimisation Technique (SCOOT), can adapt to the changing traffic state, but do not learn the specific traffic characteristics of an intersection, and leave much to be desired when performance is compared to the potential benefits of using RL for TSC. Furthermore, distributed RL can provide the unique benefits of scalability and decentralisation for road infrastructure.  However, using RL for TSC introduces the problem of non-stationarity where the changing policies of RL agents, tasked with optimal control of traffic signals, directly impacts the observed state of the system and therefore the policies of other agents. <br/>This non-stationarity can be mitigated through careful consideration and selection of an appropriate reward function. However, existing literature does not consider the impact of the reward function on the performance of agents in a non-stationary environment such as TSC. In this paper, we select 12 reward functions from the  literature, and empirically evaluate them compared to a baseline of a commercial solution in a multi-agent setting. Furthermore, we are particularly interested in the performance of agents when used in a real-world scenario, and so we use demand calibrated data from Ingolstadt, Germany to compare the average waiting time and trip duration of vehicles. We find that reward functions which often perform well in a single intersection setting may not outperform commercial solutions in a multi-agent setting due to their impact on the demand profile of other agents. Furthermore, the reward functions which include the waiting time of agents produce the most predictable demand profile, in turn leading to increased throughput than alternatively proposed solutions. "
+ },
+ {
+  "Authors": [
+   "Liu, Mengya",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian",
+   "Gerding, Enrico"
+  ],
+  "Title": "Multiobjective routing in sustainable mobility-on-demand",
+  "Year": 2022,
+  "Venue": "ATT'22: Workshop Agents in Traffic and Transportation, July 25, 2022, Vienna, Austria",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=40d6d904-7519-4681-84d7-e40e1ae85a0c",
+  "Abstract": "It is estimated that smart on-demand mobility services can significantly reduce emissions caused by urban transportation, especially when combined with the use of low emission vehicles and ridesharing. While current research on sustainable routing typically focuses on economic sustainability (as cost minimisation), this paper also considers the other pillars of sustainability, i.e., the environmental and social aspects of what we call sustainable and equitable Mobility-On-Demand (MOD). To that end, we apply multiobjective genetic algorithms and generate routing options that balance all three pillars of sustainability. We envisage that a diverse set of routing solutions allows participation of end-users in determining an equitable route (e.g., through voting processes) and strongly supports widespread adoption of sustainable MOD and ridesharing services. This work follows principles of human-centred intelligent systems and provides a foundation for building participatory, dynamic, and explainable MOD systems."
+ },
+ {
+  "Authors": [
+   "Ong, Yi Cheng",
+   "Protopapas, Nicos",
+   "Yazdanpanah, Vahid",
+   "Gerding, Enrico",
+   "Stein, Sebastian"
+  ],
+  "Title": "Preference-aware dynamic ridesharing",
+  "Year": 2022,
+  "Venue": "The 6th International Workshop on Agent-Based Modelling of Urban Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=a6e21e8b-c047-4ba0-ba8c-c32578135c34",
+  "Abstract": "Smart mobility and, in particular, automated ridesharing platforms, promise efficient, safe and sustainable modes of transportation in urban settings. To make such platforms acceptable by the end-users, it is key to capture their preferences not in a static manner (by determining a fixed route and schedule for the vehicle) but in a dynamic manner by giving the riders the chance to get involved in the routing process throughout a journey. To that end, this work provides a toolbox, enabling riders to interact with the ridesharing service and have a say in the routing process. "
+ },
+ {
+  "Authors": [
+   "Shafipour Yourdshahi, Elnaz",
+   "Stein, Sebastian"
+  ],
+  "Title": "Electric Vehicle Charging on Long Journeys: Current Challenges and Future Opportunities",
+  "Year": 2022,
+  "Venue": "Electric Vehicle Charging on Long Journeys: Current Challenges and Future Opportunities",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=77115181-dd29-4ca3-9acb-e9a5be11223e",
+  "DOI": "10.5258/SOTON/PP0006",
+  "DOI_URL": "https://doi.org/10.5258/SOTON/PP0006"
+ },
+ {
+  "Authors": [
+   "Truong, Nhat Van-Quoc",
+   "Dinh, Le Cong",
+   "Stein, Sebastian",
+   "Tran-Thanh, Long",
+   "Jennings, Nicholas R."
+  ],
+  "Title": "Efficient and adaptive incentive selection for crowdsourcing contests",
+  "Year": 2022,
+  "Venue": "Applied Intelligence",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=29b9a13e-0023-4a95-a952-2a998fe63721",
+  "DOI": "10.1007/s10489-022-03593-2",
+  "DOI_URL": "https://doi.org/10.1007/s10489-022-03593-2",
+  "Abstract": "<p>The success of crowdsourcing projects relies critically on motivating a crowd to contribute. One particularly effective method for incentivising participants to perform tasks is to run contests where participants compete against each other for rewards. However, there are numerous ways to implement such contests in specific projects, that vary in how performance is evaluated, how participants are rewarded, and the sizes of the prizes. Also, the best way to implement contests in a particular project is still an open challenge, as the effectiveness of each contest implementation (henceforth, incentive) is unknown in advance. Hence, in a crowdsourcing project, a practical approach to maximise the overall utility of the requester (which can be measured by the total number of completed tasks or the quality of the task submissions) is to choose a set of incentives suggested by previous studies from the literature or from the requester’s experience. Then, an effective mechanism can be applied to automatically select appropriate incentives from this set over different time intervals so as to maximise the cumulative utility within a given financial budget and a time limit. To this end, we present a novel approach to this incentive selection problem. Specifically, we formalise it as an online decision making problem, where each action corresponds to offering a specific incentive. After that, we detail and evaluate a novel algorithm, HAIS, to solve the incentive selection problem efficiently and adaptively. In theory, in the case that all the estimates in HAIS (except the estimates of the effectiveness of each incentive) are correct, we show that the algorithm achieves the regret bound of O(B/c), where B denotes the financial budget and c is the average cost of the incentives. In experiments, the performance of HAIS is about 93% (up to 98%) of the optimal solution and about 9% (up to 40%) better than state-of-the-art algorithms in a broad range of settings, which vary in budget sizes, time limits, numbers of incentives, values of the standard deviation of the incentives’ utilities, and group sizes of the contests (i.e., the numbers of participants in a contest).</p>"
+ },
+ {
+  "Authors": [
+   "Williams, Jennifer",
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian"
+  ],
+  "Title": "Safe Audio AI Services in Smart Buildings",
+  "Year": 2022,
+  "Venue": "ACM BuildSys 2022",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=35d67b39-a78e-48c5-a02c-5c4a5037a4a1",
+  "DOI": "10.1145/3563357.3564076",
+  "DOI_URL": "https://doi.org/10.1145/3563357.3564076",
+  "Abstract": "Audio AI services present an opportunity to conceptualise smart buildings in a new light. Microphones can capture fine-grained audio information that can be used for determining how many people are inside of a building, where they are, and what kinds of activities are taking place. This information can feed into smart<br/>resource management systems or it could be used for assistive technologies. Generally speaking, audio is regarded as a less intrusive type of information collection than video surveillance, but significant issues of privacy and security persist with audio capture. Such issues warrant a serious discussion about how safe it is to use audio-capture in smart buildings for AI decision-making. This<br/>position paper initiates a discussion of research directions for the safety of audio services related to three key areas: data degradation strategies, dynamic customisation of tools, and privacy-aware technologies. In each area, we identify key challenges and highlight solution concepts with the potential to address the issue."
+ },
+ {
+  "Authors": [
+   "Williams, Jennifer",
+   "Lellouch, Benjamin ",
+   "Stein, Sebastian",
+   "Vanderwel, Christina",
+   "Gauthier, Stephanie"
+  ],
+  "Title": "Low-carbon comfort management for smart buildings",
+  "Year": 2022,
+  "Venue": "IEEE Smart Cities",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=37e9507d-5ccc-4937-9a5d-73e9cab33132",
+  "DOI": "10.1109/ISC255366.2022.9922474",
+  "DOI_URL": "https://doi.org/10.1109/ISC255366.2022.9922474",
+  "Abstract": "We present critical research challenges for the development of smart building management systems (BMS) to achieve low-carbon comfort. To date, work in this area has focused on optimising single-scope aspects of building resources, such as energy usage or thermal comfort, but there is a recent shift toward BMS design that could simultaneously address many aspects of building resources and comfort dimensions for occupants, such as air quality, temperature, humidity, audible noise levels, and related automated safety features. In this paper, we discuss four research directions highlighting current challenges in this domain that present opportunities for research: (A) data limitations for machine learning, (B) multiple definitions of comfort, (C) BMS usability and interfaces, and (D) safety and security of automated BMS decision-making. Addressing these challenges will enable the development of advanced human-centred energy-saving buildings that meet the needs of occupants."
+ },
+ {
+  "Authors": [
+   "Yazdanpanah, Vahid",
+   "Gerding, Enrico",
+   "Stein, Sebastian",
+   "Dastani, Mehdi",
+   "Jonker, Catholijn M.",
+   "Norman, Timothy",
+   "Ramchurn, Sarvapali"
+  ],
+  "Title": "Reasoning About Responsibility in Autonomous Systems:  Challenges and Opportunities",
+  "Year": 2022,
+  "Venue": "AI & Society",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=741480fe-5205-4e61-b796-ce2b51e436bb",
+  "Abstract": "Ensuring the trustworthiness of autonomous systems and artificial intelligence<br/>is an important interdisciplinary endeavour. In this position paper, we argue that<br/>this endeavour will benefit from technical advancements in capturing various forms of responsibility, and we present a comprehensive research agenda to achieve this. In particular, we argue that ensuring the reliability of autonomous system can take advantage of technical approaches for quantifying degrees of responsibility and for coordinating tasks based on that. Moreover, we deem that, in certifying the legality of an AI system, formal and computationally implementable notions of responsibility, blame, accountability, and liability are applicable for addressing potential responsibility gaps (i.e., situations in which a group is responsible, but individuals’ responsibility may be unclear). This is a call to enable AI systems themselves, as well as those involved in the design, monitoring, and governance of AI systems, to represent and reason about who can be seen as responsible in prospect (e.g., for completing a task in future) and who can be seen as responsible retrospectively (e.g., for a failure that has already occurred). To that end, in this work, we show that across all stages of the design, development, and deployment of Trustworthy Autonomous Systems (TAS), responsibility reasoning should play a key role. This position paper is the first step towards establishing a road-map and research agenda on how the notion of responsibility can provide novel solution concepts for ensuring the reliability and legality of TAS and, as a result, enables an effective embedding of AI technologies into society."
+ },
+ {
+  "Authors": [
+   "Iwase, Tatsuya",
+   "Stein, Sebastian",
+   "Gerding, Enrico"
+  ],
+  "Title": "A Polynomial-time, truthful, individually rational and budget balanced ridesharing mechanism",
+  "Year": 2021,
+  "Venue": "30th International Joint Conference on Artificial Intelligence",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=98c022f8-85d0-4e8b-a648-540e391f1055",
+  "DOI": "10.24963/ijcai.2021/38",
+  "DOI_URL": "https://doi.org/10.24963/ijcai.2021/38",
+  "Abstract": "Ridesharing has great potential to improve transportation efficiency while reducing congestion and pollution. To realize this potential, mechanisms are needed that allocate vehicles optimally and provide the right incentives to riders. However, many existing approaches consider restricted settings (e.g., only one rider per vehicle or a common origin for all riders). Moreover, naive applications of standard approaches, such as the Vickrey-Clarke-Groves or greedy mechanisms, cannot achieve a polynomial-time, truthful, individually rational and budget balanced mechanism. To address this, we formulate a general ridesharing problem and apply mechanism design to develop a novel mechanism which satisfies all four properties and whose social cost is within 8.6% of the optimal on average."
+ },
+ {
+  "Authors": [
+   "Ramchurn, Sarvapali",
+   "Stein, Sebastian",
+   "Jennings, Nicholas R."
+  ],
+  "Title": "Trustworthy human-AI partnerships",
+  "Year": 2021,
+  "Venue": "iScience",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=0977ee56-d087-47e2-8695-75c7b95a3a4b",
+  "DOI": "10.1016/j.isci.2021.102891",
+  "DOI_URL": "https://doi.org/10.1016/j.isci.2021.102891",
+  "Abstract": "In this paper, we foreground some of the key research challenges that arise in the design of trustworthy human-AI partnerships. In particular, we focus on the challenges in designing human-AI partnerships that need to be addressed to help humans and organisations trust their machine counterparts individually or as a collective (e.g., as robot teams or groups of software agents). We also aim to identify the risks associated with human-AI partnerships and therefore determine the associated measures to mitigate these risks. By so doing, we will trigger new avenues of research that will address the key barriers to the adoption of AI-based systems more widely in our daily lives and in industry."
+ },
+ {
+  "Authors": [
+   "Yazdanpanah, Vahid",
+   "Gerding, Enrico",
+   "Stein, Sebastian",
+   "Dastani, Mehdi",
+   "Jonker, Catholijn M.",
+   "Norman, Timothy"
+  ],
+  "Title": "Responsibility Research for Trustworthy Autonomous Systems",
+  "Year": 2021,
+  "Venue": "20th International Conference on Autonomous Agents and Multiagent Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=1f4776ad-76ef-47fa-ab53-e6aae4be57dd",
+  "DOI": "10.48448/w5y9-qk13",
+  "DOI_URL": "https://doi.org/10.48448/w5y9-qk13",
+  "Abstract": "To develop and effectively deploy Trustworthy Autonomous Systems (TAS), we face various social, technological, legal, and ethical challenges in which different notions of responsibility can play a key role. In this work, we elaborate on these challenges, discuss research gaps, and show how the multidimensional notion of responsibility can play a role to bridge them. We argue that TAS requires operational tools to represent and reason about responsibilities of humans as well as AI agents. We review major challenges to which responsibility reasoning can contribute, highlight open research problems, and argue for the application of multiagent responsibility models in a variety of TAS domains."
+ },
+ {
+  "Authors": [
+   "Yazdanpanah, Vahid",
+   "Gerding, Enrico",
+   "Stein, Sebastian"
+  ],
+  "Title": "Formal Methods to Verify and Ensure Self-Coordination Abilities in the Internet of Vehicles",
+  "Year": 2021,
+  "Venue": "International Conference on Computational Logistics",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=f25164ff-caef-4d6d-96ca-393fb5e063d6",
+  "DOI": "10.1007/978-3-030-87672-2_27",
+  "DOI_URL": "https://doi.org/10.1007/978-3-030-87672-2_27",
+  "Abstract": "The emerging Internet of Vehicles (IoV) is a distributed multiagent network that utilises the potentials for collaboration of vehicles with the aim to improve the reliability and safety of transportation and logistic systems. IoV systems require operational methods to reason about the capacity of the involved (human and artificial) agents to form strategically capable coalitions as a means to ensure safety. In this work, we (1) develop a logic-based machinery  to represent and reason about strategic abilities in IoV systems, (2) provide a process to verify whether  a given IoV system is capable to safely self-coordinate,  and (3) introduce a mechanism  to ensure such an ability in a temporal, strategic, and normative setting.  "
+ },
+ {
+  "Authors": [
+   "Yazdanpanah, Vahid",
+   "Gerding, Enrico",
+   "Stein, Sebastian",
+   "Cirstea, Corina",
+   "schraefel, m.c.",
+   "Norman, Timothy",
+   "Jennings, Nicholas R."
+  ],
+  "Title": "Different Forms of Responsibility in Multiagent Systems: Sociotechnical Characteristics and  Requirements",
+  "Year": 2021,
+  "Venue": "IEEE Internet Computing",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=01c41ed0-cc34-47e1-b9bb-649c22468f73",
+  "DOI": "10.1109/MIC.2021.3107334",
+  "DOI_URL": "https://doi.org/10.1109/MIC.2021.3107334",
+  "Abstract": "<p>Ensuring trustworthy performance of autonomous agents and multiagent systems (MAS) requires computational methods and formal tools to support reasoning about different forms of responsibility. In particular, such tools are needed to support identifying agents or agent groups that are responsible, blameworthy, accountable, or sanctionable for outcomes of collective decisions, for fulfilling tasks, or for adhering to norms and social values. As a step toward developing computational frameworks to represent, reason about, and distinguish these forms of responsibility in MAS, for the first time, we present sociotechnical characteristics of these notions of responsibility, identify their requirements, and discuss their applicability for coordinating MAS and ensuring their trustworthiness. This is a step toward establishing a research agenda on how computational techniques for reasoning about and distinguishing different forms of responsibility contribute to the transformation toward ethical and trustworthy autonomous systems.</p>"
+ },
+ {
+  "Authors": [
+   "Yazdanpanah, Vahid",
+   "Gerding, Enrico H.",
+   "Stein, Sebastian",
+   "Cirstea, Corina",
+   "schraefel, m.c. ",
+   "Norman, Timothy J.",
+   "Jennings, Nicholas R."
+  ],
+  "Title": "Collective responsibility in multiagent settings",
+  "Year": 2021,
+  "Venue": "ACM Collective Intelligence Conference 2021 (CI-2021)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=a07568e8-2d68-4bcc-bdf6-5456152bfbe4"
+ },
+ {
+  "Authors": [
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian",
+   "Gerding, Enrico H.",
+   "schraefel, m.c. "
+  ],
+  "Title": "Multiagent strategic reasoning in the IoV: A logic-based approach",
+  "Year": 2021,
+  "Venue": "ACM Collective Intelligence Conference 2021 (CI-2021)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=f1c5d810-7dfe-4ec2-aa3c-4823855c4e9e"
+ },
+ {
+  "Authors": [
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian",
+   "Gerding, Enrico",
+   "Jennings, Nicholas R."
+  ],
+  "Title": "Applying strategic reasoning for accountability ascription in multiagent teams",
+  "Year": 2021,
+  "Venue": "The IJCAI-21 Workshop on Artificial Intelligence Safety (AISafety 2021)",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=db3d1793-710e-4282-a5a1-03a2a292bf47",
+  "Abstract": "For developing human-centred trustworthy autonomous systems and ensuring their safe and effective integration with the society, it is crucial to enrich autonomous agents with the capacity to represent and reason about their accountability. This is, on one hand, about their accountability as collaborative teams and, on the other hand, their individual degree of accountability in a team. In this context, accountability is understood as being responsible for failing to deliver a task that a team was allocated and able to fulfil. To that end, the semantic (strategic reasoning) machinery of the Alternating-time Temporal Logic (ATL) is a natural modelling approach as it captures the temporal, strategic, and coalitional dynamics of the notion of accountability. This allows focusing on the main problem on: “Who is accountable for an unfulfilled task in multiagent teams: when, why, and to what extent?” We apply ATL-based semantics to define accountability in multiagent teams and develop a fair and computationally feasible procedure for ascribing a degree of accountability to involved agents in accountable teams. Our main results are on decidability, fairness properties, and computational complexity of the presented accountability ascription methods in multiagent teams."
+ },
+ {
+  "Authors": [
+   "Yazdanpanah, Vahid",
+   "Stein, Sebastian",
+   "Gerding, Enrico",
+   "Jennings, Nicholas R."
+  ],
+  "Title": "Task-oriented accountability in autonomous systems",
+  "Year": 2021,
+  "Venue": "The UKRI Trustworthy Autonomous Systems Programme: All Hands Meeting",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=73e32bdf-2aa7-41d9-94ae-c0a35a3e1be8",
+  "Abstract": "In Artificial Intelligence (AI) systems, a key problem is to determine the group of agents that are accountable for delivering a task and, in case of failure, the extent to which each group member is partially accountable.<br/><br/>In this context, accountability is understood as being responsible for failing to deliver a task that a team was allocated and able to fulfil. This is, on one hand, about agents’ accountability as collaborative teams and, on the other hand, their individual degree of accountability in a team. Developing verifiable methods to address this problem is key for designing trustworthy autonomous systems and ensuring their safe and effective integration with other operational systems in society. Using degrees of accountability, one can trace back a failure to AI components and prioritise how to invest resources on fixing faulty components.<br/><br/>In this talk, we report on a line of research on the application of formal methods and modal logics for reasoning about accountability in multiagent systems and focus on answering “Who is accountable for an unfulfilled task in multiagent teams: when, why, and to what extent?”. In addition, we elaborate on open problems, link to ensuring safety in application domains such as Connected and Autonomous Vehicles (CAVs), and highlight the potentials of formal accountability reasoning in design and development of trustworthy AI systems."
+ },
+ {
+  "Authors": [
+   "Zavvos, Efstathios",
+   "Gerding, Enrico",
+   "Yazdanpanah, Vahid",
+   "Maple, Carsten",
+   "Stein, Sebastian",
+   "schraefel, m.c. "
+  ],
+  "Title": "Privacy and Trust in the Internet of Vehicles",
+  "Year": 2021,
+  "Venue": "IEEE Transactions on Intelligent Transportation Systems",
+  "URL": "https://eprints.soton.ac.uk/cgi/eprintbypureuuid?uuid=75735afc-d423-43e0-ad9e-ff3b7602bfe6",
+  "DOI": "10.1109/TITS.2021.3121125",
+  "DOI_URL": "https://doi.org/10.1109/TITS.2021.3121125",
+  "Abstract": "The Internet of Vehicles aims to fundamentally improve transportation by connecting vehicles, drivers, passengers, and service providers together. Several new services such as parking space identification, platooning and intersection control—to name just a few—are expected to improve traffic congestion, reduce pollution, and improve the efficiency, safety and logistics of transportation. Proposed end-user services, however, make extensive use of private information with little consideration for the impact on users and third parties (those individuals whose information is indirectly involved). This article provides the first comprehensive overview of privacy and trust issues in the Internet of Vehicles at the service level. Various concerns over privacy are formalised into four basic categories: privacy of personal information, trust, consent to provide information, and multi-party privacy. To help analyse services and to facilitate future research, the main relevant end-user services are taxonomised according to voluntary and involuntary information they require and produce. Finally, this work identifies several open research problems and highlights general approaches to address them. These especially relate to measuring the trade-off between privacy and service functionality, automated consent negotiation, trust towards the IoV and its individual services, and identifying and resolving multi-party privacy conflicts."
+ }
+]

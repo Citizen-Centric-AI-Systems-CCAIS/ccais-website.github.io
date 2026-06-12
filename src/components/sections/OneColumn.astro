@@ -1,0 +1,12 @@
+---
+const { colour = 'none' } = Astro.props;
+---
+<div class="one-column-section">
+  <div class="container">
+    <div class={`bg-colour-${colour}`}>
+      <div class="small-container">
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>

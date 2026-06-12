@@ -1,0 +1,56 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/sections/Hero.astro';
+import pubs from '../../data/pubs.json';
+
+// src/data/pubs.json is the single source of truth for publications
+// (refresh it via: python3 scripts/update-publications.py — VPN required).
+const fmtAuthors = (a) => (Array.isArray(a) ? a.join(', ') : String(a ?? '').replace(/,/g, ', '));
+---
+<Base title="Publications">
+  <Hero title="Publications" breadcrumb="Outputs" image="/wp-content/uploads/2023/11/siemens-image.png" />
+
+  <div class="container">
+    <div id="publicationslist">
+      {pubs.map((p) => (
+        <div class="publications-single-item">
+          <div class="publications-head">
+            <h4>{p.Title}</h4>
+            {p.Year} | {p.Venue} | {fmtAuthors(p.Authors)}
+          </div>
+          <div class="publications-body">
+            <h2>{p.Title}</h2>
+            <p>
+              {fmtAuthors(p.Authors)} ({p.Year}). {p.Title}. {p.Venue}
+              {p.DOI_URL && <> <a href={p.DOI_URL} target="_blank" rel="noopener">{p.DOI}</a></>}
+            </p>
+            {p.URL && (
+              <p>
+                <img src="/wp-content/themes/ccais/img/paper-icon.svg" alt="" style="width:15px;margin-right:8px;" />
+                <a style="color:#450DC0;" href={p.URL} target="_blank" rel="noopener">Publication Download and Full Details</a>
+              </p>
+            )}
+            {p.Abstract && <p><strong>Abstract:</strong> {p.Abstract}</p>}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.publications-head').forEach((head) => {
+      head.addEventListener('click', () => {
+        const body = head.nextElementSibling;
+        const isOpen = head.classList.contains('open');
+        document.querySelectorAll('.publications-head.open').forEach((h) => {
+          h.classList.remove('open');
+          h.nextElementSibling.style.display = 'none';
+        });
+        if (!isOpen) {
+          head.classList.add('open');
+          body.style.display = 'block';
+        }
+      });
+    });
+  </script>
+</Base>

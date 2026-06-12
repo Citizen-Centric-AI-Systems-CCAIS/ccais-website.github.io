@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { excerptOf } from '../../lib/excerpt';
+const items = (await getCollection('impacts')).sort((a, b) => b.data.date - a.data.date);
+const trim = (s, n = 110) => (s && s.length > n ? s.slice(0, n) + '…' : s);
+const fmt = (d) => d.toDateString();
+---
+<Base title="Impact" bodyClass="archive post-type-archive post-type-archive-impacts">
+  <div class="container">
+    <h1>Impact</h1>
+    <h4>Our research impact</h4>
+    <div class="impacts">
+      {items.map((i) => (
+        <div class="single-impacts">
+          <div class="bg-image" style={`background-image:url('${i.data.image}')`}></div>
+          <a href={`/impacts/${i.id}/`}>
+            <div class="text-overlay">
+              <h3>{i.data.title}</h3>
+              <p>{trim(excerptOf(i))}</p>
+            </div>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/sections/Hero.astro';
+import OneColumn from '../../components/sections/OneColumn.astro';
+import ImageText from '../../components/sections/ImageText.astro';
+---
+<Base title="Applications">
+  <Hero title="Applications" breadcrumb="About us/" variant="primary" />
+
+  <OneColumn>
+    <h4><span style="color: #450dc0">We are exploring a range of application areas for citizen-centric AI systems.</span></h4>
+  </OneColumn>
+
+  <ImageText image="/wp-content/uploads/2023/11/women-using-touch-display-at-home.jpg" side="left" alt="Person using a smart home touch display">
+    <h3><span style="color: #d5007f">Smart Energy</span></h3>
+    <p>AI systems can manage the demand and supply of energy, including for electric vehicle charging. Here, involving citizens is critical to predict and manage end-use demand, and to provide incentives for shifting energy use based on individual citizens’ preferences and constraints. Fairness is important here, to ensure citizens are given equitable access to a critical resource.</p>
+  </ImageText>
+
+  <ImageText image="/wp-content/uploads/2023/11/people-in-street-1.jpg" side="right" alt="People crossing a busy street">
+    <h3><span style="color: #0c838f">Smart Transportation</span></h3>
+    <p>In future transportation systems, access to shared autonomous vehicles and public transport will be provided seamlessly via convenient apps. Here, citizens need to be involved to offer personalised services that match each individual’s needs, but ethical issues such as equitable distribution of services or uncontrolled peak pricing need to be considered.</p>
+  </ImageText>
+
+  <ImageText image="/wp-content/uploads/2023/11/firemen-resize.jpg" side="left" alt="Firefighters responding to an emergency">
+    <h3><span style="color: #450dc0">Disaster Response</span></h3>
+    <p>Allocating limited resources or first responders during a disaster based on historical and real-time data is a promising application of AI technology. However, such data is often inherently biased due to the way it is collected, there is significant uncertainty and missing information. Here, involving citizens via a process of crowdsourcing may add valuable additional data and increase trust, but can introduce new biases or allow strategic manipulation.</p>
+  </ImageText>
+
+  <OneColumn>
+    <h3><span style="color: #d5007f">Knowledge Transfer &amp; Impact</span></h3>
+    <p>An important aspect of our work is to collaborate with our partners to create real-world impact, for example through products, apps and by developing general tools that can be applied to a range of use cases.</p>
+    <p>One example of such an application is EVtonomy, a tool for helping electric vehicle drivers find personalised charging stops on long journeys.</p>
+  </OneColumn>
+</Base>

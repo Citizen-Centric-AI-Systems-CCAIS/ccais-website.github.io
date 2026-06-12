@@ -1,0 +1,4 @@
+{
+ "_help": "Add LinkedIn posts to show on the site: open the post on LinkedIn -> ... menu -> 'Embed this post' -> copy the iframe src URL (looks like https://www.linkedin.com/embed/feed/update/urn:li:share:123...). Add newest first. A plain post URL (https://www.linkedin.com/posts/...-activity-123...) also works.",
+ "posts": ["https://www.linkedin.com/feed/update/urn:li:activity:7471260110951174145","https://www.linkedin.com/feed/update/urn:li:activity:7471278340419584001", "https://www.linkedin.com/posts/ccais_ccais-research-fellow-dr-sarah-kiden-was-activity-7392197306344689664-5ksU","https://www.linkedin.com/feed/update/urn:li:activity:7434994467771949057","https://www.linkedin.com/feed/update/urn:li:activity:7414980656968916992"]
+}

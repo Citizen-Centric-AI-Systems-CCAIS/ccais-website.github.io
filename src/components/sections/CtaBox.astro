@@ -1,0 +1,18 @@
+---
+const { image, title, text, href, label } = Astro.props;
+---
+<div class="cta-box-section">
+  <div class="container">
+    <div class="wrapper">
+      <div class="bg-image" style={`background-image: url(${image});`}></div>
+      <div class="overlay"></div>
+      <div class="info">
+        <div class="text">
+          <h2>{title}</h2>
+          <p>{text}</p>
+        </div>
+        <a class="button" href={href}>{label}</a>
+      </div>
+    </div>
+  </div>
+</div>

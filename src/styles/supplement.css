@@ -1,0 +1,274 @@
+/*
+ * Small additions on top of the original ccais theme stylesheet.
+ * The original CSS is used verbatim (src/styles/theme.css); these rules only
+ * cover (a) resets for elements WordPress rendered with plugin markup and
+ * (b) a handful of layouts for static pages whose styling lived in PHP
+ * templates that could not be exported.
+ */
+
+/* The sub-menu toggle is only styled (and needed) on mobile. */
+.submenu-toggle-button {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+@media (min-width: 769px) {
+  .submenu-toggle-button { display: none; }
+}
+
+/* The slide-in fixed header is opacity:0 when idle — don't trap clicks. */
+.fixed-header { pointer-events: none; z-index: 100; }
+.fixed-header.header-fixed { pointer-events: auto; }
+
+/* Fallback footer background (the original set a photo inline from WP). */
+.site-footer { background-color: #450dc0; }
+
+/* Newsletter bar form layout (Gravity Forms supplied this inline). */
+.site-header .top-wrap .container form,
+.footer-newsletter-wrap .container form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.site-header .top-wrap label,
+.footer-newsletter-wrap label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.site-header .top-wrap input[type='email'],
+.footer-newsletter-wrap input[type='email'] {
+  padding: 8px 12px;
+  border: none;
+  font-family: inherit;
+  font-size: 1.4rem;
+  min-width: 220px;
+}
+
+/* Hero video pause button */
+.video-section .pause-bt {
+  background: rgba(0, 0, 0, 0.35);
+  border: none;
+}
+
+/* ---- Inner page banner / breadcrumb (static pages) ---- */
+.page-intro { margin: 50px 0 30px; }
+.page-intro .breadcrumb {
+  color: var(--secondarytowhite);
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+.page-intro h1 { margin: 0 0 20px; color: var(--primarytowhite); }
+.page-intro .lede h4, .page-intro .lede { max-width: 900px; }
+
+/* ---- Team page (original .page-team-section layout) ---- */
+.page-team-section .teams-block img { aspect-ratio: 1 / 1; object-fit: cover; }
+.page-team-section .teams-block p { margin: 0; }
+.page-team-section .teams-block p strong { font-size: 1.7rem; }
+.page-team-section .teams-block .team-role { font-size: 1.4rem; opacity: 0.85; }
+.page-team-section .teams-block a { text-decoration: none; }
+
+/* ---- Search page ---- */
+.search-page { margin: 50px 0; min-height: 40vh; }
+
+.site-footer .site-info .funding img { margin-top: 10px; }
+
+/* Plain-button resets (WordPress rendered these as bare links/spans). */
+.header-search-icon,
+.close-signup,
+.mobile-search {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.header-search-icon svg { display: block; }
+
+/* Keep menu items on one line (prevents "About us" wrapping). */
+.main-navigation .menu > li > a { white-space: nowrap; }
+
+/* Slide-in fixed header: WordPress reused the #site-navigation id inside it,
+   so those id-scoped layout rules are replicated here for our class-based nav. */
+.fixed-header nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.fixed-header nav .menu-overlay {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.fixed-header nav .header-bottom-block {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+.fixed-header nav .header-bottom-block svg { height: 16px; }
+.fixed-header .desktop-logo { min-width: 0; width: auto; }
+.fixed-header .desktop-logo img { height: 40px; width: auto; display: block; }
+
+/* Homepage project cards: scale the heading down from the global 40px h3 so
+   titles fit the 300px card and the excerpt can slide in on hover. */
+.projects-section .single-project .text-overlay h3 { font-size: 24px; line-height: 1.25; }
+.projects-section .single-project .text-overlay p { font-size: 14px; margin: 10px 0 0; }
+
+
+/* Fixed-header menu link spacing (the original got this via #primary-menu). */
+.fixed-header nav .menu > li > a { padding: 5px 20px; }
+
+/* ---- Content styling conventions ----
+   Posts are pure Markdown; the accent colours WordPress applied inline are
+   reproduced per section here (projects purple, blog teal, news/events pink). */
+.text-block h3, .text-block h5 { margin: 30px 0 10px; }
+.text-block h3 { font-size: 28px; }
+.single-projects .text-block h3, .single-projects .text-block h5 { color: #450dc0; }
+.single-latest-news .text-block h3, .single-latest-news .text-block h5,
+.single-latest-news .text-block blockquote { color: #d5007f; }
+.single-events .text-block h3, .single-events .text-block h5,
+.single-events .text-block blockquote { color: #d5007f; }
+.single-post .text-block h3, .single-post .text-block h5,
+.single-post .text-block blockquote { color: #0c838f; }
+.text-block blockquote {
+  border: none;
+  margin: 24px 0;
+  padding: 0;
+  font-style: italic;
+  font-weight: 600;
+}
+.text-block img {
+  display: block;
+  max-width: min(100%, 640px);
+  height: auto;
+  margin: 24px auto;
+  border-radius: 40px;
+  border-top-left-radius: 0;
+}
+.text-block iframe { width: 100%; max-width: 760px; aspect-ratio: 16 / 9; height: auto; display: block; margin: 24px auto; }
+
+/* ---- Person (author) pages ---- */
+.author-page { margin-bottom: 70px; }
+.author-page .author-role { color: var(--secondarytowhite); font-size: 1.8rem; }
+.author-layout { display: flex; gap: 50px; align-items: flex-start; }
+.author-photo img {
+  max-width: 300px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 40px;
+  border-top-left-radius: 0;
+}
+.author-details { flex: 1; }
+.author-details h4 { color: var(--primarytowhite); margin: 20px 0 5px; }
+.author-details h3 { color: var(--primarytowhite); margin: 30px 0 10px; }
+@media (max-width: 768px) { .author-layout { flex-direction: column; } }
+
+/* ---- "Projects & Blogs" cards on person pages ---- */
+.author-works { margin-top: 50px; }
+.author-works h3 { margin-bottom: 20px; }
+.author-works-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.work-card {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 40px;
+  border-top-left-radius: 0;
+}
+.work-card .bg-image {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--primary);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.work-card .text-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  color: #ffffff;
+  background-color: rgba(69, 13, 192, 0.5);
+}
+.work-card > a {
+  position: absolute;
+  inset: 0;
+  display: block;
+  z-index: 1;
+  color: #ffffff;
+}
+.work-card .work-label { font-size: 1.4rem; opacity: 0.9; }
+.work-card .work-title { font-size: 2.2rem; font-weight: 500; line-height: 1.25; }
+.work-card:hover .work-title { text-decoration: underline; }
+@media (max-width: 1000px) { .author-works-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .author-works-grid { grid-template-columns: 1fr; } }
+
+/* ---- Inline image sizing convention (pure-Markdown floats) ----
+   Append #right or #left to an image URL in Markdown to float it small,
+   e.g. ![Hannah](/wp-content/uploads/2023/11/hannah-phillips.jpg#right) */
+.text-block img[src*="#right"] {
+  float: right;
+  max-width: 220px;
+  margin: 0 0 20px 30px;
+}
+.text-block img[src*="#left"] {
+  float: left;
+  max-width: 220px;
+  margin: 0 30px 20px 0;
+}
+.text-block::after { content: ""; display: block; clear: both; }
+
+/* Contact form (static replacement for Gravity Forms) */
+.form-section form { display: grid; gap: 16px; margin: 30px 0 50px; }
+.form-section .form-row { display: flex; gap: 16px; }
+.form-section .form-row input { flex: 1; }
+.form-section .customButton { justify-self: start; border: none; cursor: pointer; }
+@media (max-width: 768px) { .form-section .form-row { flex-direction: column; } }
+
+/* ---- LinkedIn post embeds (homepage socials section) ---- */
+.linkedin-feed { margin-top: 20px; }
+.linkedin-consent {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 40px;
+  border-top-left-radius: 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.linkedin-consent p { margin: 0; }
+.linkedin-consent .customButton { border: none; cursor: pointer; flex-shrink: 0; }
+.linkedin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px 40px;
+}
+.linkedin-grid iframe { width: 100%; border: 0; }
+.linkedin-feed[data-count="1"] .linkedin-grid { grid-template-columns: minmax(0, 400px); }
+.linkedin-feed[data-count="2"] .linkedin-grid { grid-template-columns: repeat(2, minmax(0, 400px)); }
+@media (max-width: 900px) {
+  .linkedin-grid { grid-template-columns: 1fr !important; }
+  .linkedin-consent { flex-direction: column; align-items: flex-start; }
+}
+
+/* Footer contact column: the theme lays this out as a tight 3px flex column,
+   so paragraph margins must not add extra spacing. */
+.footer-contact-block p { margin: 0; }
+.footer-contact-block .social { padding: 0; }
+.footer-contact-block .social a { display: block; line-height: 0; }
+
+/* Footer proportions to match the original: smaller logos, and the logo
+   column absorbs the slack so the menu columns sit towards the right. */
+.site-footer .footer-wrap .footer-logo { flex: 1 1 auto; }
+.site-footer .footer-wrap .footer-logo img[alt^="CCAIS"] { width: 115px; height: auto; }
+.site-footer .footer-wrap .footer-logo img[alt^="University"] { width: 150px; height: auto; }
+.site-footer .footer-wrap .footer-right-block,
+.site-footer .footer-wrap .footer-contact-block { flex: 0 0 auto; }

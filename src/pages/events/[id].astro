@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+import { team } from '../../data/team';
+
+export async function getStaticPaths() {
+  const items = await getCollection('events');
+  return items.map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const author = team.find((m) => m.slug === entry.data.author);
+const fmt = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title={entry.data.title} bodyClass="single-events">
+  <div class="container">
+    <div class="hero-block">
+      <h1>{entry.data.title}</h1>
+      <div class="ac">
+        <div class="author"><p>{fmt(entry.data.date)}</p></div>
+        {author && <div class="author"><p>By <a href={`/author/${author.slug}/`}>{author.name}</a></p></div>}
+      </div>
+    </div>
+    {entry.data.image && <div class="hero-image" style={`background-image:url('${entry.data.image}')`}></div>}
+    <div class="text-block small-container">
+      <Content />
+    </div>
+    <p><a class="customButton button-primary" href="/events/">All events</a></p>
+  </div>
+</Base>

@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/sections/Hero.astro';
+import OneColumn from '../components/sections/OneColumn.astro';
+import ImageText from '../components/sections/ImageText.astro';
+---
+<Base title="Seminar Series">
+  <Hero title="Online Seminar Series" breadcrumb="Engage with us/" image="/wp-content/uploads/2023/11/AG-CCAIS-Workshop-159-resize2.jpg" />
+
+  <OneColumn>
+    <h4><span style="color: #450dc0">Following on from a successful workshop at AAMAS 2023, we set up a monthly online seminar series on “Citizen-Centric AI Systems”.</span></h4>
+  </OneColumn>
+
+  <ImageText image="/wp-content/uploads/2023/11/seminar-series-laptop-mockup.jpg" side="left" alt="CCAIS seminar series on a laptop">
+    <p>Each month, speakers present recent research related to CCAIS and then discuss their work with the audience.</p>
+    <p>Our inaugural seminar took place in September and was a great success. Thank you to our speakers and everyone who attended for making it a great seminar. In this seminar, we heard from four separate teams that work on citizen-centric AI: Southampton, Delft, Amsterdam and Bristol. Each team outlined the different areas of research they are undertaking.</p>
+  </ImageText>
+
+  <OneColumn>
+    <p>If you would like to join in with subsequent seminars, we will be running them on the second Thursday of each month. Please visit the <a href="https://sites.google.com/view/ccais-seminar/home">CCAIS Seminar Series Website</a> for details of upcoming seminars and to sign up.</p>
+    <p>We are also interested in potential speakers and would invite you to register your interest in giving a talk also on the seminar series’ website.</p>
+    <a href="https://sites.google.com/view/ccais-seminar/home" target="_blank" class="customButton button-primary" aria-label="CCAIS Seminar Series">CCAIS Seminar Series</a>
+  </OneColumn>
+</Base>

@@ -1,0 +1,88 @@
+---
+import Base from '../../layouts/Base.astro';
+import { team } from '../../data/team';
+import bios from '../../data/team-bios.json';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  return team.map((member) => ({ params: { slug: member.slug }, props: { member } }));
+}
+const { member } = Astro.props;
+const bio = (bios as Record<string, any>)[member.slug] ?? {};
+const website = bio.website ?? member.website;
+
+// Everything this person authored (via `author:` in the entry frontmatter)
+const sources = [
+  { coll: 'projects', label: 'Project', base: '/projects/' },
+  { coll: 'blog', label: 'Blog', base: '/uncategorised/' },
+  { coll: 'news', label: 'News', base: '/latest-news/' },
+  { coll: 'events', label: 'Event', base: '/events/' }
+] as const;
+const works = (
+  await Promise.all(
+    sources.map(async ({ coll, label, base }) =>
+      (await getCollection(coll, (e) => e.data.author === member.slug)).map((e) => ({
+        label,
+        title: e.data.title,
+        image: e.data.image,
+        url: `${base}${e.id}/`,
+        date: e.data.date
+      }))
+    )
+  )
+).flat().sort((a, b) => b.date - a.date);
+---
+<Base title={member.name}>
+  <div class="container author-page">
+    <div class="page-intro">
+      <p class="breadcrumb"><a href="/about-us/our-team/">Our team</a>/</p>
+      <h1>{member.name}</h1>
+      <p class="author-role">{member.role}</p>
+    </div>
+
+    <div class="author-layout">
+      <div class="author-photo">
+        <img src={member.photo} alt={member.name} width="300" height="300" />
+      </div>
+      <div class="author-details">
+        {bio.email && (
+          <>
+            <h4>Email:</h4>
+            <p><a href={`mailto:${bio.email}`}>{bio.email}</a></p>
+          </>
+        )}
+        {website && (
+          <>
+            <h4>Website:</h4>
+            <p><a href={website}>{website}</a></p>
+          </>
+        )}
+        {bio.biography && (
+          <>
+            <h4>Biography:</h4>
+            {bio.biography.split('\n').filter(Boolean).map((p: string) => <p>{p}</p>)}
+          </>
+        )}
+      </div>
+    </div>
+
+    {works.length > 0 && (
+      <section class="author-works">
+        <h3>Projects &amp; Blogs:</h3>
+        <div class="author-works-grid">
+          {works.map((w) => (
+            <div class="work-card">
+              <div class="bg-image" style={w.image ? `background-image:url('${w.image}')` : undefined}></div>
+              <a href={w.url}>
+                <div class="text-overlay">
+                  <span class="work-label">{w.label}</span>
+                  <span class="work-title">{w.title}</span>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</Base>

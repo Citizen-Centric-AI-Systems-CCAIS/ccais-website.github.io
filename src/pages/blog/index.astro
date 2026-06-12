@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { excerptOf } from '../../lib/excerpt';
+const items = (await getCollection('blog')).sort((a, b) => b.data.date - a.data.date);
+const trim = (s, n = 110) => (s && s.length > n ? s.slice(0, n) + '…' : s);
+const fmt = (d) => d.toDateString();
+---
+<Base title="Blog" bodyClass="archive post-type-archive blog">
+  <div class="container">
+    <h1>Blog</h1>
+    <h4>Blog posts from the CCAIS team</h4>
+    <div class="blog">
+      {items.map((i) => (
+        <div class="single-blog">
+          <div class="bg-image" style={`background-image:url('${i.data.image}')`}></div>
+          <a href={`/uncategorised/${i.id}/`}>
+              <span class="date">{fmt(i.data.date)}</span>
+            <div class="text-overlay">
+              <h3>{i.data.title}</h3>
+              <p>{trim(excerptOf(i))}</p>
+            </div>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</Base>

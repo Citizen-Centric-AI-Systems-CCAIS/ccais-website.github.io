@@ -1,0 +1,23 @@
+---
+// Page hero (original .hero-section). With `image` it renders the photo
+// banner with dark overlay; without, a solid colour variant band.
+const { title, breadcrumb, image, variant = 'black' } = Astro.props;
+---
+<div class={`hero-section ${variant}`}>
+  <div class="container">
+    {image ? (
+      <div class="bg-img" style={`background-image: url(${image});`}>
+        <div class="overlay"></div>
+        <div class="text">
+          {breadcrumb && <p>{breadcrumb}</p>}
+          <h1>{title}</h1>
+        </div>
+      </div>
+    ) : (
+      <div class="text">
+        {breadcrumb && <p>{breadcrumb}</p>}
+        <h1>{title}</h1>
+      </div>
+    )}
+  </div>
+</div>
