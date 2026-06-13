@@ -2,3 +2,4 @@ node_modules/
 dist/
 .astro/
 wp-export-html/
+.DS_Store
