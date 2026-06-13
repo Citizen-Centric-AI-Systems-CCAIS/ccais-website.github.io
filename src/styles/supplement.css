@@ -70,8 +70,6 @@
 /* ---- Search page ---- */
 .search-page { margin: 50px 0; min-height: 40vh; }
 
-.site-footer .site-info .funding img { margin-top: 10px; }
-
 /* Plain-button resets (WordPress rendered these as bare links/spans). */
 .header-search-icon,
 .close-signup,
@@ -263,12 +261,4 @@
    so paragraph margins must not add extra spacing. */
 .footer-contact-block p { margin: 0; }
 .footer-contact-block .social { padding: 0; }
-.footer-contact-block .social a { display: block; line-height: 0; }
-
-/* Footer proportions to match the original: smaller logos, and the logo
-   column absorbs the slack so the menu columns sit towards the right. */
-.site-footer .footer-wrap .footer-logo { flex: 1 1 auto; }
-.site-footer .footer-wrap .footer-logo img[alt^="CCAIS"] { width: 115px; height: auto; }
-.site-footer .footer-wrap .footer-logo img[alt^="University"] { width: 150px; height: auto; }
-.site-footer .footer-wrap .footer-right-block,
-.site-footer .footer-wrap .footer-contact-block { flex: 0 0 auto; }
+.footer-contact-block .social a { line-height: 0; }

@@ -24,10 +24,7 @@ const STATIC_ASSETS = [
   '/wp-content/themes/ccais/img/play-button.svg',
   '/wp-content/themes/ccais/img/menu-item-has-children-arrow.svg',
   '/wp-content/themes/ccais/img/button-after-arrow.svg',
-  // Gordita webfont kit
-  '/wp-content/themes/ccais/Gordita-Font/MyFontsWebfontsKit/MyFontsWebfontsKit.css',
-  '/wp-content/themes/ccais/Gordita-Font/MyFontsWebfontsKit/webFonts/Gordita/font.woff2',
-  '/wp-content/themes/ccais/Gordita-Font/MyFontsWebfontsKit/webFonts/Gordita/font.woff',
+  // Fonts are loaded from Google Fonts (Poppins + Roboto); nothing to mirror.
   // Logos
   '/wp-content/uploads/2023/09/CCAIS-logo-colour.svg',
   '/wp-content/uploads/2024/01/CCAIS-logo-white.svg',
