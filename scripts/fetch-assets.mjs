@@ -110,6 +110,12 @@ try {
     css = css.replace(/^@import url\(.*$/gm, '');
     // Vite chokes on the missing sourcemap reference
     css = css.replace(/\/\*# sourceMappingURL=.*?\*\//g, '');
+    // The original theme used the licensed Gordita webfont. We've swapped it
+    // for self-hosted Poppins (see src/styles/fonts.css), so re-apply that
+    // substitution here — otherwise this refresh silently reverts the body
+    // font to Gordita, whose files are no longer shipped, and text falls
+    // back to the browser's default serif.
+    css = css.replace(/font-family:\s*Gordita\s*;/gi, 'font-family: "Poppins", sans-serif;');
     await writeFile(join(ROOT, 'src/styles/theme.css'), css);
     console.log('  ✓ src/styles/theme.css replaced with full original stylesheet');
   }
