@@ -1000,7 +1000,7 @@ html {
 body {
   color: var(--black);
   background: var(--mainwhite);
-  font-family: "Poppins", sans-serif;
+  font-family: Gordita;
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;

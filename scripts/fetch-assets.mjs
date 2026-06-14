@@ -24,6 +24,17 @@ const STATIC_ASSETS = [
   '/wp-content/themes/ccais/img/play-button.svg',
   '/wp-content/themes/ccais/img/menu-item-has-children-arrow.svg',
   '/wp-content/themes/ccais/img/button-after-arrow.svg',
+  // Favicon set (RealFaviconGenerator output referenced in the <head>)
+  '/wp-content/themes/ccais/img/favicon/favicon.ico',
+  '/wp-content/themes/ccais/img/favicon/favicon-16x16.png',
+  '/wp-content/themes/ccais/img/favicon/favicon-32x32.png',
+  '/wp-content/themes/ccais/img/favicon/apple-touch-icon.png',
+  '/wp-content/themes/ccais/img/favicon/safari-pinned-tab.svg',
+  '/wp-content/themes/ccais/img/favicon/site.webmanifest',
+  '/wp-content/themes/ccais/img/favicon/android-chrome-192x192.png',
+  '/wp-content/themes/ccais/img/favicon/android-chrome-512x512.png',
+  '/wp-content/themes/ccais/img/favicon/mstile-150x150.png',
+  '/wp-content/themes/ccais/img/favicon/browserconfig.xml',
   // Fonts are loaded from Google Fonts (Poppins + Roboto); nothing to mirror.
   // Logos
   '/wp-content/uploads/2023/09/CCAIS-logo-colour.svg',
