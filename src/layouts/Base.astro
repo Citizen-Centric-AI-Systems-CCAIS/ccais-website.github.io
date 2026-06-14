@@ -4,6 +4,7 @@ import Socials from '../components/Socials.astro';
 import RecognitionLogo from '../components/RecognitionLogo.astro';
 import HeaderIcons from '../components/HeaderIcons.astro';
 import siteAssets from '../data/site-assets.json';
+import '../styles/fonts.css';
 import '../styles/theme.css';
 import '../styles/supplement.css';
 
@@ -59,10 +60,8 @@ const fullTitle = title.includes('Citizen-Centric')
     <meta property="og:locale" content="en_GB" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <!-- Fonts: Poppins + Roboto (both free, SIL OFL / Apache 2.0) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700;1,900&display=swap" />
+    <!-- Poppins is self-hosted (SIL OFL 1.1); @font-face in src/styles/fonts.css. -->
+    <link rel="preload" href="/fonts/poppins/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body class={bodyClass}>
     <a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
