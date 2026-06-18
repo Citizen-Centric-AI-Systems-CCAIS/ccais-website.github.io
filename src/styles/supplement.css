@@ -249,7 +249,11 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 50px 40px;
 }
-.linkedin-grid iframe { width: 100%; border: 0; }
+.linkedin-grid iframe { width: 100%; border: 0; display: block; }
+/* Transparent link covering each embed so a click anywhere on the post opens
+   the original on LinkedIn (the overlay sits above the iframe). */
+.linkedin-embed { position: relative; }
+.linkedin-overlay { position: absolute; inset: 0; z-index: 2; cursor: pointer; }
 .linkedin-feed[data-count="1"] .linkedin-grid { grid-template-columns: minmax(0, 400px); }
 .linkedin-feed[data-count="2"] .linkedin-grid { grid-template-columns: repeat(2, minmax(0, 400px)); }
 @media (max-width: 900px) {

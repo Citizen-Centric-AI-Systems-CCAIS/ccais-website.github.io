@@ -15,7 +15,17 @@ const toEmbedSrc = (url: string): string | null => {
   return m ? `https://www.linkedin.com/embed/feed/update/urn:li:activity:${m[1]}` : null;
 };
 
-const posts = (data.posts ?? []).map(toEmbedSrc).filter(Boolean).slice(0, limit);
+const embeds = (data.posts ?? [])
+  .map(toEmbedSrc)
+  .filter((s): s is string => Boolean(s))
+  .slice(0, limit);
+
+// Pair each embed with the canonical post URL (drop "/embed") so an overlay
+// link can send clicks to the real post on LinkedIn.
+const posts = embeds.map((embed) => ({
+  embed,
+  url: embed.replace('/embed/feed/update/', '/feed/update/'),
+}));
 ---
 {posts.length > 0 && (
   <div class="linkedin-feed" data-count={posts.length}>
@@ -27,15 +37,24 @@ const posts = (data.posts ?? []).map(toEmbedSrc).filter(Boolean).slice(0, limit)
       <button class="customButton button-primary" id="linkedin-load">Show LinkedIn posts</button>
     </div>
     <div class="linkedin-grid" hidden>
-      {posts.map((src) => (
-        <iframe
-          data-src={src}
-          height="480"
-          frameborder="0"
-          allowfullscreen
-          title="Embedded LinkedIn post"
-          loading="lazy"
-        ></iframe>
+      {posts.map((post) => (
+        <div class="linkedin-embed">
+          <iframe
+            data-src={post.embed}
+            height="480"
+            frameborder="0"
+            allowfullscreen
+            title="Embedded LinkedIn post"
+            loading="lazy"
+          ></iframe>
+          <a
+            class="linkedin-overlay"
+            href={post.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open this post on LinkedIn"
+          ></a>
+        </div>
       ))}
     </div>
   </div>
