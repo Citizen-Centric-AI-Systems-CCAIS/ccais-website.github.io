@@ -29,13 +29,24 @@ const STATIC_ASSETS = [
   '/wp-content/themes/ccais/img/favicon/favicon-16x16.png',
   '/wp-content/themes/ccais/img/favicon/favicon-32x32.png',
   '/wp-content/themes/ccais/img/favicon/apple-touch-icon.png',
-  '/wp-content/themes/ccais/img/favicon/safari-pinned-tab.svg',
   '/wp-content/themes/ccais/img/favicon/site.webmanifest',
   '/wp-content/themes/ccais/img/favicon/android-chrome-192x192.png',
   '/wp-content/themes/ccais/img/favicon/android-chrome-512x512.png',
   '/wp-content/themes/ccais/img/favicon/mstile-150x150.png',
   '/wp-content/themes/ccais/img/favicon/browserconfig.xml',
-  // Fonts are loaded from Google Fonts (Poppins + Roboto); nothing to mirror.
+  // Fonts are self-hosted (Outfit, see public/fonts/); nothing to mirror.
+  // Partner card background photos (inline background-image on the partners
+  // page, which the homepage-only inline-bg scan below doesn't reach).
+  '/wp-content/uploads/2023/11/catapult-image.png',
+  '/wp-content/uploads/2023/11/dstl-image.png',
+  '/wp-content/uploads/2023/11/ea-image.png',
+  '/wp-content/uploads/2023/11/catapul-energy-image-2.jpg',
+  '/wp-content/uploads/2023/11/fawley-image.png',
+  '/wp-content/uploads/2023/11/ibm-image.png',
+  '/wp-content/uploads/2023/11/jag-image.png',
+  '/wp-content/uploads/2023/11/siemens-image.png',
+  '/wp-content/uploads/2023/11/thales-image.png',
+  '/wp-content/uploads/2023/11/utu-image.png',
   // Logos
   '/wp-content/uploads/2023/09/CCAIS-logo-colour.svg',
   '/wp-content/uploads/2024/01/CCAIS-logo-white.svg',

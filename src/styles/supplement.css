@@ -262,3 +262,10 @@
 .footer-contact-block p { margin: 0; }
 .footer-contact-block .social { padding: 0; }
 .footer-contact-block .social a { line-height: 0; }
+
+/* Page-title headings: the theme sets h1 to weight 900. The original used
+   Gordita, whose Black weight is fairly restrained; Poppins Black reads much
+   heavier, so the big page titles (e.g. "Projects") looked overly bold. Drop
+   them to 700, which in Poppins approximates the original's visual weight.
+   Lives here (not theme.css) so `npm run fetch-assets` can't revert it. */
+h1 { font-weight: 700; }
