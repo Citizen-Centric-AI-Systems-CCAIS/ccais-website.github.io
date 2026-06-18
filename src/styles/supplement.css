@@ -249,7 +249,11 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 50px 40px;
 }
-.linkedin-grid iframe { width: 100%; border: 0; display: block; }
+.linkedin-grid iframe { width: 100%; height: 288px; border: 0; display: block; }
+/* The grid's display:grid otherwise overrides the [hidden] attribute, leaving
+   the empty (unloaded) iframes reserving blank space before the visitor opts
+   in. This makes the hidden attribute actually collapse the grid. */
+.linkedin-grid[hidden] { display: none; }
 /* Transparent link covering each embed so a click anywhere on the post opens
    the original on LinkedIn (the overlay sits above the iframe). */
 .linkedin-embed { position: relative; }
