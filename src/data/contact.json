@@ -1,0 +1,4 @@
+{
+  "_help": "Web3Forms access key for the contact form. Get a free key at https://web3forms.com (enter the email address where you want submissions delivered — e.g. ss2@ecs.soton.ac.uk — and the key is emailed to you). The access key is designed to live in client-side HTML and is safe to commit.",
+  "web3formsKey": "abf16ae2-f977-449f-b32a-0944ae235208"
+}

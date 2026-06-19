@@ -278,6 +278,10 @@
 .newsletter-status.is-error { color: #ffd5d5; }
 .newsletter-consent { margin: 8px 0 0; font-size: 12px; opacity: 0.85; }
 
+/* Contact form (Web3Forms) inline status — on a light section, so a dark error. */
+.form-status { margin: 12px 0 0; font-size: 14px; }
+.form-status.is-error { color: #c0392b; }
+
 /* Page-title headings: the theme sets h1 to weight 900. The original used
    Gordita, whose Black weight is fairly restrained; Poppins Black reads much
    heavier, so the big page titles (e.g. "Projects") looked overly bold. Drop

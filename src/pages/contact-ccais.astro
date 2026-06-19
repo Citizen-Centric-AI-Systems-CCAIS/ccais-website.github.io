@@ -2,6 +2,9 @@
 import Base from '../layouts/Base.astro';
 import Hero from '../components/sections/Hero.astro';
 import CtaBox from '../components/sections/CtaBox.astro';
+import contact from '../data/contact.json';
+
+const contactConfigured = contact.web3formsKey !== 'REPLACE_WITH_ACCESS_KEY';
 ---
 <Base title="Contact CCAIS">
   <Hero title="Contact CCAIS" image="/wp-content/uploads/2023/11/ccais-team-lauging-around-table.jpg" />
@@ -30,9 +33,13 @@ import CtaBox from '../components/sections/CtaBox.astro';
   <div class="form-section">
     <div class="container">
       <div class="small-container">
-        <!-- Static replacement for the Gravity Form. Works as-is on Netlify
-             (data-netlify); point the action at Formspree etc. on other hosts. -->
-        <form name="contact" method="POST" data-netlify="true" action="/contact-ccais/?submitted=true">
+        <!-- Submissions go to Web3Forms, which emails them to the address tied
+             to the access key (src/data/contact.json). Works on static hosts;
+             the AJAX below keeps the visitor on the page. -->
+        <form class="contact-form" method="POST" action="https://api.web3forms.com/submit">
+          <input type="hidden" name="access_key" value={contact.web3formsKey} />
+          <input type="hidden" name="subject" value="New enquiry from the CCAIS website" />
+          <input type="hidden" name="from_name" value="CCAIS website contact form" />
           <div class="form-row">
             <label class="screen-reader-text" for="cf-name">Name</label>
             <input id="cf-name" type="text" name="name" placeholder="Name" required />
@@ -41,11 +48,54 @@ import CtaBox from '../components/sections/CtaBox.astro';
           </div>
           <label class="screen-reader-text" for="cf-message">Message</label>
           <textarea id="cf-message" name="message" rows="10" placeholder="Message" required></textarea>
+          <!-- Honeypot: real people leave this empty -->
+          <input type="checkbox" name="botcheck" class="mc-honeypot" style="display:none" tabindex="-1" autocomplete="off" />
           <button type="submit" class="customButton button-primary">Send</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </div>
   </div>
 
   <CtaBox image="/wp-content/uploads/2023/11/woman-in-server-room-crop-1.jpg" title="Our vision" text="Find out more about our vision of citizen-centric AI systems." href="/about-us/vision/" label="Vision" />
+
+  <script define:vars={{ contactConfigured }}>
+    const form = document.querySelector('.contact-form');
+    if (form) {
+      const status = form.querySelector('.form-status');
+      const btn = form.querySelector('button[type="submit"]');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!contactConfigured) {
+          status.textContent = 'The contact form is not configured yet.';
+          status.classList.add('is-error');
+          return;
+        }
+        if (form.querySelector('[name="botcheck"]').checked) return;
+        btn.disabled = true;
+        status.classList.remove('is-error');
+        status.textContent = 'Sending…';
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { Accept: 'application/json' },
+            body: new FormData(form),
+          });
+          const data = await res.json();
+          if (data.success) {
+            status.textContent = 'Thanks — your message has been sent. We will be in touch.';
+            form.reset();
+          } else {
+            status.textContent = data.message || 'Sorry, something went wrong. Please email us directly.';
+            status.classList.add('is-error');
+          }
+        } catch (_) {
+          status.textContent = 'Network error — please try again, or email us directly.';
+          status.classList.add('is-error');
+        } finally {
+          btn.disabled = false;
+        }
+      });
+    }
+  </script>
 </Base>
