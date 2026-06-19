@@ -271,6 +271,13 @@
 .footer-contact-block .social { padding: 0; }
 .footer-contact-block .social a { line-height: 0; }
 
+/* Newsletter (Mailchimp) form: hidden bot honeypot, inline status + consent. */
+.mc-honeypot { position: absolute; left: -5000px; overflow: hidden; }
+.newsletter-form { position: relative; flex-wrap: wrap; }
+.newsletter-status { flex-basis: 100%; width: 100%; margin: 8px 0 0; font-size: 13px; }
+.newsletter-status.is-error { color: #ffd5d5; }
+.newsletter-consent { margin: 8px 0 0; font-size: 12px; opacity: 0.85; }
+
 /* Page-title headings: the theme sets h1 to weight 900. The original used
    Gordita, whose Black weight is fairly restrained; Poppins Black reads much
    heavier, so the big page titles (e.g. "Projects") looked overly bold. Drop

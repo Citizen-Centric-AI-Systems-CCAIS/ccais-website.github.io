@@ -1,0 +1,7 @@
+{
+  "_help": "Mailchimp embedded-form settings. From Audience > Signup forms > Embedded form, the <form> action looks like https://ACCOUNT.us14.list-manage.com/subscribe/post?u=...&id=...&f_id=... — 'dc' is the FULL host label before .list-manage.com (e.g. ccais.us14, including the account prefix), 'u' and 'id' are those query params. 'tags' is optional (the value of the hidden 'tags' input in the embed) so signups are tagged. No API key is needed and these values are safe to commit.",
+  "dc": "ccais.us14",
+  "u": "4d7fb0aa0f331542c24610e0e",
+  "id": "87dc9243bb",
+  "tags": "7299980"
+}

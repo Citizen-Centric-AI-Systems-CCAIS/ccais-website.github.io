@@ -4,9 +4,17 @@ import Socials from '../components/Socials.astro';
 import RecognitionLogo from '../components/RecognitionLogo.astro';
 import HeaderIcons from '../components/HeaderIcons.astro';
 import siteAssets from '../data/site-assets.json';
+import mailchimp from '../data/newsletter.json';
 import '../styles/fonts.css';
 import '../styles/theme.css';
 import '../styles/supplement.css';
+
+// Mailchimp embedded-form wiring (see src/data/newsletter.json).
+const mcConfigured = mailchimp.u !== 'REPLACE_U' && mailchimp.id !== 'REPLACE_ID' && mailchimp.dc !== 'REPLACE_DC';
+const mcAction = mcConfigured
+  ? `https://${mailchimp.dc}.list-manage.com/subscribe/post?u=${mailchimp.u}&id=${mailchimp.id}`
+  : '#';
+const mcHoneypot = `b_${mailchimp.u}_${mailchimp.id}`;
 
 // Footer menu is laid out as flex columns (each <ul> is one column).
 const footerColumns = [
@@ -69,12 +77,12 @@ const fullTitle = title.includes('Citizen-Centric')
       <div class="top-wrap" id="newsletter-bar">
         <div class="container">
           <p>Sign up to our newsletter</p>
-          <!-- Replace the form action with your newsletter provider endpoint
-               (e.g. Mailchimp / Buttondown). -->
-          <form id="gform_1" method="post" action="#" aria-label="Newsletter signup">
+          <form class="newsletter-form" method="post" action={mcAction} target="_blank" aria-label="Newsletter signup">
             <label for="newsletter-email">Email</label>
-            <input type="email" id="newsletter-email" name="email" placeholder="Email" required />
+            <input type="email" id="newsletter-email" name="EMAIL" placeholder="Email" required />
+            <div class="mc-honeypot" aria-hidden="true"><input type="text" name={mcHoneypot} tabindex="-1" value="" autocomplete="off" /></div>
             <button type="submit" id="gform_submit_button_1">Sign up</button>
+            <p class="newsletter-status" role="status" aria-live="polite"></p>
           </form>
         </div>
         <button class="close-signup" aria-label="Close newsletter signup">X</button>
@@ -158,11 +166,14 @@ const fullTitle = title.includes('Citizen-Centric')
     <div class="footer-newsletter-wrap">
       <div class="container">
         <p>Sign up to our newsletter</p>
-        <form id="gform_1" method="post" action="#" aria-label="Newsletter signup">
+        <form class="newsletter-form" method="post" action={mcAction} target="_blank" aria-label="Newsletter signup">
           <label for="footer-newsletter-email">Email</label>
-          <input type="email" id="footer-newsletter-email" name="email" placeholder="Email" required />
-          <button type="submit" id="gform_submit_button_1">Sign up</button>
+          <input type="email" id="footer-newsletter-email" name="EMAIL" placeholder="Email" required />
+          <div class="mc-honeypot" aria-hidden="true"><input type="text" name={mcHoneypot} tabindex="-1" value="" autocomplete="off" /></div>
+          <button type="submit" id="gform_submit_button_footer">Sign up</button>
+          <p class="newsletter-status" role="status" aria-live="polite"></p>
         </form>
+        <p class="newsletter-consent">We'll only use your email to send the CCAIS newsletter. Unsubscribe anytime.</p>
       </div>
     </div>
 
@@ -228,5 +239,67 @@ const fullTitle = title.includes('Citizen-Centric')
     </footer>
 
     <script src="../scripts/site.js"></script>
+
+    <script define:vars={{ mc: mailchimp, mcConfigured }}>
+      // Newsletter signup -> Mailchimp, via JSONP (Mailchimp's API blocks CORS,
+      // but the list-manage post-json endpoint accepts a JSONP callback). No API
+      // key is involved; this is the public embedded-form endpoint.
+      document.querySelectorAll('form.newsletter-form').forEach((form) => {
+        const status = form.querySelector('.newsletter-status');
+        const btn = form.querySelector('button[type="submit"]');
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = (form.querySelector('input[type="email"]') || {}).value;
+          if (!email) return;
+          if (!mcConfigured) {
+            status.textContent = 'Newsletter signup is not configured yet.';
+            status.classList.add('is-error');
+            return;
+          }
+          // Honeypot: if the hidden field is filled, it's a bot — silently stop.
+          const trap = form.querySelector('.mc-honeypot input');
+          if (trap && trap.value) return;
+
+          btn.disabled = true;
+          status.classList.remove('is-error');
+          status.textContent = 'Signing you up…';
+
+          const cb = 'mcCallback_' + Date.now();
+          const url = 'https://' + mc.dc + '.list-manage.com/subscribe/post-json'
+            + '?u=' + encodeURIComponent(mc.u)
+            + '&id=' + encodeURIComponent(mc.id)
+            + '&EMAIL=' + encodeURIComponent(email.trim())
+            + (mc.tags ? '&tags=' + encodeURIComponent(mc.tags) : '')
+            + '&b_' + mc.u + '_' + mc.id + '='
+            + '&c=' + cb;
+
+          const cleanup = (s) => { try { delete window[cb]; } catch (_) { window[cb] = undefined; } if (s) s.remove(); };
+
+          window[cb] = (data) => {
+            btn.disabled = false;
+            const ok = data && data.result === 'success';
+            if (ok) {
+              status.textContent = 'Thanks! Please check your inbox to confirm your subscription.';
+              form.reset();
+            } else {
+              const msg = (data && data.msg ? String(data.msg).replace(/^\d+\s*-\s*/, '').replace(/<[^>]*>/g, '') : '');
+              status.textContent = msg || 'Sorry, something went wrong. Please try again.';
+              status.classList.add('is-error');
+            }
+            cleanup(script);
+          };
+
+          const script = document.createElement('script');
+          script.src = url;
+          script.onerror = () => {
+            btn.disabled = false;
+            status.textContent = 'Network error — please try again.';
+            status.classList.add('is-error');
+            cleanup(script);
+          };
+          document.body.appendChild(script);
+        });
+      });
+    </script>
   </body>
 </html>
