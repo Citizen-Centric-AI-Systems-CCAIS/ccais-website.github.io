@@ -37,11 +37,12 @@
 }
 .site-header .top-wrap input[type='email'],
 .footer-newsletter-wrap input[type='email'] {
-  padding: 8px 12px;
+  padding: 8px;
   border: none;
   font-family: inherit;
-  font-size: 1.4rem;
-  min-width: 220px;
+  font-size: 15px;
+  width: 196px;
+  box-sizing: border-box;
 }
 
 /* Hero video pause button */
