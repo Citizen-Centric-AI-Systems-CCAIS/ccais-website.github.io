@@ -273,10 +273,12 @@
 
 /* Newsletter (Mailchimp) form: hidden bot honeypot, inline status + consent. */
 .mc-honeypot { position: absolute; left: -5000px; overflow: hidden; }
-.newsletter-form { position: relative; flex-wrap: wrap; }
-.newsletter-status { flex-basis: 100%; width: 100%; margin: 8px 0 0; font-size: 13px; }
+/* Keep the email input + button on one centred row (matches the original);
+   the status message sits just below the form, out of the flex flow, so it
+   never pushes the controls onto separate lines. */
+.newsletter-form { position: relative; }
+.newsletter-status { position: absolute; top: 100%; left: 0; margin-top: 4px; font-size: 13px; }
 .newsletter-status.is-error { color: #ffd5d5; }
-.newsletter-consent { margin: 8px 0 0; font-size: 12px; opacity: 0.85; }
 
 /* Contact form (Web3Forms) inline status — on a light section, so a dark error. */
 .form-status { margin: 12px 0 0; font-size: 14px; }
