@@ -56,6 +56,13 @@
 .site-header .top-wrap > .container {
   padding-right: 60px;
 }
+/* Push the form hard right regardless of trailing nodes that browser
+   extensions inject (e.g. LastPass adds an icon anchor after form fields,
+   which would otherwise claim the right-hand slot under space-between). */
+.site-header .top-wrap form.newsletter-form,
+.footer-newsletter-wrap form.newsletter-form {
+  margin-left: auto;
+}
 
 /* Hero video pause button */
 .video-section .pause-bt {
