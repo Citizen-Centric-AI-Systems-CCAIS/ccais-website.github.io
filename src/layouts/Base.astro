@@ -77,7 +77,7 @@ const fullTitle = title.includes('Citizen-Centric')
       <div class="top-wrap" id="newsletter-bar">
         <div class="container">
           <p>Sign up to our newsletter</p>
-          <form class="newsletter-form" method="post" action={mcAction} target="_blank" aria-label="Newsletter signup">
+          <form id="gform_1" class="newsletter-form" method="post" action={mcAction} target="_blank" aria-label="Newsletter signup">
             <label for="newsletter-email">Email</label>
             <input type="email" id="newsletter-email" name="EMAIL" placeholder="Email" required />
             <div class="mc-honeypot" aria-hidden="true"><input type="text" name={mcHoneypot} tabindex="-1" value="" autocomplete="off" /></div>
@@ -166,11 +166,11 @@ const fullTitle = title.includes('Citizen-Centric')
     <div class="footer-newsletter-wrap">
       <div class="container">
         <p>Sign up to our newsletter</p>
-        <form class="newsletter-form" method="post" action={mcAction} target="_blank" aria-label="Newsletter signup">
+        <form id="gform_1" class="newsletter-form" method="post" action={mcAction} target="_blank" aria-label="Newsletter signup">
           <label for="footer-newsletter-email">Email</label>
           <input type="email" id="footer-newsletter-email" name="EMAIL" placeholder="Email" required />
           <div class="mc-honeypot" aria-hidden="true"><input type="text" name={mcHoneypot} tabindex="-1" value="" autocomplete="off" /></div>
-          <button type="submit" id="gform_submit_button_footer">Sign up</button>
+          <button type="submit" id="gform_submit_button_1">Sign up</button>
           <p class="newsletter-status" role="status" aria-live="polite"></p>
         </form>
         <p class="newsletter-consent">We'll only use your email to send the CCAIS newsletter. Unsubscribe anytime.</p>

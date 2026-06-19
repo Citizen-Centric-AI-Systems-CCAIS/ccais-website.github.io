@@ -282,6 +282,17 @@
 .form-status { margin: 12px 0 0; font-size: 14px; }
 .form-status.is-error { color: #c0392b; }
 
+/* Newsletter-bar close (X): the theme pinned it to top:20px and, as a <button>,
+   it rendered at the small default font size. Enlarge it and centre it
+   vertically in the bar. */
+.site-header .top-wrap .close-signup {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  line-height: 1;
+  font-family: inherit;
+}
+
 /* Page-title headings: the theme sets h1 to weight 900. The original used
    Gordita, whose Black weight is fairly restrained; Poppins Black reads much
    heavier, so the big page titles (e.g. "Projects") looked overly bold. Drop
