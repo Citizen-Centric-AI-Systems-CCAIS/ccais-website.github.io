@@ -44,6 +44,18 @@
   width: 196px;
   box-sizing: border-box;
 }
+/* Let the sign-up form ride the right edge of the full-width bar (so it tracks
+   the monitor width) instead of sitting at the right of the centred 1500px
+   container. Heading stays left, form goes hard right. */
+.site-header .top-wrap > .container,
+.footer-newsletter-wrap > .container {
+  max-width: none;
+}
+/* Header bar has an absolutely-positioned close (X) at right:20px — keep the
+   form clear of it. */
+.site-header .top-wrap > .container {
+  padding-right: 60px;
+}
 
 /* Hero video pause button */
 .video-section .pause-bt {
