@@ -148,5 +148,9 @@
   "email": "J.Dilkes@soton.ac.uk",
   "website": "https://www.southampton.ac.uk/people/65jbzs/mr-jim-dilkes",
   "biography": "Jim is a Postgraduate Researcher in Artificial Intelligence at the University of Southampton and part of the CCAIS project. His work focuses on trustworthy human-AI interaction. He has a particular interest in Large Language Model-based artificial agents and how Reinforcement Learning can improve their decision making when they interact with or act on behalf of humans."
+ },
+ "adrian-low": {
+  "email": "agxl1e22@soton.ac.uk",
+  "biography": "Adrian Low is an undergraduate student in Electronic Engineering with Artificial Intelligence at the University of Southampton. His summer research explores the use of multi-agent systems to model human behaviour in trust-based decision-making scenarios. By simulating and evaluating agent interactions within trust games, he aims to better understand how artificial agents replicate human patterns of thought and behaviour. His broader interests include large language models, reinforcement learning, and their applications in modelling human behaviour, multi-agent coordination, and social decision-making."
  }
 }
