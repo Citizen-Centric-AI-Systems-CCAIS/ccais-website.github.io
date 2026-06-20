@@ -138,5 +138,15 @@
  "ezhilarasi-periyathambi": {
   "email": "ep2n24@soton.ac.uk",
   "biography": "Ezhilarasi Periyathambi is a Research Assistant on CCAIS & FEVER project. At FEVER, Ezhilarasi focuses on developing smart charging algorithms for electric vehicles, contributing to the optimization of energy distribution and the integration of renewable energy sources. In addition to her work at FEVER, Ezhilarasi is actively involved with CCAIS, where she contributes to the design and implementation of AI systems that prioritize the public interest with fairness. She completed her PhD at Dr. MGR. Educational and Research Institute (2024), with a research focus on AI for smart grid technology."
+ },
+ "bruno-arcanjo": {
+  "email": "b.r.queiros-arcanjo@soton.ac.uk",
+  "website": "https://www.southampton.ac.uk/people/mr-bruno-arcanjo",
+  "biography": "Bruno is a research assistant on the CCAIS and FEVER projects, with a research background in computationally efficient Visual Place Recognition for mobile robotics operating with resource-constrained hardware. He is currently working on accelerating and facilitating the public-wide adoption of electrical vehicles in the UK. His research interests also cover the applicability of AI for human self-development. In particular, he is interested in the use of highly personalised AI assistants for helping humans achieve complex and demanding long-term goals. He aims to contribute AI solutions that quickly adapt to an individual’s unique and diverse circumstances, offering more targeted and, hopefully, higher value tools to their users."
+ },
+ "jim-dilkes": {
+  "email": "J.Dilkes@soton.ac.uk",
+  "website": "https://www.southampton.ac.uk/people/65jbzs/mr-jim-dilkes",
+  "biography": "Jim is a Postgraduate Researcher in Artificial Intelligence at the University of Southampton and part of the CCAIS project. His work focuses on trustworthy human-AI interaction. He has a particular interest in Large Language Model-based artificial agents and how Reinforcement Learning can improve their decision making when they interact with or act on behalf of humans."
  }
 }

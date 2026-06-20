@@ -1,5 +1,6 @@
 ---
 title: "AI Otherwise"
+author: sarah-kiden
 date: 2025-01-25
 image: "/wp-content/uploads/2025/01/AIO-cover-pic.png"
 ---

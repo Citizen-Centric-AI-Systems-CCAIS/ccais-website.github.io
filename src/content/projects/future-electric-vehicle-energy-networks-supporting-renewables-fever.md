@@ -1,5 +1,6 @@
 ---
 title: "Future Electric Vehicle Energy Networks supporting Renewables (FEVER)"
+author: jan-buermann
 date: 2023-11-09
 image: "/wp-content/uploads/2023/11/fever-project-image-1-scaled.jpg"
 ---

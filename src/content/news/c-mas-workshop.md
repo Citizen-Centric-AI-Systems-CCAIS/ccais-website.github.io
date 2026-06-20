@@ -1,5 +1,6 @@
 ---
 title: "C-MAS Workshop"
+author: behrad-koohy
 date: 2023-07-31
 image: "/wp-content/uploads/2023/11/cmas.jpg"
 ---

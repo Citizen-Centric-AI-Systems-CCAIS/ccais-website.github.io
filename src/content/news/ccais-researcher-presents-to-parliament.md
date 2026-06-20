@@ -1,5 +1,6 @@
 ---
 title: "CCAIS Researcher Presents to Parliament"
+author: jayati-deshmukh
 date: 2026-02-25
 image: "/wp-content/uploads/2025/11/image3-1024x665.png"
 ---
