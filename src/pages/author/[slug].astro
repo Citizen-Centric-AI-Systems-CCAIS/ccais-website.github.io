@@ -21,7 +21,7 @@ const sources = [
 const works = (
   await Promise.all(
     sources.map(async ({ coll, label, base }) =>
-      (await getCollection(coll, (e) => e.data.author === member.slug)).map((e) => ({
+      (await getCollection(coll, (e) => e.data.author === member.slug || (e.data.members ?? []).includes(member.slug))).map((e) => ({
         label,
         title: e.data.title,
         image: e.data.image,

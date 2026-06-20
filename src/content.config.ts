@@ -8,7 +8,11 @@ const base = z.object({
   excerpt: z.string().optional(),
   // Team slug (see src/data/team.ts). Adds a byline on the article and lists
   // the piece on the author's /author/<slug>/ page automatically.
-  author: z.string().optional()
+  author: z.string().optional(),
+  // Additional team members involved (list of slugs from src/data/team.ts).
+  // The piece is also listed on each of these members' /author/<slug>/ pages,
+  // and they're shown on the project page.
+  members: z.array(z.string()).optional()
 });
 
 const mk = (dir: string, schema = base) =>
