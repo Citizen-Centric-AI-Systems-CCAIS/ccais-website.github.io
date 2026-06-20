@@ -43,18 +43,26 @@ function extract(html) {
 
 const bios = {};
 for (const slug of slugs) {
-  try {
-    const res = await fetch(`${BASE}/author/${slug}/`, { redirect: 'follow' });
-    if (!res.ok) { console.log(`  - ${slug}: no author page (HTTP ${res.status})`); continue; }
-    const data = extract(await res.text());
-    if (Object.keys(data).length) {
-      bios[slug] = data;
-      console.log(`  ✓ ${slug}: ${Object.keys(data).join(', ')}`);
-    } else {
-      console.log(`  - ${slug}: author page had no details`);
+  // WordPress author slugs sometimes use underscores where team.ts uses
+  // hyphens (e.g. ezhilarasi_periyathambi vs ezhilarasi-periyathambi), so try
+  // both and keep the first that actually yields bio details.
+  const variants = slug.includes('-') ? [slug, slug.replace(/-/g, '_')] : [slug];
+  let data = null;
+  for (const v of variants) {
+    try {
+      const res = await fetch(`${BASE}/author/${v}/`, { redirect: 'follow' });
+      if (!res.ok) continue;
+      const d = extract(await res.text());
+      if (Object.keys(d).length) { data = d; break; }
+    } catch (e) {
+      console.warn(`  ✗ ${slug} (${v}):`, String(e));
     }
-  } catch (e) {
-    console.warn(`  ✗ ${slug}:`, String(e));
+  }
+  if (data) {
+    bios[slug] = data;
+    console.log(`  ✓ ${slug}: ${Object.keys(data).join(', ')}`);
+  } else {
+    console.log(`  - ${slug}: no author page / no details`);
   }
 }
 
