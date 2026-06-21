@@ -3,6 +3,8 @@ title: "OneSight: A Unified Interface of Multi-Social Media Apps for DigitalWell
 date: 2025-03-17
 image: "/wp-content/uploads/2025/03/Screen.png"
 author: zhaoxing-li
+members:
+  - sebastian-stein
 ---
 
 ABSTRACT  

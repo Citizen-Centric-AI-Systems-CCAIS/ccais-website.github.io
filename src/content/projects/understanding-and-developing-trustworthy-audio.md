@@ -3,6 +3,8 @@ title: "Understanding and Developing Trustworthy Audio"
 date: 2023-11-01
 image: "/wp-content/uploads/2023/11/ai-audio.jpg"
 author: jennifer-williams
+members:
+  - sebastian-stein
 ---
 
 Have you ever thought about how much audio data is really ‘out there’ on internet sites like YouTube, TikTok, and other social media platforms?

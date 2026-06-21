@@ -3,6 +3,13 @@ title: "Citizen-Centric AI for Resilient IoT Systems (CAIR)"
 date: 2025-08-28
 image: "/wp-content/uploads/2025/08/Screenshot-2025-09-01-at-17.40.36.png"
 author: zhaoxing-li
+members:
+  - sebastian-stein
+  - vahid-yazdanpanah
+  - jan-buermann
+  - sarah-kiden
+  - bruno-arcanjo
+  - ezhilarasi-periyathambi
 ---
 
 \*\*CAIR\*\* is a local, preference-aware smart-home assistant that turns everyday, loosely structured requests—such as “make the room comfortable” or “I want to relax”—into reliable actions. It addresses three persistent gaps in current assistants: difficulty interpreting vague or missing context, weak long-term adaptation to user preferences, and reliance on cloud services that can compromise privacy and destabilise integrations (e.g., brittle JSON outputs that break device control).

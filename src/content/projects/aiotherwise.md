@@ -1,6 +1,11 @@
 ---
 title: "AI Otherwise"
 author: sarah-kiden
+members:
+  - sebastian-stein
+  - vahid-yazdanpanah
+  - zhaoxing-li
+  - bruno-arcanjo
 date: 2025-01-25
 image: "/wp-content/uploads/2025/01/AIO-cover-pic.png"
 ---

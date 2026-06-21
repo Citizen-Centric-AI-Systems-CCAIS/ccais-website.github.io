@@ -3,6 +3,9 @@ title: "Computational Responsibility for Trustworthy Citizen-Centric AI"
 date: 2023-11-01
 image: "/wp-content/uploads/2023/11/computational-project-image-1.png"
 author: vahid-yazdanpanah
+members:
+  - sebastian-stein
+  - enrico-gerding
 ---
 
 ### Developing methods to determine who is responsible for decisions made by or in collaboration with AI systems

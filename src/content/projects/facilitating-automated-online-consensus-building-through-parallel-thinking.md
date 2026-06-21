@@ -3,6 +3,12 @@ title: "Facilitating Automated Online Consensus Building through Parallel Thinki
 date: 2025-03-17
 image: "/wp-content/uploads/2025/03/Screenshot-2025-01-21-at-18.11.39-copy.png"
 author: zhaoxing-li
+members:
+  - sebastian-stein
+  - vahid-yazdanpanah
+  - jan-buermann
+  - wen-gu
+  - jim-dilkes
 ---
 
 Consensus building is inherently challenging due to the diverse opinions held by stakeholders. Effective facilitation is crucial to support the consensus-building process and enable efficient group decision-making. However, the effectiveness of facilitation is often constrained by human factors such as limited experience and scalability. In this research, we propose a Parallel Thinking-based

@@ -3,6 +3,10 @@ title: "EVtonomy"
 date: 2023-12-07
 image: "/wp-content/uploads/2023/12/evtonomy-edit3-scaled.jpg"
 author: elnaz-shafipour
+members:
+  - sebastian-stein
+  - zhaoxing-li
+  - bruno-arcanjo
 ---
 
 ### Personalised Electric Vehicle Charging Stop Planning
