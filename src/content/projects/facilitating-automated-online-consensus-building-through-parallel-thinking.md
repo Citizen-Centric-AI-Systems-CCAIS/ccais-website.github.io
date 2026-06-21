@@ -4,6 +4,7 @@ date: 2025-03-17
 image: "/wp-content/uploads/2025/03/Screenshot-2025-01-21-at-18.11.39-copy.png"
 author: zhaoxing-li
 members:
+  - zhaoxing-li
   - sebastian-stein
   - vahid-yazdanpanah
   - jan-buermann

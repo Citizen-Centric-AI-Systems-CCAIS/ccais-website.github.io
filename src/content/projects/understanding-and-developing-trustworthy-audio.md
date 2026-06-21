@@ -4,6 +4,7 @@ date: 2023-11-01
 image: "/wp-content/uploads/2023/11/ai-audio.jpg"
 author: jennifer-williams
 members:
+  - jennifer-williams
   - sebastian-stein
 ---
 

@@ -4,6 +4,7 @@ date: 2023-11-01
 image: "/wp-content/uploads/2023/11/computational-project-image-1.png"
 author: vahid-yazdanpanah
 members:
+  - vahid-yazdanpanah
   - sebastian-stein
   - enrico-gerding
 ---

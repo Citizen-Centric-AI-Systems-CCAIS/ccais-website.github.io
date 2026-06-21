@@ -2,6 +2,7 @@
 title: "Ethical Alignment of AI Systems"
 author: jayati-deshmukh
 members:
+  - jayati-deshmukh
   - sebastian-stein
   - vahid-yazdanpanah
 date: 2025-03-04

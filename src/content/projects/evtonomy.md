@@ -4,6 +4,7 @@ date: 2023-12-07
 image: "/wp-content/uploads/2023/12/evtonomy-edit3-scaled.jpg"
 author: elnaz-shafipour
 members:
+  - elnaz-shafipour
   - sebastian-stein
   - zhaoxing-li
   - bruno-arcanjo

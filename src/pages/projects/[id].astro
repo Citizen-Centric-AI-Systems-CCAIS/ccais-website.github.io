@@ -12,7 +12,7 @@ const { Content } = await render(entry);
 const author = team.find((m) => m.slug === entry.data.author);
 const members = (entry.data.members ?? [])
   .map((s) => team.find((m) => m.slug === s))
-  .filter((m) => m && m.slug !== entry.data.author);
+  .filter(Boolean);
 const fmt = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 <Base title={entry.data.title} bodyClass="single-projects">

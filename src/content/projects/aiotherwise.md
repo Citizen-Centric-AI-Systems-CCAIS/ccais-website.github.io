@@ -2,6 +2,7 @@
 title: "AI Otherwise"
 author: sarah-kiden
 members:
+  - sarah-kiden
   - sebastian-stein
   - vahid-yazdanpanah
   - zhaoxing-li

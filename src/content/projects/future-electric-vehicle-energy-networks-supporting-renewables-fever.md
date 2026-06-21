@@ -2,6 +2,7 @@
 title: "Future Electric Vehicle Energy Networks supporting Renewables (FEVER)"
 author: jan-buermann
 members:
+  - jan-buermann
   - sebastian-stein
   - zhaoxing-li
   - bruno-arcanjo
