@@ -10,6 +10,7 @@ image: "/wp-content/uploads/2025/03/Screenshot-2025-03-04-at-12.14.29.png"
 ---
 
 This project focuses on the importance of ethical alignment in AI systems, particularly those designed with citizen end users in mind. It explores the intersection of responsible AI, socio-technical systems, and citizen-centric design. It proposes that addressing the \*ethical\* aspect of decisions in citizen-centric AI systems enhances trust and acceptance of AI technologies.
+
 We focus on four key areas:
 
 ![](/wp-content/uploads/2025/03/Screenshot-2025-03-04-at-12.14.29.png)
@@ -28,13 +29,16 @@ As a part of this project, we have developed a serious game that helps elicit et
 ![](/wp-content/uploads/2025/03/seriousgame_qrcode.png)
 
 Try the serious game with drones here:
+
 <https://citizen-centric-ai-systems-ccais.github.io/Drone-Serious-Game/>
 
 ---
 
 ### Publications
+
 1. Jayati Deshmukh, Zijie Liang, Vahid Yazdanpanah, Sebastian Stein, and Sarvapali D. Ramchurn. “Serious Games for Ethical Preference Elicitation”. In: Proceedings of the 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025 demonstration track, to appear). Detroit, USA, 2025. pdf:
 2. Jayati Deshmukh, Vahid Yazdanpanah, Sebastian Stein, and Timothy J Norman. “Ethical Alignment in Citizen-Centric AI”. In: Pacific Rim International Conference on Artificial Intelligence. Springer. 2024, pp. 43–55. url:
+
 ### Serious Game Demo Video
 
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="480" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/SV5Vzrl7XwY?feature=oembed" title="Serious Games for Ethical Preference Elicitation - AAMAS 2025 Demonstration" width="640"></iframe>
