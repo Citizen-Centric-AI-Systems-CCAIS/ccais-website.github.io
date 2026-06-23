@@ -34,7 +34,7 @@ export const team: Member[] = [
     group: "Researchers",
     photo: img("ag-seb-stein-01-med.jpg"),
     email: "ss2@ecs.soton.ac.uk",
-    websites: ["http://southampton.ac.uk/people/5x5r59/professor-sebastian-stein"],
+    websites: ["http://southampton.ac.uk/people/5x5r59/professor-sebastian-stein", { label: "Google Scholar", url: "https://scholar.google.com/citations?user=6TuZKj4AAAAJ" }],
     biography: `Seb is a Turing AI Acceleration Fellow and Principal Investigator of the Citizen-Centric AI Systems project. With a background in multiagent systems, Sebastian is passionate about building AI systems that help solve urgent societal problems, for example in smart mobility, smart energy and disaster response applications. This requires algorithms that consider the preferences and incentives of individuals, and that can be understood and trusted by non-expert citizen users. Sebastian is also a co-investigator on the FEVER programme grant, where he is applying AI to the design of novel electric vehicle charging stations that are 100% grid-independent. Furthermore, he is co-director of the Low Carbon Comfort Centre of Excellence at the University of Southampton, as well as Impact Acceleration Champion at the Centre for Doctoral Training on AI for Sustainability (SustAI).`,
   },
   {
