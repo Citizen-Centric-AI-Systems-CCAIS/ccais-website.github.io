@@ -65,20 +65,19 @@ if (video && pauseBt) {
 }
 
 // --- Search overlay ---
+// The theme CSS hard-codes `.header-search-backdrop { display: none }`, so we
+// toggle inline display (which overrides it) rather than the hidden attribute.
 const searchBackdrop = document.querySelector('.header-search-backdrop');
-document.querySelectorAll('.header-search-icon').forEach((b) =>
-  b.addEventListener('click', () => {
-    if (!searchBackdrop) return;
-    searchBackdrop.hidden = false;
-    searchBackdrop.querySelector('.search-field')?.focus();
-  })
-);
-searchBackdrop?.querySelector('.header-search-close')?.addEventListener('click', () => {
-  searchBackdrop.hidden = true;
-});
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && searchBackdrop && !searchBackdrop.hidden) searchBackdrop.hidden = true;
-});
+const openSearch = () => {
+  if (!searchBackdrop) return;
+  searchBackdrop.style.display = 'block';
+  searchBackdrop.querySelector('.search-field')?.focus();
+};
+const closeSearch = () => { if (searchBackdrop) searchBackdrop.style.display = 'none'; };
+document.querySelectorAll('.header-search-icon').forEach((b) => b.addEventListener('click', openSearch));
+searchBackdrop?.querySelector('.header-search-close')?.addEventListener('click', closeSearch);
+searchBackdrop?.addEventListener('click', (e) => { if (e.target === searchBackdrop) closeSearch(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSearch(); });
 
 // --- Click-to-play video (Prof Stein box on the homepage) ---
 document.querySelectorAll('.video').forEach((wrap) => {

@@ -135,6 +135,14 @@
 /* Fixed-header menu link spacing (the original got this via #primary-menu). */
 .fixed-header nav .menu > li > a { padding: 5px 20px; }
 
+/* The slide-in fixed header carries the full desktop menu + icon buttons, which
+   only fit on wide screens. Below ~992px the row overflowed and pushed the
+   icons (search/LinkedIn) off-screen, so hide the fixed header there — the main
+   header (with its hamburger) handles narrower widths. */
+@media (max-width: 992px) {
+  .fixed-header { display: none !important; }
+}
+
 /* ---- Content styling conventions ----
    Posts are pure Markdown; the accent colours WordPress applied inline are
    reproduced per section here (projects purple, blog teal, news/events pink). */
@@ -303,6 +311,10 @@
 /* Contact form (Web3Forms) inline status — on a light section, so a dark error. */
 .form-status { margin: 12px 0 0; font-size: 14px; }
 .form-status.is-error { color: #c0392b; }
+
+/* The search overlay form is always a white card, so keep its heading dark even
+   in dark mode (where all headings are forced white and would vanish on it). */
+.darkmode .header-search-backdrop .header-search-form h2 { color: #06062d !important; }
 
 /* Newsletter-bar close (X): the theme pinned it to top:20px and, as a <button>,
    it rendered at the small default font size. Enlarge it and centre it
