@@ -13,6 +13,17 @@ if (toggle && nav) {
   });
 }
 
+// --- Compact floating-header menu toggle (controls its own nav) ---
+const fixedToggle = document.querySelector('.fixed-menu-toggle');
+const fixedNav = document.querySelector('.fixed-header nav');
+if (fixedToggle && fixedNav) {
+  fixedToggle.addEventListener('click', () => {
+    const open = fixedNav.classList.toggle('toggled');
+    fixedToggle.classList.toggle('menu-is-active', open);
+    fixedToggle.setAttribute('aria-expanded', String(open));
+  });
+}
+
 // --- Sub-menu toggles (mobile) ---
 document.querySelectorAll('.submenu-toggle-button').forEach((btn) => {
   btn.addEventListener('click', (e) => {

@@ -136,11 +136,42 @@
 .fixed-header nav .menu > li > a { padding: 5px 20px; }
 
 /* The slide-in fixed header carries the full desktop menu + icon buttons, which
-   only fit on wide screens. Below ~992px the row overflowed and pushed the
-   icons (search/LinkedIn) off-screen, so hide the fixed header there — the main
-   header (with its hamburger) handles narrower widths. */
+   only fit on wide screens. Below ~992px collapse it to a compact bar — logo +
+   icon buttons + a hamburger that drops the menu down — instead of letting the
+   menu overflow and push the icons off-screen. */
+.fixed-header .menu-overlay .menu-toggle { display: none; }
 @media (max-width: 992px) {
-  .fixed-header { display: none !important; }
+  .fixed-header .menu-main-menu-container { display: none; }
+  .fixed-header .menu-overlay .menu-toggle { display: block; }
+  .fixed-header nav.toggled .menu-main-menu-container {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #450DC0;
+    padding: 10px 30px 24px;
+    z-index: 9;
+    max-height: 75vh;
+    overflow: auto;
+  }
+  .fixed-header nav.toggled .menu-main-menu-container .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .fixed-header nav.toggled .menu-main-menu-container .menu > li {
+    width: 100%;
+    border-right: 0 !important;
+  }
+  .fixed-header nav.toggled .menu-main-menu-container .menu > li > a { display: block; padding: 8px 0; }
+  .fixed-header nav.toggled .menu-main-menu-container .sub-menu {
+    display: block;
+    position: static;
+    padding: 0 0 6px 16px;
+    box-shadow: none;
+    background: transparent;
+  }
 }
 
 /* ---- Content styling conventions ----
