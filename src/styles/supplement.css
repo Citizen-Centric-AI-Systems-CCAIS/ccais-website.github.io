@@ -316,6 +316,20 @@
    in dark mode (where all headings are forced white and would vanish on it). */
 .darkmode .header-search-backdrop .header-search-form h2 { color: #06062d !important; }
 
+/* Dark theme for the Pagefind results widget on /search/ (it ships a light
+   theme by default; these are its documented CSS variables). */
+.darkmode .pagefind-ui {
+  --pagefind-ui-primary: #3CBAC6;
+  --pagefind-ui-text: #f1f1f1;
+  --pagefind-ui-background: #2a2a2a;
+  --pagefind-ui-border: #4a4a4a;
+  --pagefind-ui-tag: #333333;
+}
+.darkmode .pagefind-ui__search-input,
+.darkmode .pagefind-ui__search-clear { color: #f1f1f1; }
+.darkmode .pagefind-ui__result { border-color: #4a4a4a; }
+.darkmode .pagefind-ui__result-excerpt { color: #c8c8c8; }
+
 /* Newsletter-bar close (X): the theme pinned it to top:20px and, as a <button>,
    it rendered at the small default font size. Enlarge it and centre it
    vertically in the bar. */
