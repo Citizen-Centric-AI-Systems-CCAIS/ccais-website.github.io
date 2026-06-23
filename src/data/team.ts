@@ -1,7 +1,7 @@
 // Single source of truth for the CCAIS team — maintained by hand.
 // The team page and the /author/<slug>/ person pages are generated from this.
-// Each member's name, role, group, photo, email, website(s) and biography all
-// live here (previously biographies were a separate team-bios.json).
+// Each member's name, role, group, photo, email, websites and biography all
+// live here.
 
 export interface Member {
   slug: string;
@@ -10,9 +10,8 @@ export interface Member {
   group: string;
   photo: string;
   email?: string;
-  website?: string;
-  // Optional list of links shown on the person's page. Each item is either a
-  // URL string, or { label, url } to show friendly text instead of the URL.
+  // Links shown on the person's page. Each item is either a URL string, or
+  // { label, url } to show friendly text instead of the bare URL.
   websites?: (string | { label: string; url: string })[];
   biography?: string;
 }
@@ -35,7 +34,7 @@ export const team: Member[] = [
     group: "Researchers",
     photo: img("ag-seb-stein-01-med.jpg"),
     email: "ss2@ecs.soton.ac.uk",
-    website: "http://southampton.ac.uk/people/5x5r59/professor-sebastian-stein",
+    websites: ["http://southampton.ac.uk/people/5x5r59/professor-sebastian-stein"],
     biography: `Seb is a Turing AI Acceleration Fellow and Principal Investigator of the Citizen-Centric AI Systems project. With a background in multiagent systems, Sebastian is passionate about building AI systems that help solve urgent societal problems, for example in smart mobility, smart energy and disaster response applications. This requires algorithms that consider the preferences and incentives of individuals, and that can be understood and trusted by non-expert citizen users. Sebastian is also a co-investigator on the FEVER programme grant, where he is applying AI to the design of novel electric vehicle charging stations that are 100% grid-independent. Furthermore, he is co-director of the Low Carbon Comfort Centre of Excellence at the University of Southampton, as well as Impact Acceleration Champion at the Centre for Doctoral Training on AI for Sustainability (SustAI).`,
   },
   {
@@ -44,7 +43,7 @@ export const team: Member[] = [
     role: "Academic Collaborator - Mechanism Design, Privacy",
     group: "Researchers",
     photo: img("enrico-gerding-sq.jpg"),
-    website: "https://www.southampton.ac.uk/people/5x2dnl/professor-enrico-gerding",
+    websites: ["https://www.southampton.ac.uk/people/5x2dnl/professor-enrico-gerding"],
   },
   {
     slug: "jennifer-williams",
@@ -53,7 +52,7 @@ export const team: Member[] = [
     group: "Researchers",
     photo: img("jennifer_new.jpg"),
     email: "j.williams@soton.ac.uk",
-    website: "http://www.southampton.ac.uk/people/5zc9gl/doctor-jennifer-williams",
+    websites: ["http://www.southampton.ac.uk/people/5zc9gl/doctor-jennifer-williams"],
     biography: `Dr Jennifer Williams is an assistant professor in Electronics and Computer Science. Her current research explores creation of trustworthy, private, and secure speech/audio solutions and explainable smart building services such as occupancy-based smart energy management. Dr. Williams is the PI and Co-PI of multiple interdisciplinary teams within the UKRI Trustworthy Autonomous Systems Hub (TAS Hub). She completed her PhD at University of Edinburgh (2021) in the area of representation learning and speech signal disentanglement for a variety of speech technology applications (voice conversion, speech synthesis, anti-spoofing, naturalness assessment, and privacy).`,
   },
   {
@@ -63,7 +62,7 @@ export const team: Member[] = [
     group: "Researchers",
     photo: img("vahid-yazdanpanah-sq.jpg"),
     email: "v.yazdanpanah@soton.ac.uk",
-    website: "http://vahid.yazdanpanah.net",
+    websites: ["http://vahid.yazdanpanah.net"],
     biography: `Dr Vahid Yazdanpanah is an academic collaborator at CCAIS, working on responsibility in AI systems, ridesharing, and citizen-centric approaches to AI. His research focuses on intelligent agents, multiagent systems, formal reasoning, and game-theoretic methods. At CCAIS, Vahid contributes expertise on how AI systems can reason about responsibility, support ethical decisions, and behave in ways that are trustworthy. His work is particularly relevant to the design of AI systems that involve multiple interacting agents, where questions of coordination, accountability, fairness, and resilience are central. Vahid’s broader research explores agent-based simulation, logics for multiagent systems, and strategic reasoning. Through this work, he aims to support the development of AI technologies that are not only technically robust, but also sensitive to societal values and the real-world contexts in which citizens interact with intelligent systems.`,
   },
   {
@@ -73,7 +72,7 @@ export const team: Member[] = [
     group: "Researchers",
     photo: img("jan-buermann-sq.jpg"),
     email: "j.buermann@soton.ac.uk",
-    website: "http://www.southampton.ac.uk/people/5yk8j2/doctor-jan-buermann",
+    websites: ["http://www.southampton.ac.uk/people/5yk8j2/doctor-jan-buermann"],
     biography: `Dr Jan Buermann is a research fellow on the CCAIS project with an interest in the fair and efficient usage of resources in multi-agent systems. For problems in this context, Jan is particularly interested in properly including and considering agents' incentives relating to costs, participation, manipulation and fairness. An example of his work on fair electricity systems is his work on how neighbours could fairly share the electricity generated by a photovoltaic system which he considered during his PhD on resource allocation under uncertainty. Besides the CCAIS project, Jan is also involved in the Future Electric Vehicle Energy Networks supporting Renewables (FEVER) project. This project works on developing a grid-independent renewable-energy-based charging station to support green electrification. Spanning both projects, Jan applies his expertise in designing algorithms and mechanisms to problems in smart charging, energy storage and grid interaction that take users’ needs into consideration and provides efficient and citizen-trustworthy AI systems. His work thus balances fundamental and practical real-world applicable research, satisfying the needs of the FEVER project and the aims of the CCAIS project.`,
   },
   {
@@ -83,7 +82,7 @@ export const team: Member[] = [
     group: "Researchers",
     photo: img("sarah.jpg"),
     email: "sk3r24@soton.ac.uk",
-    website: "https://www.southampton.ac.uk/people/65cclz/ms-sarah-kiden",
+    websites: ["https://www.southampton.ac.uk/people/65cclz/ms-sarah-kiden"],
     biography: `Sarah Kiden is a Public Interest Technologist and Design Researcher investigating the relationship between technology, design, policy, and society. At the University of Southampton, she is spending time on projects across the Citizen-Centric Artificial Intelligence Systems (CCAIS) research group and Responsible AI UK (RAI UK). She is collaborating on research on the design of algorithms and interaction mechanisms with non-expert citizen end users to understand and trust future AI systems, and issues around AI ethics, governance, and public participation. Previously, she was a Marie Curie Research Fellow on a joint EU-funded industrial doctoral programme between Northumbria University Newcastle and Mozilla. Her research focused on how we might design and shape Internet of Things (IoT) ideas into trustworthy and responsible technologies when working with grassroots communities.`,
   },
   {
@@ -93,7 +92,7 @@ export const team: Member[] = [
     group: "Researchers",
     photo: img("zhaoxing.jpg"),
     email: "zhaoxing.li@soton.ac.uk",
-    website: "https://www.southampton.ac.uk/people/659ph2/doctor-zhaoxing-li",
+    websites: ["https://www.southampton.ac.uk/people/659ph2/doctor-zhaoxing-li"],
     biography: `Dr. Zhaoxing Li is a research fellow on the CCAIS project, specializing in Large Language Models, Deep Reinforcement Learning, Human-AI Interaction, and Explainable AI. His research focuses on integrating large language models into citizen-centric AI systems, striving to bridge the gap between technological innovation and social impact. Zhaoxing's work encompasses enhancing AI's understanding and interaction with humans, ensuring transparency, and aligning AI development with ethical and societal needs. He aims to create intelligent, interactive, and humanized AI solutions through his contributions, balancing fundamental research with practical applications.`,
   },
   {
@@ -103,7 +102,7 @@ export const team: Member[] = [
     group: "Researchers",
     photo: img("jayati.jpg"),
     email: "j.deshmukh@soton.ac.uk",
-    website: "https://www.southampton.ac.uk/people/65clnm/ms-jayati-deshmukh",
+    websites: ["https://www.southampton.ac.uk/people/65clnm/ms-jayati-deshmukh"],
     biography: `Jayati Deshmukh is a Postdoctoral Researcher at the School of Electronics and Computer Science at the University of Southampton. She is a part of the UKRI Trustworthy Autonomous Systems (TAS Hub), Responsible AI UK (RAI UK) and Citizen-Centric AI Systems (CCAIS) teams. Her research interests are in designing autonomous multi-agent systems which can act responsibly and can be trusted by the people who interface with diverse applications of these systems. She has submitted her PhD thesis at the Web Science Lab at IIIT-Bangalore. She holds an MTech in Data Science from IIIT-Bangalore and a BE in Computer Engineering from Gujarat Technological University. She is a gold medalist in both undergraduate and graduate degrees. She has 4+ years of work experience at Accenture Technology Labs, Bangalore where she did research and development in the area of natural language processing, deep learning and knowledge graphs which resulted in many successful PoCs as well as patents and publications.`,
   },
   {
@@ -113,7 +112,7 @@ export const team: Member[] = [
     group: "Researchers",
     photo: img("wengu-e1724773300673.png"),
     email: "wgu@jaist.ac.jp",
-    website: "https://researchmap.jp/wgu?lang=en",
+    websites: ["https://researchmap.jp/wgu?lang=en"],
     biography: `Dr. Wen Gu is an assistant professor in Japan Advanced Institute of Science and Technology (JAIST). Currently he is a visiting researcher in the Citizen-Centric Artificial Intelligence Systems (CCAIS) research group at the University of Southampton. He received his Ph.D from Nagoya Institute of Technology and University of Wollongong in 2022 as the first runner of the joint program. His current research interests lie in agent-based systems, consensus decision-making, distance education support, and social network analysis.`,
   },
   {
@@ -123,7 +122,7 @@ export const team: Member[] = [
     group: "Researchers",
     photo: img("bruno.jpg"),
     email: "b.r.queiros-arcanjo@soton.ac.uk",
-    website: "https://www.southampton.ac.uk/people/mr-bruno-arcanjo",
+    websites: ["https://www.southampton.ac.uk/people/mr-bruno-arcanjo"],
     biography: `Bruno is a research assistant on the CCAIS and FEVER projects, with a research background in computationally efficient Visual Place Recognition for mobile robotics operating with resource-constrained hardware. He is currently working on accelerating and facilitating the public-wide adoption of electrical vehicles in the UK. His research interests also cover the applicability of AI for human self-development. In particular, he is interested in the use of highly personalised AI assistants for helping humans achieve complex and demanding long-term goals. He aims to contribute AI solutions that quickly adapt to an individual’s unique and diverse circumstances, offering more targeted and, hopefully, higher value tools to their users.`,
   },
   {
@@ -143,7 +142,7 @@ export const team: Member[] = [
     group: "PhD Students",
     photo: img("behrad-koohy.jpg"),
     email: "Bk2g18@soton.ac.uk",
-    website: "https://behradkoohy.github.io/",
+    websites: ["https://behradkoohy.github.io/"],
     biography: `I'm a postgraduate researcher in artificial intelligence at the University of Southampton, and I am part of the Citizen-Centric Artificial Intelligence Systems research group. I primarily work on adaptive and intelligence transport systems, using techniques such as reinforcement learning and graph learning to progress towards the goal of making our cities healthier, more sustainable and prosperous.`,
   },
   {
@@ -153,7 +152,7 @@ export const team: Member[] = [
     group: "PhD Students",
     photo: img("connor-watson.jpg"),
     email: "c.watson@soton.ac.uk",
-    website: "http://www.southampton.ac.uk/people/62ft87/mr-connor-watson",
+    websites: ["http://www.southampton.ac.uk/people/62ft87/mr-connor-watson"],
     biography: `The aim of my postgraduate research project is to use data-driven long-term artificial intelligence models to understand the thermal comfort effectiveness of building materials, design, passive and active comfort systems, and individual practises and clothing norms. We also assess internal air quality for these proposed retrofits and designs, as well as whether these solutions are economically viable.`,
   },
   {
@@ -163,7 +162,7 @@ export const team: Member[] = [
     group: "PhD Students",
     photo: img("fariba.jpg"),
     email: "f.dehghan@soton.ac.uk",
-    website: "https://www.southampton.ac.uk/people/6627t6/miss-fariba-dehghan",
+    websites: ["https://www.southampton.ac.uk/people/6627t6/miss-fariba-dehghan"],
     biography: `Fariba is a PhD student in Computer Science at the University of Southampton, and part of the FEVER and CCAIS projects. Her research focuses on using artificial intelligence techniques to optimize the energy management of grid-independent electric vehicle (EV) charging stations. This approach aims to enhance the efficiency and economic viability of these stations, encourage greater adoption of EVs, and contribute to the creation of more environmentally friendly urban environments.`,
   },
   {
@@ -182,7 +181,7 @@ export const team: Member[] = [
     group: "PhD Students",
     photo: img("jim.png"),
     email: "J.Dilkes@soton.ac.uk",
-    website: "https://www.southampton.ac.uk/people/65jbzs/mr-jim-dilkes",
+    websites: ["https://www.southampton.ac.uk/people/65jbzs/mr-jim-dilkes"],
     biography: `Jim is a Postgraduate Researcher in Artificial Intelligence at the University of Southampton and part of the CCAIS project. His work focuses on trustworthy human-AI interaction. He has a particular interest in Large Language Model-based artificial agents and how Reinforcement Learning can improve their decision making when they interact with or act on behalf of humans.`,
   },
   {
@@ -192,7 +191,7 @@ export const team: Member[] = [
     group: "PhD Students",
     photo: img("luke.jpg"),
     email: "LO.Nicholas@soton.ac.uk",
-    website: "https://www.southampton.ac.uk/people/5zkybp/mr-luke-nicholas",
+    websites: ["https://www.southampton.ac.uk/people/5zkybp/mr-luke-nicholas"],
     biography: `I’m a postgraduate researcher in sustainable AI at the University of Southampton. I am a member of the first cohort of the UKRI AI Centre for Doctoral Training in AI for Sustainability (SustAI) and collaborate with the Citizen-Centric Artificial Intelligence Systems (CCAIS) research group. I primarily work on occupant centric multiagent systems and the application of LLMs to deliver more sustainable building management systems. The goal of my research is to deliver a more sustainable urban environment that fosters sustainable urban communities.`,
   },
   {
@@ -202,7 +201,7 @@ export const team: Member[] = [
     group: "PhD Students",
     photo: img("beining-zhang-scaled.jpg"),
     email: "beiningzhang001@gmail.com",
-    website: "https://www.linkedin.com/in/beining-zhang/",
+    websites: ["https://www.linkedin.com/in/beining-zhang/"],
     biography: `Beining is a prospective PhD student at the University of Southampton and a member of the Citizen-Centric Artificial Intelligence Systems (CCAIS) research group. Her research investigates how artificial intelligence and multi-agent systems can help address major challenges in human cooperation. In particular, she uses techniques such as large language models and reinforcement learning to identify mutually beneficial agreements, ultimately enhancing collective decision-making in mixed-motive settings where the involved parties may have conflicting interests.`,
   },
   {
@@ -222,8 +221,7 @@ export const team: Member[] = [
     group: "Research Engineers / Assistants",
     photo: img("alexandry-augustin-sq.jpg"),
     email: "augustin.consulting.ltd@gmail.com",
-    website: "https://augustin-consulting.co.uk",
-    websites: ["https://alexandryaugustin.com"],
+    websites: ["https://augustin-consulting.co.uk","https://alexandryaugustin.com"],
     biography: `Dr. Alexandry Augustin is a freelance consultant specialising in web technologies, mobile application development, and systems programming. He graduated from the University of Southampton in 2021 with a PhD in Computer Science, where his research focused on Bayesian inference and deep learning. He continues to support the lab as an external consultant, having recently coordinated the deployment of the smart routing application for electric vehicles.`,
   },
   {
@@ -233,7 +231,7 @@ export const team: Member[] = [
     group: "Research Engineers / Assistants",
     photo: img("zijie.jpg"),
     email: "jackliang0124@foxmail.com",
-    website: "https://www.linkedin.com/in/zijie-liang-b48025184/",
+    websites: ["https://www.linkedin.com/in/zijie-liang-b48025184/"],
     biography: `Game designer for serious games`,
   },
   {
@@ -252,7 +250,7 @@ export const team: Member[] = [
     group: "Research Engineers / Assistants",
     photo: img("eu-jin.jpg"),
     email: "ejl1e22@soton.ac.uk",
-    website: "http://www.linkedin.com/in/eu-jin-lim-733148220",
+    websites: ["http://www.linkedin.com/in/eu-jin-lim-733148220"],
     biography: `Lim Eu Jin is a final-year MEng student in Electronics Engineering with Artificial Intelligence at the University of Southampton. He is currently a research intern at CCAIS, where his work focuses on exploring the application of Large Language Models (LLMs) in smart home systems. Eu Jin is passionate about artificial intelligence, with particular interests in natural language processing, human-AI interaction, and the real-world deployment of LLMs. He is enthusiastic about leveraging AI to develop intelligent, intuitive systems that can enhance everyday living.`,
   },
   {
@@ -262,7 +260,7 @@ export const team: Member[] = [
     group: "Research Engineers / Assistants",
     photo: img("prokopis.jpg"),
     email: "pg1n23@soton.ac.uk",
-    website: "https://www.linkedin.com/in/prokopis-georgiou/",
+    websites: ["https://www.linkedin.com/in/prokopis-georgiou/"],
     biography: `Prokopis is a 3rd year computer science student at the University of Southampton and research intern collaborator on the CCAIS team. He is currently working on modelling how different policy interventions influence strategic behaviour and infrastructure efficiency in the EV ecosystem. He is passionate about harnessing AI to address complex societal challenges and drive meaningful, data-informed change.`,
   },
   {
@@ -282,7 +280,7 @@ export const team: Member[] = [
     group: "Alumni",
     photo: img("ag-alex-masterman-02_jpg.jpg"),
     email: "Am4e20@soton.ac.uk",
-    website: "http://www.southampton.ac.uk/people/5yj82z/mr-alexander-masterman",
+    websites: ["http://www.southampton.ac.uk/people/5yj82z/mr-alexander-masterman"],
     biography: `Alex is a PhD candidate whose research specializes in smart transportation and routing optimization, focusing specifically on accessibility.`,
   },
   {
@@ -291,7 +289,7 @@ export const team: Member[] = [
     role: "Reinforcement Learning for Smart Energy Management. JPMorgan Chase & Co",
     group: "Alumni",
     photo: img("benjamin-lellouch.jpg"),
-    website: "https://www.linkedin.com/in/benjamin-lellouch/",
+    websites: ["https://www.linkedin.com/in/benjamin-lellouch/"],
   },
   {
     slug: "elnaz-shafipour",
@@ -300,7 +298,7 @@ export const team: Member[] = [
     group: "Alumni",
     photo: img("ag-elnaz-shafipour-02-squ.jpg"),
     email: "e.shafipour@soton.ac.uk",
-    website: "https://www.southampton.ac.uk/people/5z9rcg/doctor-elnaz-shafipour",
+    websites: ["https://www.southampton.ac.uk/people/5z9rcg/doctor-elnaz-shafipour"],
     biography: `Elnaz Shafipour is a Research Fellow at the School of Electronics and Computer Science at UoS. She is part of the Citizen-Centric AI Systems (CCAIS) teams. She received her PhD from Lancaster University in September 2021. Her research focuses on AI and Multi-Agent Systems, as well as planning and preference elicitation. In CCAIS project, she is working on a smart application for electric vehicle drivers to plan their charging stops based on their preferences. She received a Postdoctoral Enrichment Award from the Alan Turing Institute in 2022, and she led a project funded by Public Policy (UoS) on electric vehicle charging on long journeys.`,
   },
   {
@@ -309,7 +307,7 @@ export const team: Member[] = [
     role: "Equitable Ridesharing Simulator. PhD Student, Queen Mary University of London",
     group: "Alumni",
     photo: img("farida-yusuf.jpg"),
-    website: "https://www.linkedin.com/in/frdysf/",
+    websites: ["https://www.linkedin.com/in/frdysf/"],
   },
   {
     slug: "gongwei-shi",
@@ -318,7 +316,7 @@ export const team: Member[] = [
     group: "Alumni",
     photo: img("gongwei-alvin-shi-sq.jpg"),
     email: "gs1n17@soton.ac.uk",
-    website: "https://www.southampton.ac.uk/people/5xjxfn/mr-gongwei-alvin-shi",
+    websites: ["https://www.southampton.ac.uk/people/5xjxfn/mr-gongwei-alvin-shi"],
     biography: `I am researching on the project named intelligent Heating, Ventilation and Air Conditioning (HVAC) operation for the individualized occupant in residential households. The problem involves balancing contrary objectives, including thermal discomfort and electricity consumption costs associated with HVAC system control actions. User preference plays a major role here. However, a problem arises from incorporating human knowledge into the domain system, in an efficient and less-problematic way. Therefore, we specifically investigate different approaches that leverage user preference into the training procedure, as well as online learning to adjust the existing model so it is acting in accordance with the user’s present preferences.`,
   },
   {
@@ -328,7 +326,7 @@ export const team: Member[] = [
     group: "Alumni",
     photo: img("greg-sewell-sq.jpg"),
     email: "TBC",
-    website: "TBC",
+    websites: ["TBC"],
     biography: `TBC`,
   },
   {
@@ -338,7 +336,7 @@ export const team: Member[] = [
     group: "Alumni",
     photo: img("hannah-phillips-sq.jpg"),
     email: "TBC",
-    website: "TBC",
+    websites: ["TBC"],
     biography: `TBC`,
   },
   {
@@ -347,7 +345,7 @@ export const team: Member[] = [
     role: "Trustworthy Recommender Systems. MSc Student, University of Edinburgh",
     group: "Alumni",
     photo: img("harris-hadjiantonis.jpg"),
-    website: "https://www.linkedin.com/in/harris-hadjiantonis/",
+    websites: ["https://www.linkedin.com/in/harris-hadjiantonis/"],
   },
   {
     slug: "jack-dymond",
@@ -356,7 +354,7 @@ export const team: Member[] = [
     group: "Alumni",
     photo: img("jack-dymond-sq.jpg"),
     email: "TBC",
-    website: "TBC",
+    websites: ["TBC"],
     biography: `TBC`,
   },
   {
@@ -365,7 +363,7 @@ export const team: Member[] = [
     role: "Human-Agent Interaction. JPMorgan Chase & Co",
     group: "Alumni",
     photo: img("james-king.jpg"),
-    website: "https://www.linkedin.com/in/james-phillips-king/",
+    websites: ["https://www.linkedin.com/in/james-phillips-king/"],
   },
   {
     slug: "jovan-karlius",
@@ -380,7 +378,7 @@ export const team: Member[] = [
     role: "Smart Routing for Electric Vehicles. Freelance Software Engineer",
     group: "Alumni",
     photo: img("lewis-hill-sq.jpg"),
-    website: "https://www.linkedin.com/in/lewis-hill-5b8163b3/",
+    websites: ["https://www.linkedin.com/in/lewis-hill-5b8163b3/"],
   },
   {
     slug: "lila-marshman",
@@ -388,7 +386,7 @@ export const team: Member[] = [
     role: "Smart Building Energy (EPSRC Vacation Intern). Undergraduate Student, University of Edinburgh",
     group: "Alumni",
     photo: img("lila-marshman.jpg"),
-    website: "https://www.linkedin.com/in/lila-m-644145268/",
+    websites: ["https://www.linkedin.com/in/lila-m-644145268/"],
   },
   {
     slug: "lucia-cipolina-kun",
@@ -396,7 +394,7 @@ export const team: Member[] = [
     role: "Coalition Formation for Equitable Ridesharing. PhD Student, University of Bristol",
     group: "Alumni",
     photo: img("lucia-cipolina-kun-sq.jpg"),
-    website: "https://www.linkedin.com/in/luciacipolina/",
+    websites: ["https://www.linkedin.com/in/luciacipolina/"],
   },
   {
     slug: "mark-saunders",
@@ -413,7 +411,7 @@ export const team: Member[] = [
     role: "Incentive Compatible Ridesharing. Former Research Engineer / Assistant",
     group: "Alumni",
     photo: img("matt-ivery.png"),
-    website: "https://www.linkedin.com/in/matt-ivey-19b3ab219/",
+    websites: ["https://www.linkedin.com/in/matt-ivey-19b3ab219/"],
   },
   {
     slug: "mengya-liu",
@@ -421,7 +419,7 @@ export const team: Member[] = [
     role: "Multi-objective Optimisation for Equitable Ridesharing. Lenovo Research",
     group: "Alumni",
     photo: img("mengya-liu.jpg"),
-    website: "https://www.linkedin.com/in/mengya-liu-a68627139/",
+    websites: ["https://www.linkedin.com/in/mengya-liu-a68627139/"],
   },
   {
     slug: "nicos-protopapas",
@@ -430,7 +428,7 @@ export const team: Member[] = [
     group: "Alumni",
     photo: img("nicos-protopapas.jpg"),
     email: "TBC",
-    website: "TBC",
+    websites: ["TBC"],
     biography: `TBC`,
   },
   {
@@ -439,6 +437,6 @@ export const team: Member[] = [
     role: "Influence Maximisation. The Alan Turing Institute",
     group: "Alumni",
     photo: img("sukankana-chakraborty-sq.jpg"),
-    website: "https://www.turing.ac.uk/people/researchers/sukankana-chakraborty",
+    websites: ["https://www.turing.ac.uk/people/researchers/sukankana-chakraborty"],
   },
 ];

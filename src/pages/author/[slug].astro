@@ -10,8 +10,7 @@ const { member } = Astro.props;
 // Normalise the person's links (website + optional websites list) to
 // { label, url } and de-duplicate by URL.
 const seenUrls = new Set<string>();
-const websites = [...((member as any).websites ?? []), member.website]
-  .filter(Boolean)
+const websites = (member.websites ?? [])
   .map((w: any) => (typeof w === 'string' ? { url: w, label: w } : { url: w.url, label: w.label ?? w.url }))
   .filter((w: { url: string }) => w.url && !seenUrls.has(w.url) && seenUrls.add(w.url));
 

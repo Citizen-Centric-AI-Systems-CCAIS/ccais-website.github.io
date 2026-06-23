@@ -8,6 +8,7 @@ members:
   - sebastian-stein
   - zhaoxing-li
   - bruno-arcanjo
+  - alexandry-augustin
 ---
 
 ### Personalised Electric Vehicle Charging Stop Planning
