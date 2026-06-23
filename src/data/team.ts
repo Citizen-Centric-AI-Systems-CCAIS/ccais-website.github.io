@@ -223,6 +223,7 @@ export const team: Member[] = [
     photo: img("alexandry-augustin-sq.jpg"),
     email: "augustin.consulting.ltd@gmail.com",
     website: "https://augustin-consulting.co.uk",
+    websites: ["https://alexandryaugustin.com"],
     biography: `Dr. Alexandry Augustin is a freelance consultant specialising in web technologies, mobile application development, and systems programming. He graduated from the University of Southampton in 2021 with a PhD in Computer Science, where his research focused on Bayesian inference and deep learning. He continues to support the lab as an external consultant, having recently coordinated the deployment of the smart routing application for electric vehicles.`,
   },
   {
