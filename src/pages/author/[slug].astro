@@ -1,15 +1,19 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { team } from '../../data/team';
-import bios from '../../data/team-bios.json';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   return team.map((member) => ({ params: { slug: member.slug }, props: { member } }));
 }
 const { member } = Astro.props;
-const bio = (bios as Record<string, any>)[member.slug] ?? {};
-const website = bio.website ?? member.website;
+// Normalise the person's links (website + optional websites list) to
+// { label, url } and de-duplicate by URL.
+const seenUrls = new Set<string>();
+const websites = [...((member as any).websites ?? []), member.website]
+  .filter(Boolean)
+  .map((w: any) => (typeof w === 'string' ? { url: w, label: w } : { url: w.url, label: w.label ?? w.url }))
+  .filter((w: { url: string }) => w.url && !seenUrls.has(w.url) && seenUrls.add(w.url));
 
 // Everything this person authored (via `author:` in the entry frontmatter)
 const sources = [
@@ -45,22 +49,22 @@ const works = (
         <img src={member.photo} alt={member.name} width="300" height="300" />
       </div>
       <div class="author-details">
-        {bio.email && (
+        {member.email && (
           <>
             <h4>Email:</h4>
-            <p><a href={`mailto:${bio.email}`}>{bio.email}</a></p>
+            <p><a href={`mailto:${member.email}`}>{member.email}</a></p>
           </>
         )}
-        {website && (
+        {websites.length > 0 && (
           <>
-            <h4>Website:</h4>
-            <p><a href={website}>{website}</a></p>
+            <h4>{websites.length > 1 ? 'Websites:' : 'Website:'}</h4>
+            {websites.map((w) => <p><a href={w.url} target="_blank" rel="noopener">{w.label}</a></p>)}
           </>
         )}
-        {bio.biography && (
+        {member.biography && (
           <>
             <h4>Biography:</h4>
-            {bio.biography.split('\n').filter(Boolean).map((p: string) => <p>{p}</p>)}
+            {member.biography.split('\n').filter(Boolean).map((p: string) => <p>{p}</p>)}
           </>
         )}
       </div>
