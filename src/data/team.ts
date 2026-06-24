@@ -22,6 +22,7 @@ export const groups = [
   { heading: 'Researchers', variant: 'primary' },
   { heading: 'PhD Students', variant: 'secondary' },
   { heading: 'Research Engineers / Assistants', variant: 'tertiary' },
+  { heading: 'PhD Graduates', variant: 'green' },
   { heading: 'Alumni', variant: 'black' }
 ] as const;
 
@@ -136,16 +137,6 @@ export const team: Member[] = [
   },
   // PhD Students
   {
-    slug: "behrad-koohy",
-    name: "Behrad Koohy",
-    role: "Smart Routing for Connected / Autonomous Vehicles",
-    group: "PhD Students",
-    photo: img("behrad-koohy.jpg"),
-    email: "Bk2g18@soton.ac.uk",
-    websites: ["https://behradkoohy.github.io/"],
-    biography: `I'm a postgraduate researcher in artificial intelligence at the University of Southampton, and I am part of the Citizen-Centric Artificial Intelligence Systems research group. I primarily work on adaptive and intelligence transport systems, using techniques such as reinforcement learning and graph learning to progress towards the goal of making our cities healthier, more sustainable and prosperous.`,
-  },
-  {
     slug: "connor-watson",
     name: "Connor Watson",
     role: "Building Air Quality and Comfort Modelling",
@@ -193,16 +184,6 @@ export const team: Member[] = [
     email: "LO.Nicholas@soton.ac.uk",
     websites: ["https://www.southampton.ac.uk/people/5zkybp/mr-luke-nicholas"],
     biography: `I’m a postgraduate researcher in sustainable AI at the University of Southampton. I am a member of the first cohort of the UKRI AI Centre for Doctoral Training in AI for Sustainability (SustAI) and collaborate with the Citizen-Centric Artificial Intelligence Systems (CCAIS) research group. I primarily work on occupant centric multiagent systems and the application of LLMs to deliver more sustainable building management systems. The goal of my research is to deliver a more sustainable urban environment that fosters sustainable urban communities.`,
-  },
-  {
-    slug: "beining-zhang",
-    name: "Beining Zhang",
-    role: "AI for Facilitating Human Cooperation",
-    group: "PhD Students",
-    photo: img("beining-zhang-scaled.jpg"),
-    email: "beiningzhang001@gmail.com",
-    websites: ["https://www.linkedin.com/in/beining-zhang/"],
-    biography: `Beining is a prospective PhD student at the University of Southampton and a member of the Citizen-Centric Artificial Intelligence Systems (CCAIS) research group. Her research investigates how artificial intelligence and multi-agent systems can help address major challenges in human cooperation. In particular, she uses techniques such as large language models and reinforcement learning to identify mutually beneficial agreements, ultimately enhancing collective decision-making in mixed-motive settings where the involved parties may have conflicting interests.`,
   },
   {
     slug: "andrew-poile",
@@ -272,6 +253,45 @@ export const team: Member[] = [
     email: "agxl1e22@soton.ac.uk",
     biography: `Adrian Low is an undergraduate student in Electronic Engineering with Artificial Intelligence at the University of Southampton. His summer research explores the use of multi-agent systems to model human behaviour in trust-based decision-making scenarios. By simulating and evaluating agent interactions within trust games, he aims to better understand how artificial agents replicate human patterns of thought and behaviour. His broader interests include large language models, reinforcement learning, and their applications in modelling human behaviour, multi-agent coordination, and social decision-making.`,
   },
+  // PhD Graduates
+  {
+    slug: "behrad-koohy",
+    name: "Behrad Koohy",
+    role: "Smart Routing for Connected / Autonomous Vehicles",
+    group: "PhD Graduates",
+    photo: img("behrad-koohy.jpg"),
+    email: "Bk2g18@soton.ac.uk",
+    websites: ["https://behradkoohy.github.io/"],
+    biography: `I'm a postgraduate researcher in artificial intelligence at the University of Southampton, and I am part of the Citizen-Centric Artificial Intelligence Systems research group. I primarily work on adaptive and intelligence transport systems, using techniques such as reinforcement learning and graph learning to progress towards the goal of making our cities healthier, more sustainable and prosperous.`,
+  },
+  {
+    slug: "greg-sewell",
+    name: "Greg Sewell",
+    role: "Inter-generational Influences on Households' Heating Control",
+    group: "PhD Graduates",
+    photo: img("greg-sewell-sq.jpg"),
+    email: "TBC",
+    websites: ["TBC"],
+    biography: `TBC`,
+  },  
+  {
+    slug: "jack-dymond",
+    name: "Jack Dymond",
+    role: "Progressive Intelligence",
+    group: "PhD Graduates",
+    photo: img("jack-dymond-sq.jpg"),
+    email: "TBC",
+    websites: ["TBC"],
+    biography: `TBC`,
+  },
+  {
+    slug: "sukankana-chakraborty",
+    name: "Dr Sukankana Chakraborty",
+    role: "Influence Maximisation. The Alan Turing Institute",
+    group: "PhD Graduates",
+    photo: img("sukankana-chakraborty-sq.jpg"),
+    websites: ["https://www.turing.ac.uk/people/researchers/sukankana-chakraborty"],
+  },  
   // Alumni
   {
     slug: "alexander-masterman",
@@ -290,6 +310,16 @@ export const team: Member[] = [
     group: "Alumni",
     photo: img("benjamin-lellouch.jpg"),
     websites: ["https://www.linkedin.com/in/benjamin-lellouch/"],
+  },
+  {
+    slug: "beining-zhang",
+    name: "Beining Zhang",
+    role: "AI for Facilitating Human Cooperation",
+    group: "Alumni",
+    photo: img("beining-zhang-scaled.jpg"),
+    email: "beiningzhang001@gmail.com",
+    websites: ["https://www.linkedin.com/in/beining-zhang/"],
+    biography: `Beining is a member of the Citizen-Centric Artificial Intelligence Systems (CCAIS) research group. Her research investigates how artificial intelligence and multi-agent systems can help address major challenges in human cooperation. In particular, she uses techniques such as large language models and reinforcement learning to identify mutually beneficial agreements, ultimately enhancing collective decision-making in mixed-motive settings where the involved parties may have conflicting interests.`,
   },
   {
     slug: "elnaz-shafipour",
@@ -320,16 +350,6 @@ export const team: Member[] = [
     biography: `I am researching on the project named intelligent Heating, Ventilation and Air Conditioning (HVAC) operation for the individualized occupant in residential households. The problem involves balancing contrary objectives, including thermal discomfort and electricity consumption costs associated with HVAC system control actions. User preference plays a major role here. However, a problem arises from incorporating human knowledge into the domain system, in an efficient and less-problematic way. Therefore, we specifically investigate different approaches that leverage user preference into the training procedure, as well as online learning to adjust the existing model so it is acting in accordance with the user’s present preferences.`,
   },
   {
-    slug: "greg-sewell",
-    name: "Greg Sewell",
-    role: "Inter-generational Influences on Households' Heating Control",
-    group: "Alumni",
-    photo: img("greg-sewell-sq.jpg"),
-    email: "TBC",
-    websites: ["TBC"],
-    biography: `TBC`,
-  },
-  {
     slug: "hannah-phillips",
     name: "Hannah Phillips",
     role: "ENGAGE Intern Voice Modification",
@@ -346,16 +366,6 @@ export const team: Member[] = [
     group: "Alumni",
     photo: img("harris-hadjiantonis.jpg"),
     websites: ["https://www.linkedin.com/in/harris-hadjiantonis/"],
-  },
-  {
-    slug: "jack-dymond",
-    name: "Jack Dymond",
-    role: "Progressive Intelligence",
-    group: "Alumni",
-    photo: img("jack-dymond-sq.jpg"),
-    email: "TBC",
-    websites: ["TBC"],
-    biography: `TBC`,
   },
   {
     slug: "james-king",
@@ -430,13 +440,5 @@ export const team: Member[] = [
     email: "TBC",
     websites: ["TBC"],
     biography: `TBC`,
-  },
-  {
-    slug: "sukankana-chakraborty",
-    name: "Dr Sukankana Chakraborty",
-    role: "Influence Maximisation. The Alan Turing Institute",
-    group: "Alumni",
-    photo: img("sukankana-chakraborty-sq.jpg"),
-    websites: ["https://www.turing.ac.uk/people/researchers/sukankana-chakraborty"],
   },
 ];
