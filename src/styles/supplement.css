@@ -87,6 +87,20 @@
 .page-team-section .teams-block .team-role { font-size: 1.4rem; opacity: 0.85; }
 .page-team-section .teams-block a { text-decoration: none; }
 
+/* Team group accent colours. A group's `variant` (src/data/team.ts) becomes a
+   class on its section and colours the heading + member links. primary/
+   secondary/tertiary (purple/pink/teal) and black are defined in theme.css;
+   below are the local additions:
+   - `green`: a 4th accent ready to use — set `variant: 'green'` on a group.
+   - a dark-mode colour for `black` (Alumni), which theme.css otherwise leaves
+     black-on-dark; match the others by going white. */
+.page-team-section.green,
+.page-team-section.green a { color: #2E7D4F; }
+.darkmode .page-team-section.green,
+.darkmode .page-team-section.green a { color: #5FC98C; }
+.darkmode .page-team-section.black,
+.darkmode .page-team-section.black a { color: #fff; }
+
 /* ---- Search page ---- */
 .search-page { margin: 50px 0; min-height: 40vh; }
 

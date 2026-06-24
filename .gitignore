@@ -3,3 +3,6 @@ dist/
 .astro/
 wp-export-html/
 .DS_Store
+# Staging copies dropped by scripts/fetch-assets.mjs when it would otherwise
+# overwrite a hand-edited generated file.
+*.fetched

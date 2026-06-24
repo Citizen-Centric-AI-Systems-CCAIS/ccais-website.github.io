@@ -1,12 +1,19 @@
 #!/usr/bin/env node
 /**
- * Downloads all images, fonts, video and the original theme stylesheet from
- * the live WordPress site into this project, so the static site is fully
- * self-contained. Run once before building:
+ * Mirrors images, fonts, video and the original theme stylesheet from the
+ * (now frozen) WordPress site into this project, so the static site is fully
+ * self-contained.
  *
- *   npm run fetch-assets
+ *   npm run fetch-assets            # safe: never overwrites local changes
+ *   npm run fetch-assets -- --force # allow overwriting generated files
  *
- * Safe to re-run; existing files are skipped.
+ * The WordPress site is no longer updated, so this normally isn't needed — it's
+ * kept only for reference / one-off re-mirroring. Binary assets that already
+ * exist are skipped. The two GENERATED files derived from WordPress but since
+ * hand-edited here — src/styles/theme.css and src/data/site-assets.json — are
+ * never silently clobbered: if the freshly fetched version differs from what's
+ * on disk, the script warns and writes a `<file>.fetched` sibling to diff,
+ * unless you pass --force.
  */
 import { mkdir, writeFile, readFile, readdir, access } from 'node:fs/promises';
 import { dirname, join, extname } from 'node:path';
@@ -14,6 +21,25 @@ import { dirname, join, extname } from 'node:path';
 const BASE = 'https://www.ccais.ac.uk';
 const ROOT = new URL('..', import.meta.url).pathname;
 const PUBLIC = join(ROOT, 'public');
+const FORCE = process.argv.includes('--force');
+
+// theme.css and site-assets.json are generated from the (frozen) WordPress site
+// but have since been hand-edited in this repo. Never silently overwrite those
+// local changes: only write when the fetched content is identical (a no-op) or
+// when --force is given; otherwise warn and drop the fetched copy beside the
+// file as <name>.fetched for manual diffing.
+async function safeWriteGenerated(dest, content, label) {
+  const current = await readFile(dest, 'utf8').catch(() => null);
+  if (current === content) return; // unchanged — nothing to do
+  if (current !== null && !FORCE) {
+    await writeFile(dest + '.fetched', content);
+    console.warn(`  ! ${label} differs from the live site — NOT overwriting local changes.`);
+    console.warn(`    Wrote ${label}.fetched instead; diff/merge by hand, or re-run with --force.`);
+    return;
+  }
+  await writeFile(dest, content);
+  console.log(`  ✓ ${label} ${current === null ? 'written' : 'overwritten (--force)'}`);
+}
 
 // Assets referenced by the theme / layout that don't appear inside content:
 const STATIC_ASSETS = [
@@ -127,8 +153,7 @@ try {
     // font to Gordita, whose files are no longer shipped, and text falls
     // back to the browser's default serif.
     css = css.replace(/font-family:\s*Gordita\s*;/gi, 'font-family: "Poppins", sans-serif;');
-    await writeFile(join(ROOT, 'src/styles/theme.css'), css);
-    console.log('  ✓ src/styles/theme.css replaced with full original stylesheet');
+    await safeWriteGenerated(join(ROOT, 'src/styles/theme.css'), css, 'src/styles/theme.css');
   }
 } catch (e) {
   console.warn('  ✗ could not refresh theme.css:', String(e));
@@ -150,7 +175,7 @@ try {
     console.warn('  ! footer background image not found in homepage HTML');
   }
   if (videoMatch) console.log('  ✓ embedded video found:', assets.wwabVideo);
-  await writeFile(join(ROOT, 'src/data/site-assets.json'), JSON.stringify(assets, null, 1) + '\n');
+  await safeWriteGenerated(join(ROOT, 'src/data/site-assets.json'), JSON.stringify(assets, null, 1) + '\n', 'src/data/site-assets.json');
   for (const u of [...new Set(inlineUrls)]) {
     try {
       const r = await download(u, join(PUBLIC, u));
