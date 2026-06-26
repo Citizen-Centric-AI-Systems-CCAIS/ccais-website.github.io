@@ -28,6 +28,12 @@ const IMAGES = [
     credit: 'Photo by Fabian Kleiser on Unsplash (Unsplash License)',
     url: 'https://images.unsplash.com/photo-1745015446589-7ee6f702d8c1?auto=format&fit=crop&w=1600&q=70',
     dest: 'public/images/projects/generative-occupants-llm-agents-for-building-simulation.jpg'
+  },
+  {
+    project: 'news: ccais-at-buildsys-2026',
+    credit: 'Photo by David Wirzba on Unsplash (Unsplash License)',
+    url: 'https://images.unsplash.com/photo-1558818061-547b1114aa6a?auto=format&fit=crop&w=1600&q=70',
+    dest: 'public/images/news/ccais-at-buildsys-2026.jpg'
   }
 ];
 

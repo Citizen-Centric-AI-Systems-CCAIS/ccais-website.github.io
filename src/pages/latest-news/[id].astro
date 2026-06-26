@@ -26,5 +26,10 @@ const fmt = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long'
       <Content />
     </div>
     <p><a class="customButton button-primary" href="/latest-news/">All news</a></p>
+    {entry.data.imageCredit && (
+      <p class="image-credit">Header image: {entry.data.imageCreditUrl
+        ? <a href={entry.data.imageCreditUrl} target="_blank" rel="noopener">{entry.data.imageCredit}</a>
+        : entry.data.imageCredit}</p>
+    )}
   </div>
 </Base>
