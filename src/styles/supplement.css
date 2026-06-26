@@ -449,3 +449,16 @@ h1 { font-weight: 700; }
 /* Header-image credit: small, muted line at the foot of a project/post. */
 .image-credit { margin-top: 30px; font-size: 12px; opacity: 0.65; }
 .image-credit a { color: inherit; text-decoration: underline; }
+
+/* ---- Mobile header / burger menu ----
+   On phones the nav collapses to a bar (logo + a white "burger" that expands the
+   full menu via `nav.toggled`, handled in theme.css). The homepage nav is set to
+   transparent on mobile — originally to overlay the hero — but in this build it
+   sits above the hero on a light background, so its white logo and burger were
+   invisible and the header looked missing. Give the homepage the same solid
+   purple bar as the inner pages so the burger menu is always visible. */
+@media (max-width: 768px) {
+  .page-template-front-page #site-navigation {
+    background-color: #450dc0;
+  }
+}
