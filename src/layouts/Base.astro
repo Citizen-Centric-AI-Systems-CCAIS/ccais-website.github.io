@@ -200,11 +200,14 @@ const fullTitle = title.includes('Citizen-Centric')
                     <li class={item.children ? 'menu-item menu-item-has-children' : 'menu-item'}>
                       <a href={item.children ? item.children[0].href : item.href}>{item.label}</a>
                       {item.children && (
-                        <ul class="sub-menu">
-                          {item.children.map((c) => (
-                            <li class="menu-item"><a href={c.href}>{c.label}</a></li>
-                          ))}
-                        </ul>
+                        <>
+                          <button class="submenu-toggle-button" aria-label={`Open ${item.label} submenu`}></button>
+                          <ul class="sub-menu">
+                            {item.children.map((c) => (
+                              <li class="menu-item"><a href={c.href}>{c.label}</a></li>
+                            ))}
+                          </ul>
+                        </>
                       )}
                     </li>
                   ))}
