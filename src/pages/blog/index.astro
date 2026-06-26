@@ -13,7 +13,7 @@ const fmt = (d) => d.toDateString();
     <div class="blog">
       {items.map((i) => (
         <div class="single-blog">
-          <div class="bg-image" style={`background-image:url('${i.data.image}')`}></div>
+          <div class={`bg-image${i.data.image ? '' : ' no-image'}`} style={i.data.image ? `background-image:url('${i.data.image}')` : undefined}></div>
           <a href={`/uncategorised/${i.id}/`}>
               <span class="date">{fmt(i.data.date)}</span>
             <div class="text-overlay">

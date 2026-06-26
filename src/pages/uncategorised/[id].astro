@@ -21,7 +21,7 @@ const fmt = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long'
         {author && <div class="author"><p>By <a href={`/author/${author.slug}/`}>{author.name}</a></p></div>}
       </div>
     </div>
-    {entry.data.image && <div class="hero-image" style={`background-image:url('${entry.data.image}')`}></div>}
+    <div class={`hero-image${entry.data.image ? '' : ' no-image'}`} style={entry.data.image ? `background-image:url('${entry.data.image}')` : undefined}></div>
     <div class="text-block small-container">
       <Content />
     </div>

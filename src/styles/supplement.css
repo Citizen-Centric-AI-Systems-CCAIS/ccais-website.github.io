@@ -497,3 +497,22 @@ h1 { font-weight: 700; }
     justify-content: center;
   }
 }
+
+/* ---- Fallback header for posts with no image ----
+   A two-tone brand gradient, tinted per section (projects purple→pink,
+   news/events pink→purple, blog teal→purple). Shown on listing cards and the
+   detail-page hero when a post has no `image`. The `!important` overrides the
+   theme's grayscale filter (meant for photos) so the gradient keeps its colour. */
+.bg-image.no-image,
+.hero-image.no-image {
+  background-image: var(--post-fallback, linear-gradient(125deg, #450DC0, #D5007F)) !important;
+  filter: none !important;
+}
+.hero-image.no-image { height: 10px; border-radius: 5px; margin: 0 0 12px; }
+.post-type-archive-latest-news, .single-latest-news, .news-block,
+.post-type-archive-events, .single-events {
+  --post-fallback: linear-gradient(125deg, #D5007F, #450DC0);
+}
+.blog, .single-post, .blog-block {
+  --post-fallback: linear-gradient(125deg, #0C838F, #450DC0);
+}

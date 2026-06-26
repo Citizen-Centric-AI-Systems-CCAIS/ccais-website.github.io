@@ -140,7 +140,7 @@ const trim = (s, n = 90) => (s && s.length > n ? s.slice(0, n) + '…' : s);
       <div class="projects-main-block">
         {projects.map((p) => (
           <div class="single-project">
-            <div class="bg-image" style={`background-image:url('${p.data.image}')`}></div>
+            <div class={`bg-image${p.data.image ? '' : ' no-image'}`} style={p.data.image ? `background-image:url('${p.data.image}')` : undefined}></div>
             <a href={`/projects/${p.id}/`}>
               <div class="text-overlay">
                 <h3>{p.data.title}</h3>
@@ -164,7 +164,7 @@ const trim = (s, n = 90) => (s && s.length > n ? s.slice(0, n) + '…' : s);
         <div class="news-main-block">
           {news.map((n) => (
             <div class="single-news">
-              <div class="bg-image" style={`background-image:url('${n.data.image}')`}></div>
+              <div class={`bg-image${n.data.image ? '' : ' no-image'}`} style={n.data.image ? `background-image:url('${n.data.image}')` : undefined}></div>
               <div class="overlay"></div>
               <a href={`/latest-news/${n.id}/`}>
                 <div class="text-overlay">
@@ -186,7 +186,7 @@ const trim = (s, n = 90) => (s && s.length > n ? s.slice(0, n) + '…' : s);
         <div class="blog-main-block">
           {blog.map((b) => (
             <div class="single-blog">
-              <div class="bg-image" style={`background-image:url('${b.data.image}')`}></div>
+              <div class={`bg-image${b.data.image ? '' : ' no-image'}`} style={b.data.image ? `background-image:url('${b.data.image}')` : undefined}></div>
               <div class="overlay"></div>
               <a href={`/uncategorised/${b.id}/`}>
                 <div class="text-overlay">

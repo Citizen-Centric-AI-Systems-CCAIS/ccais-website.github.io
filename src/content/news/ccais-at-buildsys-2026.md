@@ -1,5 +1,5 @@
 ---
-title: "CCAIS researchers present at ACM BuildSys 2026"
+title: "CCAIS researchers present at BuildSys 2026"
 date: 2026-06-26
 image: "/images/news/ccais-at-buildsys-2026.jpg"
 imageCredit: "Photo by David Wirzba on Unsplash"
