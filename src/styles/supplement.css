@@ -473,16 +473,27 @@ h1 { font-weight: 700; }
   display: block;
 }
 
-/* Newsletter sign-up bar: stack it on mobile so the heading, email field and
-   button don't overlap, and keep the close (X) pinned to the top-right. */
+/* Newsletter sign-up bars (header + footer): on mobile, stack and CENTRE the
+   heading, email field and button. The form is otherwise pushed to the right by
+   `margin-left: auto`. Keep the header bar's close (X) pinned to the top-right. */
 @media (max-width: 768px) {
   .site-header .top-wrap > .container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 8px;
-    padding-right: 44px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  .site-header .top-wrap form.newsletter-form { margin-left: 0; }
   .site-header .top-wrap .close-signup { top: 14px; transform: none; }
+
+  .footer-newsletter-wrap .container { align-items: center; text-align: center; }
+
+  .site-header .top-wrap form.newsletter-form,
+  .footer-newsletter-wrap form.newsletter-form {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
 }
