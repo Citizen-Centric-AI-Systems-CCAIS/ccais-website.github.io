@@ -145,6 +145,59 @@
 .projects-section .single-project .text-overlay h3 { font-size: 24px; line-height: 1.25; }
 .projects-section .single-project .text-overlay p { font-size: 14px; margin: 10px 0 0; }
 
+/* ---------------------------------------------------------------------------
+   Card hover (projects archive + homepage "current projects" + news archive +
+   blog archive): keep the title pinned at the bottom and ALWAYS fully visible.
+   The summary is a flex sibling the title takes priority over, so on hover it
+   only fills the space left above the title and is truncated — to nothing if
+   necessary — instead of pushing the title up and off the top of the card
+   (which overflow:hidden was clipping before).
+   --------------------------------------------------------------------------- */
+.post-type-archive-projects .site-main .projects .single-project .text-overlay,
+.projects-section .projects-main-block .single-project .text-overlay,
+.post-type-archive-latest-news .site-main .latest-news .single-news .text-overlay,
+.blog .site-main .blog .single-blog .text-overlay {
+  justify-content: flex-end;   /* title anchored to the bottom */
+  overflow: hidden;
+}
+.post-type-archive-projects .site-main .projects .single-project h3,
+.projects-section .projects-main-block .single-project h3,
+.post-type-archive-latest-news .site-main .latest-news .single-news h3,
+.blog .site-main .blog .single-blog h3 {
+  flex: 0 0 auto;              /* title is never compressed — always fully shown */
+}
+.post-type-archive-projects .site-main .projects .single-project p,
+.projects-section .projects-main-block .single-project p,
+.post-type-archive-latest-news .site-main .latest-news .single-news p,
+.blog .site-main .blog .single-blog p {
+  position: static;            /* in flow so the title governs it (was absolute) */
+  bottom: auto;
+  flex: 0 1 auto;             /* summary yields its space to the title… */
+  min-height: 0;             /* …and may shrink all the way to zero */
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;           /* clip whatever doesn't fit */
+}
+@media (min-width: 769px) {
+  .post-type-archive-projects .site-main .projects .single-project p,
+  .projects-section .projects-main-block .single-project p,
+  .post-type-archive-latest-news .site-main .latest-news .single-news p,
+  .blog .site-main .blog .single-blog p {
+    max-height: 0;             /* hidden at rest -> title sits at the bottom */
+    opacity: 0;
+    padding-top: 0;
+    transition: max-height 0.45s ease, opacity 0.45s ease, padding-top 0.45s ease;
+  }
+  .post-type-archive-projects .site-main .projects .single-project:hover p,
+  .projects-section .projects-main-block .single-project:hover p,
+  .post-type-archive-latest-news .site-main .latest-news .single-news:hover p,
+  .blog .site-main .blog .single-blog:hover p {
+    max-height: 8em;           /* capped by the flex layout to the room available */
+    opacity: 1;
+    padding-top: 8px;
+  }
+}
+
 
 /* Fixed-header menu link spacing (the original got this via #primary-menu). */
 .fixed-header nav .menu > li > a { padding: 5px 20px; }
