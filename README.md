@@ -22,7 +22,7 @@ truth.
 
 ## Structure
 
-- `src/content/` — Markdown content collections (`projects`, `news`, `blog`, `events`, `impacts`, `open-source`). Add a new post by dropping a `.md` file in the right folder. Listing excerpts are derived automatically from the first paragraph of the body (`src/lib/excerpt.ts`); add an `excerpt:` frontmatter field only if you want to override that.
+- `src/content/` — Markdown content collections (`projects`, `news`, `blog`, `events`, `impacts`, `open-source`). Add a new post by dropping a `.md` file in the right folder. Listing excerpts are derived automatically from the first paragraph of the body (`src/lib/excerpt.ts`); add an `excerpt:` frontmatter field only if you want to override that. Set `imageCredit` (and optionally `imageCreditUrl`) to show a small credit for the header image at the foot of the page.
 - `src/data/team.ts` — the **single, hand-maintained source for all team data**: each member's name, role, group, photo, email, website(s) and biography, plus the ordered list of section headings (`groups`) and their accent colours. The team page and the per-person `/author/<slug>/` pages are generated from it. Projects and posts link to people via `author` / `members` slugs in their frontmatter.
 - `src/data/` (other) — small JSON config: `newsletter.json` (Mailchimp embed settings), `contact.json` (Web3Forms key), `linkedin.json` (featured posts), `pubs.json` (publications, see below).
 - `public/images/team/` — team profile photos referenced from `src/data/team.ts`.

@@ -392,3 +392,7 @@
    them to 700, which in Poppins approximates the original's visual weight.
    Lives here (not theme.css) so `npm run fetch-assets` can't revert it. */
 h1 { font-weight: 700; }
+
+/* Header-image credit: small, muted line at the foot of a project/post. */
+.image-credit { margin-top: 30px; font-size: 12px; opacity: 0.65; }
+.image-credit a { color: inherit; text-decoration: underline; }

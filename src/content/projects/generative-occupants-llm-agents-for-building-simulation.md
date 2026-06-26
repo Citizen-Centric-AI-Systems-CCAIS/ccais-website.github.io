@@ -2,15 +2,15 @@
 title: "Generative Occupants: LLM Agents for Building Energy Simulation"
 date: 2026-06-22
 image: "/images/projects/generative-occupants-llm-agents-for-building-simulation.jpg"
+imageCredit: "Photo by Fabian Kleiser on Unsplash"
+imageCreditUrl: "https://unsplash.com/@fabiankleiser"
 author: luke-nicholas
 members:
   - luke-nicholas
   - sebastian-stein
   - enrico-gerding
 ---
-<!-- Header image: Photo by Fabian Kleiser (https://unsplash.com/@fabiankleiser) on Unsplash,
-     free to use under the Unsplash License (attribution appreciated, not required).
-     Source: https://unsplash.com/photos/glass-facade-of-a-modern-office-building-V5vF94h52r0 -->
+<!-- Header image source: https://unsplash.com/photos/glass-facade-of-a-modern-office-building-V5vF94h52r0 (Unsplash License) -->
 
 How much energy a building uses depends enormously on the people inside it — when they arrive, whether they open a window, nudge the thermostat up, or switch on a heater at their desk. This human behaviour is one of the biggest reasons a building's real energy use can differ from what its designers predicted, yet most building simulations still represent occupants with fixed schedules or simple rules that miss how people actually behave.
 

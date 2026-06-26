@@ -5,6 +5,10 @@ const base = z.object({
   title: z.string(),
   date: z.coerce.date(),
   image: z.string().optional(),
+  // Optional credit for the header image, shown small at the foot of the page;
+  // imageCreditUrl (e.g. the photographer's profile) turns the credit into a link.
+  imageCredit: z.string().optional(),
+  imageCreditUrl: z.string().optional(),
   excerpt: z.string().optional(),
   // Team slug (see src/data/team.ts). Adds a byline on the article and lists
   // the piece on the author's /author/<slug>/ page automatically.

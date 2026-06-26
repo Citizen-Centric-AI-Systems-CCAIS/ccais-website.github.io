@@ -2,14 +2,14 @@
 title: "Building Physics for Low-Carbon Comfort using Artificial Intelligence"
 date: 2026-06-25
 image: "/images/projects/building-physics-for-low-carbon-comfort.jpg"
+imageCredit: "Photo by Nha Chill on Unsplash"
+imageCreditUrl: "https://unsplash.com/@nhachill"
 author: connor-watson
 members:
   - connor-watson
   - sebastian-stein
 ---
-<!-- Header image: Photo by Nha Chill (https://unsplash.com/@nhachill) on Unsplash,
-     free to use under the Unsplash License (attribution appreciated, not required).
-     Source: https://unsplash.com/photos/a-bright-and-airy-living-room-with-modern-decor-ZuHIek5xn_I -->
+<!-- Header image source: https://unsplash.com/photos/a-bright-and-airy-living-room-with-modern-decor-ZuHIek5xn_I (Unsplash License) -->
 
 Keeping buildings comfortable usually costs energy — heating in winter, cooling in summer, and ventilation to keep the air fresh and healthy. But how do we know which designs and retrofits actually deliver a comfortable, healthy indoor environment without driving up carbon emissions and bills? It is a surprisingly hard question to answer, because comfort and air quality depend on a building's materials and design, its heating, cooling and ventilation systems, the weather outside, and the everyday habits of the people living and working inside.
 
