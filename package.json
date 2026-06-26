@@ -9,6 +9,7 @@
     "postbuild": "pagefind --site dist",
     "preview": "astro preview",
     "fetch-assets": "node scripts/fetch-assets.mjs",
+    "fetch-project-images": "node scripts/fetch-project-images.mjs",
     "optimize-images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {

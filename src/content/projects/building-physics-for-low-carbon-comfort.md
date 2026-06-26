@@ -1,7 +1,7 @@
 ---
 title: "Building Physics for Low-Carbon Comfort using Artificial Intelligence"
 date: 2026-06-25
-image: "https://images.unsplash.com/photo-1751945965597-71171ec7a458?auto=format&fit=crop&w=1600&q=70"
+image: "/images/projects/building-physics-for-low-carbon-comfort.jpg"
 author: connor-watson
 members:
   - connor-watson
