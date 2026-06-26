@@ -462,3 +462,27 @@ h1 { font-weight: 700; }
     background-color: #450dc0;
   }
 }
+
+/* The burger's three bars are <span>s; give them display:block so their
+   width/height apply (inline elements ignore both). Without this the toggle
+   button renders empty and there's no visible way to open the mobile menu.
+   On desktop the button is display:none, so this is harmless there. */
+.menu-toggle .bar1,
+.menu-toggle .bar2,
+.menu-toggle .bar3 {
+  display: block;
+}
+
+/* Newsletter sign-up bar: stack it on mobile so the heading, email field and
+   button don't overlap, and keep the close (X) pinned to the top-right. */
+@media (max-width: 768px) {
+  .site-header .top-wrap > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-right: 44px;
+  }
+  .site-header .top-wrap form.newsletter-form { margin-left: 0; }
+  .site-header .top-wrap .close-signup { top: 14px; transform: none; }
+}
