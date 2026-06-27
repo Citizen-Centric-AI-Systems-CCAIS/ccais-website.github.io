@@ -49,15 +49,6 @@ export const team: Member[] = [
   {
     slug: "stephanie-gauthier",
     name: "Dr Stephanie Gauthier",
-    role: "Academic Collaborator – Energy, Buildings & Thermal Comfort",
-    group: "Researchers",
-    photo: img("stephanie-gauthier.webp"),
-    websites: ["https://www.southampton.ac.uk/people/5xf7fn/doctor-stephanie-gauthier"],
-    biography: `Dr Stephanie Gauthier is an Associate Professor in Energy and Buildings at the University of Southampton and a collaborator with CCAIS. Her research focuses on energy demand in buildings, and in particular on occupants' behaviour and thermal comfort. She draws on a range of methods — from occupant surveys and in-situ environmental monitoring to time-series and inferential analysis — to understand how people use buildings and how energy can be saved without sacrificing comfort. She also leads the Sustainable Energy and Buildings theme of the UKRI AI Centre for Doctoral Training in AI for Sustainability (SustAI).`,
-  },
-  {
-    slug: "stephanie-gauthier",
-    name: "Dr Stephanie Gauthier",
     role: "Academic Collaborator – Building Energy & Thermal Comfort",
     group: "Researchers",
     photo: img("stephanie-gauthier.webp"),
