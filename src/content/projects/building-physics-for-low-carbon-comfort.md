@@ -8,6 +8,8 @@ author: connor-watson
 members:
   - connor-watson
   - sebastian-stein
+  - stephanie-gauthier
+  - { name: "Professor Christina Vanderwel", url: "https://www.southampton.ac.uk/people/5xcpfb/professor-christina-vanderwel" }
 ---
 <!-- Header image source: https://unsplash.com/photos/a-bright-and-airy-living-room-with-modern-decor-ZuHIek5xn_I (Unsplash License) -->
 
