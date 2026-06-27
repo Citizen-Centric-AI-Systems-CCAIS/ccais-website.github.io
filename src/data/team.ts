@@ -47,6 +47,25 @@ export const team: Member[] = [
     websites: ["https://www.southampton.ac.uk/people/5x2dnl/professor-enrico-gerding"],
   },
   {
+    slug: "stephanie-gauthier",
+    name: "Dr Stephanie Gauthier",
+    role: "Academic Collaborator – Energy, Buildings & Thermal Comfort",
+    group: "Researchers",
+    photo: img("stephanie-gauthier.webp"),
+    websites: ["https://www.southampton.ac.uk/people/5xf7fn/doctor-stephanie-gauthier"],
+    biography: `Dr Stephanie Gauthier is an Associate Professor in Energy and Buildings at the University of Southampton and a collaborator with CCAIS. Her research focuses on energy demand in buildings, and in particular on occupants' behaviour and thermal comfort. She draws on a range of methods — from occupant surveys and in-situ environmental monitoring to time-series and inferential analysis — to understand how people use buildings and how energy can be saved without sacrificing comfort. She also leads the Sustainable Energy and Buildings theme of the UKRI AI Centre for Doctoral Training in AI for Sustainability (SustAI).`,
+  },
+  {
+    slug: "stephanie-gauthier",
+    name: "Dr Stephanie Gauthier",
+    role: "Academic Collaborator – Building Energy & Thermal Comfort",
+    group: "Researchers",
+    photo: img("stephanie-gauthier.webp"),
+    email: "S.Gauthier@soton.ac.uk",
+    websites: ["https://www.southampton.ac.uk/people/5xf7fn/doctor-stephanie-gauthier"],
+    biography: `Dr Stephanie Gauthier is an Associate Professor in Energy and Buildings at the University of Southampton and a member of the Energy and Climate Change Group. Her research focuses on energy demand in buildings, with a particular emphasis on occupants' behaviour and thermal comfort. She draws on a wide range of methods, from occupant surveys and in-situ environmental monitoring to content, inferential and time-series analysis. Her work bridges building physics and the human side of energy use, supporting the design of low-carbon, occupant-centric buildings.`,
+  },
+  {
     slug: "jennifer-williams",
     name: "Dr Jennifer Williams",
     role: "Academic Collaborator – Audio AI and Applications",
@@ -441,4 +460,21 @@ export const team: Member[] = [
     email: "aaaa1g22@soton.ac.uk",
     biography: `I am a second-year undergraduate student at the University of Southampton, studying Computer Science. I assist the team whenever possible and enjoy our weekly meetings with coffee. Being involved with the team has brought me insights into the research life, and helping me shape my ideas about pursuing a researching career in AI.`,
   },
+];
+
+// Lightweight collaborators who can be listed in a project's `members` without a
+// full team entry or an /author/<slug>/ page — e.g. external co-investigators or
+// joint PhD supervisors. Reference them by `slug` in the project's frontmatter
+// `members`; on the project page they show as plain text, or a link if `url` is
+// given, and they never appear on the team page. To promote someone to a full
+// member later, move them into the `team` array above with a group, photo and bio.
+export interface Collaborator {
+  slug: string;
+  name: string;
+  url?: string;
+}
+
+export const collaborators: Collaborator[] = [
+  // Example:
+  // { slug: "jane-doe", name: "Professor Jane Doe", url: "https://example.org/jane-doe" },
 ];

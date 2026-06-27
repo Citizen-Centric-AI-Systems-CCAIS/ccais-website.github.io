@@ -13,10 +13,10 @@ const base = z.object({
   // Team slug (see src/data/team.ts). Adds a byline on the article and lists
   // the piece on the author's /author/<slug>/ page automatically.
   author: z.string().optional(),
-  // Additional team members involved (list of slugs from src/data/team.ts).
-  // The piece is also listed on each of these members' /author/<slug>/ pages,
-  // and they're shown on the project page.
-  members: z.array(z.string()).optional()
+  // Team members involved. Each entry is either a slug from src/data/team.ts
+  // (links to that person's /author/<slug>/ page and lists the piece there), or
+  // an inline { name, url? } for an external collaborator who has no CCAIS page.
+  members: z.array(z.union([z.string(), z.object({ name: z.string(), url: z.string().optional() })])).optional()
 });
 
 const mk = (dir: string, schema = base) =>

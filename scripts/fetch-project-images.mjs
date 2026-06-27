@@ -34,6 +34,12 @@ const IMAGES = [
     credit: 'Photo by David Wirzba on Unsplash (Unsplash License)',
     url: 'https://images.unsplash.com/photo-1558818061-547b1114aa6a?auto=format&fit=crop&w=1600&q=70',
     dest: 'public/images/news/ccais-at-buildsys-2026.jpg'
+  },
+  {
+    project: 'team: stephanie-gauthier',
+    credit: 'University of Southampton staff profile photo',
+    url: 'https://www.southampton.ac.uk/sites/default/files/styles/max_1300x1300/public/staff/sg1f14-62358.jpg.webp?h=735f7c84&itok=BFUVMP00',
+    dest: 'public/images/team/stephanie-gauthier.webp'
   }
 ];
 
