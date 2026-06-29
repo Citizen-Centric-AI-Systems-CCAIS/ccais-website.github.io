@@ -204,6 +204,15 @@ export const team: Member[] = [
     email: "A.Poile@soton.ac.uk",
     biography: `My research looks at integrating transport into school matching mechanisms, with the intent to reduce inequality, improve student outcomes, and explore how it affects trips taken by private transport to school. Currently, school allocation mechanisms favour students who live closest to them, which introduces a proximity bias. This is exploited by students with means and leads to socioeconomic segregation of schools. There are allocation mechanisms in the literature that have certain properties that we want; they elicit truthful responses, ensure no students wish to swap schools, and provide each student the best school they can get, given the first two properties. We extend these mechanisms with transportation to ameliorate the proximity bias and improve student outcomes.`,
   },
+  {
+    slug: "kiarash-kianian",
+    name: "Kiarash Kianian",
+    role: "Resource Allocation for Green Data Centres",
+    group: "PhD Students",
+    photo: img("kiarash-kianian.jpg"),
+    email: "K.Kianian@soton.ac.uk",
+    biography: `Kiarash Kianian is a PhD student in Computer Science at the University of Southampton. He received his B.Sc. in Computer Engineering from Sharif University of Technology. Before starting his PhD, he worked as a software engineer, developing large-scale backend and distributed software systems. His current research interests include game theory, multi-agent systems, algorithm design, and resource allocation.`,
+  },
   // Research Engineers / Assistants
   {
     slug: "alexandry-augustin",

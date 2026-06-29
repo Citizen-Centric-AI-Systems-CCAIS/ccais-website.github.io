@@ -9,6 +9,7 @@ members:
   - luke-nicholas
   - sebastian-stein
   - enrico-gerding
+  - stephanie-gauthier
 ---
 <!-- Header image source: https://unsplash.com/photos/glass-facade-of-a-modern-office-building-V5vF94h52r0 (Unsplash License) -->
 
