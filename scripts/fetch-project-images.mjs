@@ -40,6 +40,12 @@ const IMAGES = [
     credit: 'University of Southampton staff profile photo',
     url: 'https://www.southampton.ac.uk/sites/default/files/styles/max_1300x1300/public/staff/sg1f14-62358.jpg.webp?h=735f7c84&itok=BFUVMP00',
     dest: 'public/images/team/stephanie-gauthier.webp'
+  },
+  {
+    project: 'school-choice-with-transportation',
+    credit: 'Photo by Denisse Leon on Unsplash (Unsplash License)',
+    url: 'https://images.unsplash.com/photo-1527058918112-6e17a8213943?auto=format&fit=crop&w=1600&q=70',
+    dest: 'public/images/projects/school-choice-with-transportation.jpg'
   }
 ];
 
