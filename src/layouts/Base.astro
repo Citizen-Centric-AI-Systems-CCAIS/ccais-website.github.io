@@ -5,6 +5,7 @@ import RecognitionLogo from '../components/RecognitionLogo.astro';
 import HeaderIcons from '../components/HeaderIcons.astro';
 import siteAssets from '../data/site-assets.json';
 import mailchimp from '../data/newsletter.json';
+import analytics from '../data/analytics.json';
 import '../styles/fonts.css';
 import '../styles/theme.css';
 import '../styles/supplement.css';
@@ -69,6 +70,9 @@ const fullTitle = title.includes('Citizen-Centric')
     <link rel="sitemap" href="/sitemap-index.xml" />
     <!-- Poppins is self-hosted (SIL OFL 1.1); @font-face in src/styles/fonts.css. -->
     <link rel="preload" href="/fonts/poppins/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    {analytics.goatcounter && !analytics.goatcounter.startsWith('REPLACE') && (
+      <script data-goatcounter={analytics.goatcounter} async src="https://gc.zgo.at/count.js" is:inline></script>
+    )}
   </head>
   <body class={bodyClass}>
     <a class="skip-link screen-reader-text" href="#primary">Skip to content</a>

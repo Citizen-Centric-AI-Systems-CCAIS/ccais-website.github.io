@@ -1,0 +1,4 @@
+{
+  "_help": "GoatCounter page analytics: privacy-friendly and cookieless, so no consent banner is required. Set up: create a free site at https://www.goatcounter.com, choose a code (e.g. 'ccais' or 'citizen-centric'), then set `goatcounter` below to your counter URL, e.g. https://ccais.goatcounter.com/count. While it stays as the REPLACE value, no analytics script is added. If you self-host GoatCounter later, put your own /count URL here instead.",
+  "goatcounter": "https://ccais.goatcounter.com/count"
+}
