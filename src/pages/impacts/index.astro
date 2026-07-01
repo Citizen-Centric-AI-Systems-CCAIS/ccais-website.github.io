@@ -6,7 +6,7 @@ const items = (await getCollection('impacts')).sort((a, b) => b.data.date - a.da
 const trim = (s, n = 110) => (s && s.length > n ? s.slice(0, n) + '…' : s);
 const fmt = (d) => d.toDateString();
 ---
-<Base title="Impact" bodyClass="archive post-type-archive post-type-archive-impacts">
+<Base title="Impact" description="How CCAIS research on citizen-centric AI creates real-world impact — tools, products and collaborations with our partners." bodyClass="archive post-type-archive post-type-archive-impacts">
   <div class="container">
     <h1>Impact</h1>
     <h4>Our research impact</h4>

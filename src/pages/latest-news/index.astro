@@ -6,7 +6,7 @@ const items = (await getCollection('news')).sort((a, b) => b.data.date - a.data.
 const trim = (s, n = 110) => (s && s.length > n ? s.slice(0, n) + '…' : s);
 const fmt = (d) => d.toDateString();
 ---
-<Base title="Latest News" bodyClass="archive post-type-archive post-type-archive-latest-news">
+<Base title="Latest News" description="News from the CCAIS group — papers, awards, events and milestones in citizen-centric AI research at the University of Southampton." bodyClass="archive post-type-archive post-type-archive-latest-news">
   <div class="container">
     <h1>Latest News</h1>
     <h4>News and updates from the CCAIS team</h4>

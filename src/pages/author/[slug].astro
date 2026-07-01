@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { team } from '../../data/team';
 import { getCollection } from 'astro:content';
+import { clip, personSchema } from '../../lib/seo';
 
 export async function getStaticPaths() {
   return team.map((member) => ({ params: { slug: member.slug }, props: { member } }));
@@ -34,8 +35,21 @@ const works = (
     )
   )
 ).flat().sort((a, b) => b.date - a.date);
+
+const bioText = (member.biography ?? '').replace(/\s*\n+\s*/g, ' ').trim();
+const description = bioText
+  ? clip(bioText)
+  : `${member.name} — ${member.role}, Citizen-Centric AI Systems, University of Southampton.`;
+const jsonld = personSchema({
+  name: member.name,
+  role: member.role,
+  bio: bioText || undefined,
+  image: member.photo,
+  path: Astro.url.pathname,
+  sameAs: websites.map((w) => w.url)
+});
 ---
-<Base title={member.name}>
+<Base title={member.name} description={description} image={member.photo} ogType="profile" jsonld={jsonld}>
   <div class="container author-page">
     <div class="page-intro">
       <p class="breadcrumb"><a href="/about-us/our-team/">Our team</a>/</p>

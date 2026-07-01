@@ -6,7 +6,7 @@ const items = (await getCollection('open-source')).sort((a, b) => b.data.date - 
 const trim = (s, n = 110) => (s && s.length > n ? s.slice(0, n) + '…' : s);
 const fmt = (d) => d.toDateString();
 ---
-<Base title="Open Source" bodyClass="archive post-type-archive post-type-archive-open-sources">
+<Base title="Open Source" description="Open-source software, tools and datasets released by the CCAIS research group on citizen-centric artificial intelligence." bodyClass="archive post-type-archive post-type-archive-open-sources">
   <div class="container">
     <h1>Open Source</h1>
     <h4>Open source software from CCAIS</h4>

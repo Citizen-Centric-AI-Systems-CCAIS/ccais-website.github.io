@@ -6,7 +6,7 @@ const items = (await getCollection('blog')).sort((a, b) => b.data.date - a.data.
 const trim = (s, n = 110) => (s && s.length > n ? s.slice(0, n) + '…' : s);
 const fmt = (d) => d.toDateString();
 ---
-<Base title="Blog" bodyClass="archive post-type-archive blog">
+<Base title="Blog" description="The CCAIS blog — perspectives, explainers and behind-the-scenes writing on citizen-centric AI from our researchers." bodyClass="archive post-type-archive blog">
   <div class="container">
     <h1>Blog</h1>
     <h4>Blog posts from the CCAIS team</h4>

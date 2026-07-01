@@ -2,6 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
 import { team, collaborators } from '../../data/team';
+import { excerptOf } from '../../lib/excerpt';
+import { clip, projectSchema } from '../../lib/seo';
 
 export async function getStaticPaths() {
   const items = await getCollection('projects');
@@ -24,8 +26,18 @@ const resolveMember = (m: any) => {
 };
 const members = (entry.data.members ?? []).map(resolveMember).filter(Boolean);
 const fmt = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const description = clip(excerptOf(entry));
+const jsonld = projectSchema({
+  title: entry.data.title,
+  description,
+  image: entry.data.image,
+  dateISO: entry.data.date.toISOString(),
+  authorName: author?.name,
+  contributors: members.map((m) => m.name),
+  path: Astro.url.pathname
+});
 ---
-<Base title={entry.data.title} bodyClass="single-projects">
+<Base title={entry.data.title} description={description} image={entry.data.image} jsonld={jsonld} bodyClass="single-projects">
   <div class="container">
     <div class="hero-block">
       <h1>{entry.data.title}</h1>

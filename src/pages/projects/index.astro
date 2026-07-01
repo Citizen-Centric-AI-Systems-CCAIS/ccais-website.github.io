@@ -6,7 +6,7 @@ const items = (await getCollection('projects')).sort((a, b) => b.data.date - a.d
 const trim = (s, n = 110) => (s && s.length > n ? s.slice(0, n) + '…' : s);
 const fmt = (d) => d.toDateString();
 ---
-<Base title="Projects" bodyClass="archive post-type-archive post-type-archive-projects">
+<Base title="Projects" description="Research projects from the CCAIS group, applying citizen-centric AI across smart energy, transportation, buildings and public services." bodyClass="archive post-type-archive post-type-archive-projects">
   <div class="container">
     <h1>Projects</h1>
     <h4>Explore our current research projects</h4>

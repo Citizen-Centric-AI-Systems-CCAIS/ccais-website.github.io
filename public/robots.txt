@@ -1,0 +1,8 @@
+# CCAIS — https://www.ccais.ac.uk
+# All crawlers are welcome, including search and AI/LLM crawlers
+# (e.g. GPTBot, ClaudeBot, Google-Extended, PerplexityBot). To disallow a
+# specific bot later, add a "User-agent: <name>" block with "Disallow: /".
+User-agent: *
+Allow: /
+
+Sitemap: https://www.ccais.ac.uk/sitemap-index.xml

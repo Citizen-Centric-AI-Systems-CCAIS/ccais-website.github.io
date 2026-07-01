@@ -6,6 +6,7 @@ import HeaderIcons from '../components/HeaderIcons.astro';
 import siteAssets from '../data/site-assets.json';
 import mailchimp from '../data/newsletter.json';
 import analytics from '../data/analytics.json';
+import { orgSchema, abs } from '../lib/seo';
 import '../styles/fonts.css';
 import '../styles/theme.css';
 import '../styles/supplement.css';
@@ -42,12 +43,19 @@ const footerStyle = siteAssets.footerBackground
 const {
   title = 'Citizen-Centric Artificial Intelligence Systems',
   description = 'We conduct fundamental research into citizen-centric artificial intelligence systems',
-  bodyClass = ''
+  bodyClass = '',
+  image,
+  ogType = 'website',
+  jsonld
 } = Astro.props;
 
 const fullTitle = title.includes('Citizen-Centric')
   ? title
   : `${title} - Citizen-Centric Artificial Intelligence Systems`;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = abs(image) ?? new URL('/wp-content/uploads/2024/02/AG-CCAIS-Team-crop-1.jpg', Astro.site).href;
+const schemas = [orgSchema, ...(Array.isArray(jsonld) ? jsonld : jsonld ? [jsonld] : [])];
 ---
 <!doctype html>
 <html lang="en-GB">
@@ -56,7 +64,7 @@ const fullTitle = title.includes('Citizen-Centric')
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="canonical" href={canonical} />
     <link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/ccais/img/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/ccais/img/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/ccais/img/favicon/favicon-16x16.png" />
@@ -64,8 +72,15 @@ const fullTitle = title.includes('Citizen-Centric')
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta property="og:site_name" content="Citizen-Centric Artificial Intelligence Systems" />
     <meta property="og:title" content={fullTitle} />
-    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:locale" content="en_GB" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <meta name="theme-color" content="#ffffff" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <!-- Poppins is self-hosted (SIL OFL 1.1); @font-face in src/styles/fonts.css. -->
@@ -73,6 +88,9 @@ const fullTitle = title.includes('Citizen-Centric')
     {analytics.goatcounter && !analytics.goatcounter.startsWith('REPLACE') && (
       <script data-goatcounter={analytics.goatcounter} async src="https://gc.zgo.at/count.js" is:inline></script>
     )}
+    {schemas.map((s) => (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(s)} />
+    ))}
   </head>
   <body class={bodyClass}>
     <a class="skip-link screen-reader-text" href="#primary">Skip to content</a>

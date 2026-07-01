@@ -28,6 +28,7 @@ truth.
 - `public/images/team/` — team profile photos referenced from `src/data/team.ts`.
 - `src/pages/` — routes. Static pages (About, Vision, Team, …) are `.astro` files; listing/detail pages are generated from the collections. Original WordPress URLs are preserved (including blog posts under `/uncategorised/...`).
 - `src/components/` — shared building blocks; `Nav.astro` is the **single** navigation menu used by both header and footer.
+- `src/lib/` — small helpers: `excerpt.ts` (listing/meta excerpts) and `seo.ts` (per-page metadata + JSON-LD structured data; see **SEO, metadata & structured data**).
 - `src/styles/theme.css` — original WordPress theme CSS. `src/styles/supplement.css` — small additions and overrides layered on top; this is where custom, durable CSS belongs (it can't be clobbered by `fetch-assets`).
 - `scripts/` — one-off maintenance scripts (see **Maintenance scripts** below).
 - `originals/` — full-resolution image masters, archived before optimisation. Kept in the repo but **not deployed**.
@@ -36,9 +37,27 @@ truth.
 
 - **Footer links fixed**: the old footer pointed at `/outputs/open-source/` and `/outputs/impact/` while the header used `/open-sources/` and `/impacts/`, and the footer was missing "About CCAIS". Header and footer now share one menu (the header's structure). Redirects in `astro.config.mjs` keep the old footer URLs working.
 - **Search** is now [Pagefind](https://pagefind.app/) (static, built at build time) instead of WordPress search. Available at `/search/` after a production build.
-- **Cookie banner removed** — the static site sets no tracking cookies, so the GDPR cookie plugin is unnecessary. If you add analytics, reconsider.
+- **Cookie banner removed** — the static site sets no tracking cookies. Page analytics use **GoatCounter** (cookieless, so no consent banner is needed), set via `src/data/analytics.json`; while that value is empty or left as `REPLACE...`, no analytics script is emitted.
 - **Newsletter forms** (header bar + above footer) post to **Mailchimp** via its embedded-form endpoint (JSONP, with a honeypot field and an optional list tag). Settings live in `src/data/newsletter.json`; no API key or backend is required.
 - **Contact form** posts to **Web3Forms**, which emails each submission to the address tied to the access key in `src/data/contact.json`. No backend is required.
+
+## SEO, metadata & structured data
+
+Every page is rendered by `src/layouts/Base.astro`, which sets the head metadata from these optional props:
+
+- `description` — meta description, reused for Open Graph and Twitter. There's a site-wide default, but **set it per page**: detail templates derive one automatically from the entry's first paragraph (`clip(excerptOf(entry))`), and static pages pass a hand-written one.
+- `image` — the social share image (Open Graph / Twitter `summary_large_image`). Defaults to the CCAIS team photo; detail pages pass their own header image.
+- `ogType` — `og:type` (`website` by default; `article` for news/blog/impact, `profile` for people).
+- `jsonld` — a JSON-LD object (or array) injected as `<script type="application/ld+json">`.
+
+`src/lib/seo.ts` centralises the structured data. It holds the site-wide **Organization** schema (emitted on every page) plus small builders — `articleSchema`, `projectSchema`, `eventSchema`, `personSchema`. The detail templates use them, so news → `NewsArticle`, blog → `BlogPosting`, projects & open-source → `CreativeWork`, impact → `Article`, events → `Event`, and every `/author/<slug>/` page → `Person` (with role, affiliation and links). To add structured data to a new page or collection, pass `description`, `image` and a builder's result as `jsonld` to `Base` (add a builder to `seo.ts` if none fits).
+
+Two related files:
+
+- **`public/robots.txt`** — allows all crawlers, including AI/LLM crawlers (GPTBot, ClaudeBot, PerplexityBot, …), and points to the sitemap. Block a specific bot by adding a `User-agent` block with `Disallow: /`.
+- **`sitemap-index.xml`** — generated at build by the `@astrojs/sitemap` integration (`astro.config.mjs`), covering every page. Submit it once in Google Search Console.
+
+Because the site is static HTML with no client-side rendering, crawlers and LLM agents receive the full text of every page directly — the biggest single factor for both search ranking and AI readability.
 
 ## LinkedIn posts
 
