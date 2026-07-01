@@ -52,10 +52,12 @@ Every page is rendered by `src/layouts/Base.astro`, which sets the head metadata
 
 `src/lib/seo.ts` centralises the structured data. It holds the site-wide **Organization** schema (emitted on every page) plus small builders — `articleSchema`, `projectSchema`, `eventSchema`, `personSchema`. The detail templates use them, so news → `NewsArticle`, blog → `BlogPosting`, projects & open-source → `CreativeWork`, impact → `Article`, events → `Event`, and every `/author/<slug>/` page → `Person` (with role, affiliation and links). To add structured data to a new page or collection, pass `description`, `image` and a builder's result as `jsonld` to `Base` (add a builder to `seo.ts` if none fits).
 
-Two related files:
+Related files:
 
 - **`public/robots.txt`** — allows all crawlers, including AI/LLM crawlers (GPTBot, ClaudeBot, PerplexityBot, …), and points to the sitemap. Block a specific bot by adding a `User-agent` block with `Disallow: /`.
 - **`sitemap-index.xml`** — generated at build by the `@astrojs/sitemap` integration (`astro.config.mjs`), covering every page. Submit it once in Google Search Console.
+- **`llms.txt`** — generated at build by `src/pages/llms.txt.ts` (the [llms.txt](https://llmstxt.org/) convention): a curated Markdown index of the site (about, projects, news, blog, outputs, team), built from the content collections so it stays in sync. Low-yield today — the major LLM crawlers mostly ignore it — but cheap, and used by some agent/IDE tooling.
+- **Google Search Console** verification uses `public/google*.html` (a static token file served at the site root); keep it in place so re-checks keep passing.
 
 Because the site is static HTML with no client-side rendering, crawlers and LLM agents receive the full text of every page directly — the biggest single factor for both search ranking and AI readability.
 

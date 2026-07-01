@@ -13,6 +13,7 @@ export function excerptOf(entry: { data: { excerpt?: string }; body?: string }, 
         .replace(/<[^>]+>/g, ' ')
         .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
         .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+        .replace(/\\([\\`*_{}\[\]()#+\-.!>~|])/g, '$1')
         .replace(/[#>*_`]/g, '')
         .replace(/\s+/g, ' ')
         .trim()
